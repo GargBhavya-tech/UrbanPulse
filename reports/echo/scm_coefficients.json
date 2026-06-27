@@ -1,0 +1,2246 @@
+{
+  "1": {
+    "archetype": "Ghost",
+    "estimation_mode": "policy_simulation",
+    "eq1_mean_occup": {
+      "target": "mean_occup",
+      "predictors": [
+        "intervention_value",
+        "total_vehs",
+        "hour"
+      ],
+      "intercept": 0.298161,
+      "coefficients": {
+        "intervention_value": -0.059171,
+        "total_vehs": 0.000274,
+        "hour": -0.000413
+      },
+      "r2": 0.3963
+    },
+    "eq2_mean_queue_s": {
+      "target": "mean_queue_s",
+      "predictors": [
+        "mean_occup",
+        "mean_speed_div",
+        "hour"
+      ],
+      "intercept": 129.195121,
+      "coefficients": {
+        "mean_occup": 59.660533,
+        "mean_speed_div": 2.726977,
+        "hour": -0.17672
+      },
+      "r2": 0.1617
+    }
+  },
+  "2": {
+    "archetype": "Chameleon",
+    "estimation_mode": "policy_simulation",
+    "eq1_mean_occup": {
+      "target": "mean_occup",
+      "predictors": [
+        "intervention_value",
+        "total_vehs",
+        "hour"
+      ],
+      "intercept": 0.420889,
+      "coefficients": {
+        "intervention_value": -0.067105,
+        "total_vehs": 0.000206,
+        "hour": 0.000212
+      },
+      "r2": 0.2195
+    },
+    "eq2_mean_queue_s": {
+      "target": "mean_queue_s",
+      "predictors": [
+        "mean_occup",
+        "mean_speed_div",
+        "hour"
+      ],
+      "intercept": 150.264243,
+      "coefficients": {
+        "mean_occup": 77.89042,
+        "mean_speed_div": -12.887624,
+        "hour": -0.169351
+      },
+      "r2": 0.1281
+    }
+  },
+  "3": {
+    "archetype": "Ghost",
+    "estimation_mode": "policy_simulation",
+    "eq1_mean_occup": {
+      "target": "mean_occup",
+      "predictors": [
+        "intervention_value",
+        "total_vehs",
+        "hour"
+      ],
+      "intercept": 0.397884,
+      "coefficients": {
+        "intervention_value": -0.067941,
+        "total_vehs": 0.000356,
+        "hour": -0.000436
+      },
+      "r2": 0.2475
+    },
+    "eq2_mean_queue_s": {
+      "target": "mean_queue_s",
+      "predictors": [
+        "mean_occup",
+        "mean_speed_div",
+        "hour"
+      ],
+      "intercept": 98.283859,
+      "coefficients": {
+        "mean_occup": 75.10707,
+        "mean_speed_div": 4.436595,
+        "hour": -0.303048
+      },
+      "r2": 0.1365
+    }
+  },
+  "4": {
+    "archetype": "Chameleon",
+    "estimation_mode": "policy_simulation",
+    "eq1_mean_occup": {
+      "target": "mean_occup",
+      "predictors": [
+        "intervention_value",
+        "total_vehs",
+        "hour"
+      ],
+      "intercept": 0.237534,
+      "coefficients": {
+        "intervention_value": -0.05751,
+        "total_vehs": 0.000227,
+        "hour": -0.000198
+      },
+      "r2": 0.4319
+    },
+    "eq2_mean_queue_s": {
+      "target": "mean_queue_s",
+      "predictors": [
+        "mean_occup",
+        "mean_speed_div",
+        "hour"
+      ],
+      "intercept": 159.05983,
+      "coefficients": {
+        "mean_occup": 68.268506,
+        "mean_speed_div": -5.850134,
+        "hour": -0.051021
+      },
+      "r2": 0.1423
+    }
+  },
+  "5": {
+    "archetype": "Saturator",
+    "estimation_mode": "policy_simulation",
+    "eq1_mean_occup": {
+      "target": "mean_occup",
+      "predictors": [
+        "intervention_value",
+        "total_vehs",
+        "hour"
+      ],
+      "intercept": 0.668946,
+      "coefficients": {
+        "intervention_value": -0.084146,
+        "total_vehs": 0.000139,
+        "hour": -0.000124
+      },
+      "r2": 0.3128
+    },
+    "eq2_mean_queue_s": {
+      "target": "mean_queue_s",
+      "predictors": [
+        "mean_occup",
+        "mean_speed_div",
+        "hour"
+      ],
+      "intercept": 49.333507,
+      "coefficients": {
+        "mean_occup": 278.061613,
+        "mean_speed_div": 7.135459,
+        "hour": -0.303796
+      },
+      "r2": 0.17
+    }
+  },
+  "6": {
+    "archetype": "Ghost",
+    "estimation_mode": "policy_simulation",
+    "eq1_mean_occup": {
+      "target": "mean_occup",
+      "predictors": [
+        "intervention_value",
+        "total_vehs",
+        "hour"
+      ],
+      "intercept": 0.212408,
+      "coefficients": {
+        "intervention_value": -0.060219,
+        "total_vehs": 0.000218,
+        "hour": 0.000656
+      },
+      "r2": 0.5658
+    },
+    "eq2_mean_queue_s": {
+      "target": "mean_queue_s",
+      "predictors": [
+        "mean_occup",
+        "mean_speed_div",
+        "hour"
+      ],
+      "intercept": 221.146484,
+      "coefficients": {
+        "mean_occup": 43.943309,
+        "mean_speed_div": -0.603242,
+        "hour": -0.231844
+      },
+      "r2": 0.0497
+    }
+  },
+  "7": {
+    "archetype": "Chameleon",
+    "estimation_mode": "policy_simulation",
+    "eq1_mean_occup": {
+      "target": "mean_occup",
+      "predictors": [
+        "intervention_value",
+        "total_vehs",
+        "hour"
+      ],
+      "intercept": 0.072955,
+      "coefficients": {
+        "intervention_value": -0.035703,
+        "total_vehs": 0.00041,
+        "hour": 0.001482
+      },
+      "r2": 0.2316
+    },
+    "eq2_mean_queue_s": {
+      "target": "mean_queue_s",
+      "predictors": [
+        "mean_occup",
+        "mean_speed_div",
+        "hour"
+      ],
+      "intercept": 206.000016,
+      "coefficients": {
+        "mean_occup": 26.724604,
+        "mean_speed_div": -1.214793,
+        "hour": -0.205733
+      },
+      "r2": 0.0157
+    }
+  },
+  "8": {
+    "archetype": "Chameleon",
+    "estimation_mode": "policy_simulation",
+    "eq1_mean_occup": {
+      "target": "mean_occup",
+      "predictors": [
+        "intervention_value",
+        "total_vehs",
+        "hour"
+      ],
+      "intercept": 0.042495,
+      "coefficients": {
+        "intervention_value": -0.03689,
+        "total_vehs": 0.00061,
+        "hour": 3.8e-05
+      },
+      "r2": 0.575
+    },
+    "eq2_mean_queue_s": {
+      "target": "mean_queue_s",
+      "predictors": [
+        "mean_occup",
+        "mean_speed_div",
+        "hour"
+      ],
+      "intercept": 77.764239,
+      "coefficients": {
+        "mean_occup": 61.737667,
+        "mean_speed_div": 0.267407,
+        "hour": -0.013527
+      },
+      "r2": 0.2844
+    }
+  },
+  "9": {
+    "archetype": "Chameleon",
+    "estimation_mode": "policy_simulation",
+    "eq1_mean_occup": {
+      "target": "mean_occup",
+      "predictors": [
+        "intervention_value",
+        "total_vehs",
+        "hour"
+      ],
+      "intercept": 0.058299,
+      "coefficients": {
+        "intervention_value": -0.043022,
+        "total_vehs": 0.000893,
+        "hour": 0.000377
+      },
+      "r2": 0.2179
+    },
+    "eq2_mean_queue_s": {
+      "target": "mean_queue_s",
+      "predictors": [
+        "mean_occup",
+        "mean_speed_div",
+        "hour"
+      ],
+      "intercept": 241.236607,
+      "coefficients": {
+        "mean_occup": 92.246611,
+        "mean_speed_div": 0.538265,
+        "hour": -0.18223
+      },
+      "r2": 0.1818
+    }
+  },
+  "10": {
+    "archetype": "Ghost",
+    "estimation_mode": "policy_simulation",
+    "eq1_mean_occup": {
+      "target": "mean_occup",
+      "predictors": [
+        "intervention_value",
+        "total_vehs",
+        "hour"
+      ],
+      "intercept": 0.128792,
+      "coefficients": {
+        "intervention_value": -0.068732,
+        "total_vehs": 0.000209,
+        "hour": 0.00146
+      },
+      "r2": 0.6155
+    },
+    "eq2_mean_queue_s": {
+      "target": "mean_queue_s",
+      "predictors": [
+        "mean_occup",
+        "mean_speed_div",
+        "hour"
+      ],
+      "intercept": 235.025255,
+      "coefficients": {
+        "mean_occup": 51.406685,
+        "mean_speed_div": -4.064101,
+        "hour": -0.137751
+      },
+      "r2": 0.0536
+    }
+  },
+  "11": {
+    "archetype": "Ghost",
+    "estimation_mode": "policy_simulation",
+    "eq1_mean_occup": {
+      "target": "mean_occup",
+      "predictors": [
+        "intervention_value",
+        "total_vehs",
+        "hour"
+      ],
+      "intercept": 0.010985,
+      "coefficients": {
+        "intervention_value": -0.043428,
+        "total_vehs": 0.000437,
+        "hour": 0.001295
+      },
+      "r2": 0.7058
+    },
+    "eq2_mean_queue_s": {
+      "target": "mean_queue_s",
+      "predictors": [
+        "mean_occup",
+        "mean_speed_div",
+        "hour"
+      ],
+      "intercept": 133.890066,
+      "coefficients": {
+        "mean_occup": 24.218904,
+        "mean_speed_div": -0.400044,
+        "hour": -0.046991
+      },
+      "r2": 0.0909
+    }
+  },
+  "12": {
+    "archetype": "Chameleon",
+    "estimation_mode": "policy_simulation",
+    "eq1_mean_occup": {
+      "target": "mean_occup",
+      "predictors": [
+        "intervention_value",
+        "total_vehs",
+        "hour"
+      ],
+      "intercept": 0.118051,
+      "coefficients": {
+        "intervention_value": -0.035728,
+        "total_vehs": 0.000286,
+        "hour": 0.000641
+      },
+      "r2": 0.1385
+    },
+    "eq2_mean_queue_s": {
+      "target": "mean_queue_s",
+      "predictors": [
+        "mean_occup",
+        "mean_speed_div",
+        "hour"
+      ],
+      "intercept": 159.355449,
+      "coefficients": {
+        "mean_occup": 65.007378,
+        "mean_speed_div": -2.208118,
+        "hour": 0.020298
+      },
+      "r2": 0.0825
+    }
+  },
+  "13": {
+    "archetype": "Ghost",
+    "estimation_mode": "policy_simulation",
+    "eq1_mean_occup": {
+      "target": "mean_occup",
+      "predictors": [
+        "intervention_value",
+        "total_vehs",
+        "hour"
+      ],
+      "intercept": 0.067637,
+      "coefficients": {
+        "intervention_value": -0.042522,
+        "total_vehs": 0.000487,
+        "hour": 0.001688
+      },
+      "r2": 0.384
+    },
+    "eq2_mean_queue_s": {
+      "target": "mean_queue_s",
+      "predictors": [
+        "mean_occup",
+        "mean_speed_div",
+        "hour"
+      ],
+      "intercept": 198.013847,
+      "coefficients": {
+        "mean_occup": 58.129844,
+        "mean_speed_div": -5.494567,
+        "hour": -0.092478
+      },
+      "r2": 0.1205
+    }
+  },
+  "14": {
+    "archetype": "Chameleon",
+    "estimation_mode": "policy_simulation",
+    "eq1_mean_occup": {
+      "target": "mean_occup",
+      "predictors": [
+        "intervention_value",
+        "total_vehs",
+        "hour"
+      ],
+      "intercept": -0.066763,
+      "coefficients": {
+        "intervention_value": -0.036976,
+        "total_vehs": 0.000377,
+        "hour": -0.000202
+      },
+      "r2": 0.7348
+    },
+    "eq2_mean_queue_s": {
+      "target": "mean_queue_s",
+      "predictors": [
+        "mean_occup",
+        "mean_speed_div",
+        "hour"
+      ],
+      "intercept": 97.853252,
+      "coefficients": {
+        "mean_occup": 26.955458,
+        "mean_speed_div": 1.381454,
+        "hour": 0.068158
+      },
+      "r2": 0.0888
+    }
+  },
+  "15": {
+    "archetype": "Chameleon",
+    "estimation_mode": "policy_simulation",
+    "eq1_mean_occup": {
+      "target": "mean_occup",
+      "predictors": [
+        "intervention_value",
+        "total_vehs",
+        "hour"
+      ],
+      "intercept": 0.548545,
+      "coefficients": {
+        "intervention_value": -0.084151,
+        "total_vehs": 0.000149,
+        "hour": -3.1e-05
+      },
+      "r2": 0.446
+    },
+    "eq2_mean_queue_s": {
+      "target": "mean_queue_s",
+      "predictors": [
+        "mean_occup",
+        "mean_speed_div",
+        "hour"
+      ],
+      "intercept": 182.314495,
+      "coefficients": {
+        "mean_occup": 61.221973,
+        "mean_speed_div": 2.638769,
+        "hour": -0.248279
+      },
+      "r2": 0.0345
+    }
+  },
+  "16": {
+    "archetype": "Chameleon",
+    "estimation_mode": "policy_simulation",
+    "eq1_mean_occup": {
+      "target": "mean_occup",
+      "predictors": [
+        "intervention_value",
+        "total_vehs",
+        "hour"
+      ],
+      "intercept": 0.242677,
+      "coefficients": {
+        "intervention_value": -0.055287,
+        "total_vehs": 0.000249,
+        "hour": 5.1e-05
+      },
+      "r2": 0.3555
+    },
+    "eq2_mean_queue_s": {
+      "target": "mean_queue_s",
+      "predictors": [
+        "mean_occup",
+        "mean_speed_div",
+        "hour"
+      ],
+      "intercept": 296.080503,
+      "coefficients": {
+        "mean_occup": 153.556354,
+        "mean_speed_div": -16.390433,
+        "hour": -0.324701
+      },
+      "r2": 0.2738
+    }
+  },
+  "17": {
+    "archetype": "Saturator",
+    "estimation_mode": "policy_simulation",
+    "eq1_mean_occup": {
+      "target": "mean_occup",
+      "predictors": [
+        "intervention_value",
+        "total_vehs",
+        "hour"
+      ],
+      "intercept": 0.017874,
+      "coefficients": {
+        "intervention_value": -0.044186,
+        "total_vehs": 0.000631,
+        "hour": 0.000521
+      },
+      "r2": 0.5758
+    },
+    "eq2_mean_queue_s": {
+      "target": "mean_queue_s",
+      "predictors": [
+        "mean_occup",
+        "mean_speed_div",
+        "hour"
+      ],
+      "intercept": 241.130943,
+      "coefficients": {
+        "mean_occup": 144.26669,
+        "mean_speed_div": -2.849311,
+        "hour": -0.578457
+      },
+      "r2": 0.1693
+    }
+  },
+  "18": {
+    "archetype": "Chameleon",
+    "estimation_mode": "policy_simulation",
+    "eq1_mean_occup": {
+      "target": "mean_occup",
+      "predictors": [
+        "intervention_value",
+        "total_vehs",
+        "hour"
+      ],
+      "intercept": 0.105557,
+      "coefficients": {
+        "intervention_value": -0.036832,
+        "total_vehs": 0.000309,
+        "hour": 0.000858
+      },
+      "r2": 0.223
+    },
+    "eq2_mean_queue_s": {
+      "target": "mean_queue_s",
+      "predictors": [
+        "mean_occup",
+        "mean_speed_div",
+        "hour"
+      ],
+      "intercept": 222.424309,
+      "coefficients": {
+        "mean_occup": 56.19628,
+        "mean_speed_div": -12.459042,
+        "hour": -0.086819
+      },
+      "r2": 0.0887
+    }
+  },
+  "19": {
+    "archetype": "Commuter",
+    "estimation_mode": "ols",
+    "eq1_mean_occup": {
+      "target": "mean_occup",
+      "predictors": [
+        "intervention_value",
+        "total_vehs",
+        "hour"
+      ],
+      "intercept": -0.002248,
+      "coefficients": {
+        "intervention_value": -0.002804,
+        "total_vehs": 0.000317,
+        "hour": -6e-06
+      },
+      "r2": 0.8002
+    },
+    "eq2_mean_queue_s": {
+      "target": "mean_queue_s",
+      "predictors": [
+        "mean_occup",
+        "mean_speed_div",
+        "hour"
+      ],
+      "intercept": 118.939025,
+      "coefficients": {
+        "mean_occup": -442.92851,
+        "mean_speed_div": -4.94807,
+        "hour": -0.337023
+      },
+      "r2": 0.0216
+    }
+  },
+  "20": {
+    "archetype": "Commuter",
+    "estimation_mode": "ols",
+    "eq1_mean_occup": {
+      "target": "mean_occup",
+      "predictors": [
+        "intervention_value",
+        "total_vehs",
+        "hour"
+      ],
+      "intercept": 0.00313,
+      "coefficients": {
+        "intervention_value": -0.005048,
+        "total_vehs": 0.0003,
+        "hour": -3.6e-05
+      },
+      "r2": 0.7298
+    },
+    "eq2_mean_queue_s": {
+      "target": "mean_queue_s",
+      "predictors": [
+        "mean_occup",
+        "mean_speed_div",
+        "hour"
+      ],
+      "intercept": 155.949085,
+      "coefficients": {
+        "mean_occup": 352.322111,
+        "mean_speed_div": -7.289603,
+        "hour": -0.246263
+      },
+      "r2": 0.0552
+    }
+  },
+  "21": {
+    "archetype": "Commuter",
+    "estimation_mode": "ols",
+    "eq1_mean_occup": {
+      "target": "mean_occup",
+      "predictors": [
+        "intervention_value",
+        "total_vehs",
+        "hour"
+      ],
+      "intercept": 0.00299,
+      "coefficients": {
+        "intervention_value": -0.004096,
+        "total_vehs": 0.000307,
+        "hour": -2.7e-05
+      },
+      "r2": 0.6906
+    },
+    "eq2_mean_queue_s": {
+      "target": "mean_queue_s",
+      "predictors": [
+        "mean_occup",
+        "mean_speed_div",
+        "hour"
+      ],
+      "intercept": 138.161344,
+      "coefficients": {
+        "mean_occup": 506.833121,
+        "mean_speed_div": -3.892275,
+        "hour": -0.175762
+      },
+      "r2": 0.0506
+    }
+  },
+  "22": {
+    "archetype": "Commuter",
+    "estimation_mode": "ols",
+    "eq1_mean_occup": {
+      "target": "mean_occup",
+      "predictors": [
+        "intervention_value",
+        "total_vehs",
+        "hour"
+      ],
+      "intercept": -0.00307,
+      "coefficients": {
+        "intervention_value": -0.004385,
+        "total_vehs": 0.000309,
+        "hour": -2e-05
+      },
+      "r2": 0.8595
+    },
+    "eq2_mean_queue_s": {
+      "target": "mean_queue_s",
+      "predictors": [
+        "mean_occup",
+        "mean_speed_div",
+        "hour"
+      ],
+      "intercept": 111.843891,
+      "coefficients": {
+        "mean_occup": 173.536392,
+        "mean_speed_div": -11.507477,
+        "hour": -0.411237
+      },
+      "r2": 0.0273
+    }
+  },
+  "23": {
+    "archetype": "Saturator",
+    "estimation_mode": "policy_simulation",
+    "eq1_mean_occup": {
+      "target": "mean_occup",
+      "predictors": [
+        "intervention_value",
+        "total_vehs",
+        "hour"
+      ],
+      "intercept": -0.003475,
+      "coefficients": {
+        "intervention_value": -0.005875,
+        "total_vehs": 0.000341,
+        "hour": 0.0
+      },
+      "r2": 0.7414
+    },
+    "eq2_mean_queue_s": {
+      "target": "mean_queue_s",
+      "predictors": [
+        "mean_occup",
+        "mean_speed_div",
+        "hour"
+      ],
+      "intercept": 259.262057,
+      "coefficients": {
+        "mean_occup": -28.669902,
+        "mean_speed_div": -3.292813,
+        "hour": -0.854333
+      },
+      "r2": 0.0129
+    }
+  },
+  "24": {
+    "archetype": "Saturator",
+    "estimation_mode": "policy_simulation",
+    "eq1_mean_occup": {
+      "target": "mean_occup",
+      "predictors": [
+        "intervention_value",
+        "total_vehs",
+        "hour"
+      ],
+      "intercept": 0.026733,
+      "coefficients": {
+        "intervention_value": -0.01282,
+        "total_vehs": 0.000242,
+        "hour": 4.2e-05
+      },
+      "r2": 0.8093
+    },
+    "eq2_mean_queue_s": {
+      "target": "mean_queue_s",
+      "predictors": [
+        "mean_occup",
+        "mean_speed_div",
+        "hour"
+      ],
+      "intercept": 191.395322,
+      "coefficients": {
+        "mean_occup": 298.031677,
+        "mean_speed_div": -12.326456,
+        "hour": -0.037039
+      },
+      "r2": 0.1629
+    }
+  },
+  "25": {
+    "archetype": "Commuter",
+    "estimation_mode": "ols",
+    "eq1_mean_occup": {
+      "target": "mean_occup",
+      "predictors": [
+        "intervention_value",
+        "total_vehs",
+        "hour"
+      ],
+      "intercept": 0.002179,
+      "coefficients": {
+        "intervention_value": -0.018876,
+        "total_vehs": 0.000345,
+        "hour": 3.1e-05
+      },
+      "r2": 0.6746
+    },
+    "eq2_mean_queue_s": {
+      "target": "mean_queue_s",
+      "predictors": [
+        "mean_occup",
+        "mean_speed_div",
+        "hour"
+      ],
+      "intercept": 166.885581,
+      "coefficients": {
+        "mean_occup": 134.110527,
+        "mean_speed_div": -19.394747,
+        "hour": -0.249848
+      },
+      "r2": 0.0713
+    }
+  },
+  "26": {
+    "archetype": "Commuter",
+    "estimation_mode": "ols",
+    "eq1_mean_occup": {
+      "target": "mean_occup",
+      "predictors": [
+        "intervention_value",
+        "total_vehs",
+        "hour"
+      ],
+      "intercept": 0.005686,
+      "coefficients": {
+        "intervention_value": -0.014251,
+        "total_vehs": 0.000289,
+        "hour": -5.4e-05
+      },
+      "r2": 0.8816
+    },
+    "eq2_mean_queue_s": {
+      "target": "mean_queue_s",
+      "predictors": [
+        "mean_occup",
+        "mean_speed_div",
+        "hour"
+      ],
+      "intercept": 121.976028,
+      "coefficients": {
+        "mean_occup": 478.830358,
+        "mean_speed_div": -6.928202,
+        "hour": -0.353082
+      },
+      "r2": 0.1478
+    }
+  },
+  "27": {
+    "archetype": "Saturator",
+    "estimation_mode": "policy_simulation",
+    "eq1_mean_occup": {
+      "target": "mean_occup",
+      "predictors": [
+        "intervention_value",
+        "total_vehs",
+        "hour"
+      ],
+      "intercept": 0.022211,
+      "coefficients": {
+        "intervention_value": -0.007561,
+        "total_vehs": 0.00023,
+        "hour": 0.000101
+      },
+      "r2": 0.8615
+    },
+    "eq2_mean_queue_s": {
+      "target": "mean_queue_s",
+      "predictors": [
+        "mean_occup",
+        "mean_speed_div",
+        "hour"
+      ],
+      "intercept": 206.626529,
+      "coefficients": {
+        "mean_occup": 504.098015,
+        "mean_speed_div": -10.771958,
+        "hour": -0.705687
+      },
+      "r2": 0.1132
+    }
+  },
+  "28": {
+    "archetype": "Commuter",
+    "estimation_mode": "ols",
+    "eq1_mean_occup": {
+      "target": "mean_occup",
+      "predictors": [
+        "intervention_value",
+        "total_vehs",
+        "hour"
+      ],
+      "intercept": 0.002608,
+      "coefficients": {
+        "intervention_value": -0.007012,
+        "total_vehs": 0.000313,
+        "hour": -3.3e-05
+      },
+      "r2": 0.6908
+    },
+    "eq2_mean_queue_s": {
+      "target": "mean_queue_s",
+      "predictors": [
+        "mean_occup",
+        "mean_speed_div",
+        "hour"
+      ],
+      "intercept": 168.904041,
+      "coefficients": {
+        "mean_occup": -81.823114,
+        "mean_speed_div": -20.232551,
+        "hour": -0.042148
+      },
+      "r2": 0.0684
+    }
+  },
+  "29": {
+    "archetype": "Saturator",
+    "estimation_mode": "policy_simulation",
+    "eq1_mean_occup": {
+      "target": "mean_occup",
+      "predictors": [
+        "intervention_value",
+        "total_vehs",
+        "hour"
+      ],
+      "intercept": 0.033437,
+      "coefficients": {
+        "intervention_value": -0.01064,
+        "total_vehs": 0.000215,
+        "hour": 0.000101
+      },
+      "r2": 0.6854
+    },
+    "eq2_mean_queue_s": {
+      "target": "mean_queue_s",
+      "predictors": [
+        "mean_occup",
+        "mean_speed_div",
+        "hour"
+      ],
+      "intercept": 312.94128,
+      "coefficients": {
+        "mean_occup": 375.709864,
+        "mean_speed_div": -19.151264,
+        "hour": -0.649172
+      },
+      "r2": 0.0739
+    }
+  },
+  "30": {
+    "archetype": "Saturator",
+    "estimation_mode": "policy_simulation",
+    "eq1_mean_occup": {
+      "target": "mean_occup",
+      "predictors": [
+        "intervention_value",
+        "total_vehs",
+        "hour"
+      ],
+      "intercept": 0.293937,
+      "coefficients": {
+        "intervention_value": -0.04561,
+        "total_vehs": 0.000294,
+        "hour": 0.000295
+      },
+      "r2": 0.3519
+    },
+    "eq2_mean_queue_s": {
+      "target": "mean_queue_s",
+      "predictors": [
+        "mean_occup",
+        "mean_speed_div",
+        "hour"
+      ],
+      "intercept": 273.867147,
+      "coefficients": {
+        "mean_occup": 192.716455,
+        "mean_speed_div": -12.297525,
+        "hour": -0.358694
+      },
+      "r2": 0.17
+    }
+  },
+  "31": {
+    "archetype": "Chameleon",
+    "estimation_mode": "policy_simulation",
+    "eq1_mean_occup": {
+      "target": "mean_occup",
+      "predictors": [
+        "intervention_value",
+        "total_vehs",
+        "hour"
+      ],
+      "intercept": 0.109631,
+      "coefficients": {
+        "intervention_value": -0.060878,
+        "total_vehs": 0.000301,
+        "hour": 0.001307
+      },
+      "r2": 0.4511
+    },
+    "eq2_mean_queue_s": {
+      "target": "mean_queue_s",
+      "predictors": [
+        "mean_occup",
+        "mean_speed_div",
+        "hour"
+      ],
+      "intercept": 228.113754,
+      "coefficients": {
+        "mean_occup": 103.275024,
+        "mean_speed_div": -7.563687,
+        "hour": -0.153776
+      },
+      "r2": 0.1824
+    }
+  },
+  "32": {
+    "archetype": "Chameleon",
+    "estimation_mode": "policy_simulation",
+    "eq1_mean_occup": {
+      "target": "mean_occup",
+      "predictors": [
+        "intervention_value",
+        "total_vehs",
+        "hour"
+      ],
+      "intercept": -0.081636,
+      "coefficients": {
+        "intervention_value": -0.026275,
+        "total_vehs": 0.000435,
+        "hour": -0.000438
+      },
+      "r2": 0.7023
+    },
+    "eq2_mean_queue_s": {
+      "target": "mean_queue_s",
+      "predictors": [
+        "mean_occup",
+        "mean_speed_div",
+        "hour"
+      ],
+      "intercept": 299.373212,
+      "coefficients": {
+        "mean_occup": 64.10418,
+        "mean_speed_div": -7.556127,
+        "hour": 0.137141
+      },
+      "r2": 0.0692
+    }
+  },
+  "33": {
+    "archetype": "Chameleon",
+    "estimation_mode": "policy_simulation",
+    "eq1_mean_occup": {
+      "target": "mean_occup",
+      "predictors": [
+        "intervention_value",
+        "total_vehs",
+        "hour"
+      ],
+      "intercept": 0.188241,
+      "coefficients": {
+        "intervention_value": -0.033756,
+        "total_vehs": 0.000257,
+        "hour": 6.1e-05
+      },
+      "r2": 0.0888
+    },
+    "eq2_mean_queue_s": {
+      "target": "mean_queue_s",
+      "predictors": [
+        "mean_occup",
+        "mean_speed_div",
+        "hour"
+      ],
+      "intercept": 154.706334,
+      "coefficients": {
+        "mean_occup": 31.146937,
+        "mean_speed_div": 5.285673,
+        "hour": -0.123082
+      },
+      "r2": 0.0298
+    }
+  },
+  "34": {
+    "archetype": "Ghost",
+    "estimation_mode": "policy_simulation",
+    "eq1_mean_occup": {
+      "target": "mean_occup",
+      "predictors": [
+        "intervention_value",
+        "total_vehs",
+        "hour"
+      ],
+      "intercept": 0.07351,
+      "coefficients": {
+        "intervention_value": -0.020864,
+        "total_vehs": 0.000208,
+        "hour": 0.000244
+      },
+      "r2": 0.1985
+    },
+    "eq2_mean_queue_s": {
+      "target": "mean_queue_s",
+      "predictors": [
+        "mean_occup",
+        "mean_speed_div",
+        "hour"
+      ],
+      "intercept": 173.257109,
+      "coefficients": {
+        "mean_occup": 117.692132,
+        "mean_speed_div": -4.492562,
+        "hour": -0.294412
+      },
+      "r2": 0.1007
+    }
+  },
+  "35": {
+    "archetype": "Chameleon",
+    "estimation_mode": "policy_simulation",
+    "eq1_mean_occup": {
+      "target": "mean_occup",
+      "predictors": [
+        "intervention_value",
+        "total_vehs",
+        "hour"
+      ],
+      "intercept": 0.073557,
+      "coefficients": {
+        "intervention_value": -0.03153,
+        "total_vehs": 0.000293,
+        "hour": 0.000203
+      },
+      "r2": 0.4286
+    },
+    "eq2_mean_queue_s": {
+      "target": "mean_queue_s",
+      "predictors": [
+        "mean_occup",
+        "mean_speed_div",
+        "hour"
+      ],
+      "intercept": 295.300769,
+      "coefficients": {
+        "mean_occup": 98.789034,
+        "mean_speed_div": -0.169914,
+        "hour": -0.195084
+      },
+      "r2": 0.0504
+    }
+  },
+  "36": {
+    "archetype": "Chronic",
+    "estimation_mode": "policy_simulation",
+    "eq1_mean_occup": {
+      "target": "mean_occup",
+      "predictors": [
+        "intervention_value",
+        "total_vehs",
+        "hour"
+      ],
+      "intercept": 0.429668,
+      "coefficients": {
+        "intervention_value": -0.062082,
+        "total_vehs": 0.000234,
+        "hour": 0.00022
+      },
+      "r2": 0.1775
+    },
+    "eq2_mean_queue_s": {
+      "target": "mean_queue_s",
+      "predictors": [
+        "mean_occup",
+        "mean_speed_div",
+        "hour"
+      ],
+      "intercept": 398.306134,
+      "coefficients": {
+        "mean_occup": 135.90975,
+        "mean_speed_div": -33.962218,
+        "hour": -0.355952
+      },
+      "r2": 0.1602
+    }
+  },
+  "37": {
+    "archetype": "Chronic",
+    "estimation_mode": "policy_simulation",
+    "eq1_mean_occup": {
+      "target": "mean_occup",
+      "predictors": [
+        "intervention_value",
+        "total_vehs",
+        "hour"
+      ],
+      "intercept": 0.223177,
+      "coefficients": {
+        "intervention_value": -0.041944,
+        "total_vehs": 0.000422,
+        "hour": -0.000119
+      },
+      "r2": 0.2295
+    },
+    "eq2_mean_queue_s": {
+      "target": "mean_queue_s",
+      "predictors": [
+        "mean_occup",
+        "mean_speed_div",
+        "hour"
+      ],
+      "intercept": 395.179754,
+      "coefficients": {
+        "mean_occup": 27.673712,
+        "mean_speed_div": -10.61863,
+        "hour": 0.181632
+      },
+      "r2": 0.0106
+    }
+  },
+  "38": {
+    "archetype": "Saturator",
+    "estimation_mode": "policy_simulation",
+    "eq1_mean_occup": {
+      "target": "mean_occup",
+      "predictors": [
+        "intervention_value",
+        "total_vehs",
+        "hour"
+      ],
+      "intercept": 0.02676,
+      "coefficients": {
+        "intervention_value": -0.015842,
+        "total_vehs": 0.000266,
+        "hour": -2.3e-05
+      },
+      "r2": 0.9462
+    },
+    "eq2_mean_queue_s": {
+      "target": "mean_queue_s",
+      "predictors": [
+        "mean_occup",
+        "mean_speed_div",
+        "hour"
+      ],
+      "intercept": 309.023444,
+      "coefficients": {
+        "mean_occup": 285.303573,
+        "mean_speed_div": -9.304298,
+        "hour": -0.192419
+      },
+      "r2": 0.2564
+    }
+  },
+  "39": {
+    "archetype": "Commuter",
+    "estimation_mode": "ols",
+    "eq1_mean_occup": {
+      "target": "mean_occup",
+      "predictors": [
+        "intervention_value",
+        "total_vehs",
+        "hour"
+      ],
+      "intercept": 0.009896,
+      "coefficients": {
+        "intervention_value": 0.001777,
+        "total_vehs": 0.000244,
+        "hour": -4.1e-05
+      },
+      "r2": 0.8045
+    },
+    "eq2_mean_queue_s": {
+      "target": "mean_queue_s",
+      "predictors": [
+        "mean_occup",
+        "mean_speed_div",
+        "hour"
+      ],
+      "intercept": 178.946742,
+      "coefficients": {
+        "mean_occup": 312.334807,
+        "mean_speed_div": -7.633193,
+        "hour": 0.024332
+      },
+      "r2": 0.0641
+    }
+  },
+  "40": {
+    "archetype": "Commuter",
+    "estimation_mode": "ols",
+    "eq1_mean_occup": {
+      "target": "mean_occup",
+      "predictors": [
+        "intervention_value",
+        "total_vehs",
+        "hour"
+      ],
+      "intercept": 0.007461,
+      "coefficients": {
+        "intervention_value": 0.00407,
+        "total_vehs": 0.000261,
+        "hour": -4.3e-05
+      },
+      "r2": 0.9188
+    },
+    "eq2_mean_queue_s": {
+      "target": "mean_queue_s",
+      "predictors": [
+        "mean_occup",
+        "mean_speed_div",
+        "hour"
+      ],
+      "intercept": 173.93677,
+      "coefficients": {
+        "mean_occup": 475.561806,
+        "mean_speed_div": -15.046716,
+        "hour": 0.024016
+      },
+      "r2": 0.163
+    }
+  },
+  "41": {
+    "archetype": "Chameleon",
+    "estimation_mode": "policy_simulation",
+    "eq1_mean_occup": {
+      "target": "mean_occup",
+      "predictors": [
+        "intervention_value",
+        "total_vehs",
+        "hour"
+      ],
+      "intercept": 0.0399,
+      "coefficients": {
+        "intervention_value": -0.034564,
+        "total_vehs": 0.000348,
+        "hour": -0.000101
+      },
+      "r2": 0.4053
+    },
+    "eq2_mean_queue_s": {
+      "target": "mean_queue_s",
+      "predictors": [
+        "mean_occup",
+        "mean_speed_div",
+        "hour"
+      ],
+      "intercept": 279.294226,
+      "coefficients": {
+        "mean_occup": 110.314556,
+        "mean_speed_div": -2.306686,
+        "hour": -0.282872
+      },
+      "r2": 0.0792
+    }
+  },
+  "42": {
+    "archetype": "Chameleon",
+    "estimation_mode": "policy_simulation",
+    "eq1_mean_occup": {
+      "target": "mean_occup",
+      "predictors": [
+        "intervention_value",
+        "total_vehs",
+        "hour"
+      ],
+      "intercept": 0.084487,
+      "coefficients": {
+        "intervention_value": -0.028574,
+        "total_vehs": 0.000335,
+        "hour": 0.000358
+      },
+      "r2": 0.1446
+    },
+    "eq2_mean_queue_s": {
+      "target": "mean_queue_s",
+      "predictors": [
+        "mean_occup",
+        "mean_speed_div",
+        "hour"
+      ],
+      "intercept": 307.665583,
+      "coefficients": {
+        "mean_occup": 71.976289,
+        "mean_speed_div": 0.943065,
+        "hour": -0.033576
+      },
+      "r2": 0.0458
+    }
+  },
+  "43": {
+    "archetype": "Saturator",
+    "estimation_mode": "policy_simulation",
+    "eq1_mean_occup": {
+      "target": "mean_occup",
+      "predictors": [
+        "intervention_value",
+        "total_vehs",
+        "hour"
+      ],
+      "intercept": 0.066832,
+      "coefficients": {
+        "intervention_value": -0.025326,
+        "total_vehs": 0.000237,
+        "hour": -0.000125
+      },
+      "r2": 0.6078
+    },
+    "eq2_mean_queue_s": {
+      "target": "mean_queue_s",
+      "predictors": [
+        "mean_occup",
+        "mean_speed_div",
+        "hour"
+      ],
+      "intercept": 259.579433,
+      "coefficients": {
+        "mean_occup": 188.321131,
+        "mean_speed_div": -12.013047,
+        "hour": -0.111148
+      },
+      "r2": 0.0942
+    }
+  },
+  "44": {
+    "archetype": "Saturator",
+    "estimation_mode": "policy_simulation",
+    "eq1_mean_occup": {
+      "target": "mean_occup",
+      "predictors": [
+        "intervention_value",
+        "total_vehs",
+        "hour"
+      ],
+      "intercept": 0.534105,
+      "coefficients": {
+        "intervention_value": -0.072174,
+        "total_vehs": 0.000158,
+        "hour": 9.3e-05
+      },
+      "r2": 0.3255
+    },
+    "eq2_mean_queue_s": {
+      "target": "mean_queue_s",
+      "predictors": [
+        "mean_occup",
+        "mean_speed_div",
+        "hour"
+      ],
+      "intercept": 198.276205,
+      "coefficients": {
+        "mean_occup": 126.378262,
+        "mean_speed_div": -12.613448,
+        "hour": -0.082867
+      },
+      "r2": 0.2368
+    }
+  },
+  "45": {
+    "archetype": "Saturator",
+    "estimation_mode": "policy_simulation",
+    "eq1_mean_occup": {
+      "target": "mean_occup",
+      "predictors": [
+        "intervention_value",
+        "total_vehs",
+        "hour"
+      ],
+      "intercept": 0.256829,
+      "coefficients": {
+        "intervention_value": -0.04323,
+        "total_vehs": 0.000225,
+        "hour": -0.000272
+      },
+      "r2": 0.4479
+    },
+    "eq2_mean_queue_s": {
+      "target": "mean_queue_s",
+      "predictors": [
+        "mean_occup",
+        "mean_speed_div",
+        "hour"
+      ],
+      "intercept": 249.554464,
+      "coefficients": {
+        "mean_occup": 68.612056,
+        "mean_speed_div": -15.877553,
+        "hour": 0.079132
+      },
+      "r2": 0.0749
+    }
+  },
+  "46": {
+    "archetype": "Chameleon",
+    "estimation_mode": "policy_simulation",
+    "eq1_mean_occup": {
+      "target": "mean_occup",
+      "predictors": [
+        "intervention_value",
+        "total_vehs",
+        "hour"
+      ],
+      "intercept": 0.391893,
+      "coefficients": {
+        "intervention_value": -0.063738,
+        "total_vehs": 0.000201,
+        "hour": 0.000529
+      },
+      "r2": 0.2389
+    },
+    "eq2_mean_queue_s": {
+      "target": "mean_queue_s",
+      "predictors": [
+        "mean_occup",
+        "mean_speed_div",
+        "hour"
+      ],
+      "intercept": 163.036595,
+      "coefficients": {
+        "mean_occup": 156.4015,
+        "mean_speed_div": 1.240902,
+        "hour": -0.102841
+      },
+      "r2": 0.1862
+    }
+  },
+  "47": {
+    "archetype": "Saturator",
+    "estimation_mode": "policy_simulation",
+    "eq1_mean_occup": {
+      "target": "mean_occup",
+      "predictors": [
+        "intervention_value",
+        "total_vehs",
+        "hour"
+      ],
+      "intercept": 0.067337,
+      "coefficients": {
+        "intervention_value": -0.031252,
+        "total_vehs": 0.000205,
+        "hour": -0.000322
+      },
+      "r2": 0.6173
+    },
+    "eq2_mean_queue_s": {
+      "target": "mean_queue_s",
+      "predictors": [
+        "mean_occup",
+        "mean_speed_div",
+        "hour"
+      ],
+      "intercept": 219.031335,
+      "coefficients": {
+        "mean_occup": 173.458925,
+        "mean_speed_div": -16.104584,
+        "hour": -0.212055
+      },
+      "r2": 0.1091
+    }
+  },
+  "48": {
+    "archetype": "Chameleon",
+    "estimation_mode": "policy_simulation",
+    "eq1_mean_occup": {
+      "target": "mean_occup",
+      "predictors": [
+        "intervention_value",
+        "total_vehs",
+        "hour"
+      ],
+      "intercept": 0.528528,
+      "coefficients": {
+        "intervention_value": -0.073751,
+        "total_vehs": 0.000176,
+        "hour": 0.00018
+      },
+      "r2": 0.2488
+    },
+    "eq2_mean_queue_s": {
+      "target": "mean_queue_s",
+      "predictors": [
+        "mean_occup",
+        "mean_speed_div",
+        "hour"
+      ],
+      "intercept": 208.487371,
+      "coefficients": {
+        "mean_occup": 45.114838,
+        "mean_speed_div": -13.1229,
+        "hour": 0.156563
+      },
+      "r2": 0.0662
+    }
+  },
+  "49": {
+    "archetype": "Saturator",
+    "estimation_mode": "policy_simulation",
+    "eq1_mean_occup": {
+      "target": "mean_occup",
+      "predictors": [
+        "intervention_value",
+        "total_vehs",
+        "hour"
+      ],
+      "intercept": -0.012677,
+      "coefficients": {
+        "intervention_value": -0.01878,
+        "total_vehs": 0.000362,
+        "hour": -0.000576
+      },
+      "r2": 0.4617
+    },
+    "eq2_mean_queue_s": {
+      "target": "mean_queue_s",
+      "predictors": [
+        "mean_occup",
+        "mean_speed_div",
+        "hour"
+      ],
+      "intercept": 302.205074,
+      "coefficients": {
+        "mean_occup": 165.075283,
+        "mean_speed_div": -10.839214,
+        "hour": 0.179538
+      },
+      "r2": 0.0989
+    }
+  },
+  "50": {
+    "archetype": "Saturator",
+    "estimation_mode": "policy_simulation",
+    "eq1_mean_occup": {
+      "target": "mean_occup",
+      "predictors": [
+        "intervention_value",
+        "total_vehs",
+        "hour"
+      ],
+      "intercept": 0.036335,
+      "coefficients": {
+        "intervention_value": -0.016904,
+        "total_vehs": 0.000317,
+        "hour": 0.000245
+      },
+      "r2": 0.4491
+    },
+    "eq2_mean_queue_s": {
+      "target": "mean_queue_s",
+      "predictors": [
+        "mean_occup",
+        "mean_speed_div",
+        "hour"
+      ],
+      "intercept": 301.910214,
+      "coefficients": {
+        "mean_occup": 232.740857,
+        "mean_speed_div": -22.372995,
+        "hour": -0.07415
+      },
+      "r2": 0.1501
+    }
+  },
+  "51": {
+    "archetype": "Commuter",
+    "estimation_mode": "ols",
+    "eq1_mean_occup": {
+      "target": "mean_occup",
+      "predictors": [
+        "intervention_value",
+        "total_vehs",
+        "hour"
+      ],
+      "intercept": 0.031328,
+      "coefficients": {
+        "intervention_value": 0.041747,
+        "total_vehs": 0.000284,
+        "hour": -0.000205
+      },
+      "r2": 0.4054
+    },
+    "eq2_mean_queue_s": {
+      "target": "mean_queue_s",
+      "predictors": [
+        "mean_occup",
+        "mean_speed_div",
+        "hour"
+      ],
+      "intercept": 154.381029,
+      "coefficients": {
+        "mean_occup": 83.162615,
+        "mean_speed_div": -7.22962,
+        "hour": 0.103175
+      },
+      "r2": 0.0512
+    }
+  },
+  "52": {
+    "archetype": "Commuter",
+    "estimation_mode": "ols",
+    "eq1_mean_occup": {
+      "target": "mean_occup",
+      "predictors": [
+        "intervention_value",
+        "total_vehs",
+        "hour"
+      ],
+      "intercept": 0.030328,
+      "coefficients": {
+        "intervention_value": 0.014275,
+        "total_vehs": 0.00029,
+        "hour": 0.000378
+      },
+      "r2": 0.2045
+    },
+    "eq2_mean_queue_s": {
+      "target": "mean_queue_s",
+      "predictors": [
+        "mean_occup",
+        "mean_speed_div",
+        "hour"
+      ],
+      "intercept": 180.165307,
+      "coefficients": {
+        "mean_occup": 192.122699,
+        "mean_speed_div": -15.856836,
+        "hour": -0.087065
+      },
+      "r2": 0.1094
+    }
+  },
+  "53": {
+    "archetype": "Saturator",
+    "estimation_mode": "policy_simulation",
+    "eq1_mean_occup": {
+      "target": "mean_occup",
+      "predictors": [
+        "intervention_value",
+        "total_vehs",
+        "hour"
+      ],
+      "intercept": -0.016871,
+      "coefficients": {
+        "intervention_value": -0.024187,
+        "total_vehs": 0.000312,
+        "hour": -8e-06
+      },
+      "r2": 0.4339
+    },
+    "eq2_mean_queue_s": {
+      "target": "mean_queue_s",
+      "predictors": [
+        "mean_occup",
+        "mean_speed_div",
+        "hour"
+      ],
+      "intercept": 241.985878,
+      "coefficients": {
+        "mean_occup": 288.176941,
+        "mean_speed_div": -9.062213,
+        "hour": 0.01158
+      },
+      "r2": 0.1615
+    }
+  },
+  "54": {
+    "archetype": "Chameleon",
+    "estimation_mode": "policy_simulation",
+    "eq1_mean_occup": {
+      "target": "mean_occup",
+      "predictors": [
+        "intervention_value",
+        "total_vehs",
+        "hour"
+      ],
+      "intercept": -0.007955,
+      "coefficients": {
+        "intervention_value": -0.031168,
+        "total_vehs": 0.000333,
+        "hour": -0.000647
+      },
+      "r2": 0.5686
+    },
+    "eq2_mean_queue_s": {
+      "target": "mean_queue_s",
+      "predictors": [
+        "mean_occup",
+        "mean_speed_div",
+        "hour"
+      ],
+      "intercept": 177.955246,
+      "coefficients": {
+        "mean_occup": 56.119882,
+        "mean_speed_div": -4.110075,
+        "hour": 0.007678
+      },
+      "r2": 0.0351
+    }
+  },
+  "55": {
+    "archetype": "Chameleon",
+    "estimation_mode": "ols",
+    "eq1_mean_occup": {
+      "target": "mean_occup",
+      "predictors": [
+        "intervention_value",
+        "total_vehs",
+        "hour"
+      ],
+      "intercept": 0.245304,
+      "coefficients": {
+        "intervention_value": -0.004554,
+        "total_vehs": 0.000192,
+        "hour": -0.000203
+      },
+      "r2": 0.4798
+    },
+    "eq2_mean_queue_s": {
+      "target": "mean_queue_s",
+      "predictors": [
+        "mean_occup",
+        "mean_speed_div",
+        "hour"
+      ],
+      "intercept": 211.792172,
+      "coefficients": {
+        "mean_occup": 89.671075,
+        "mean_speed_div": 1.990471,
+        "hour": 0.029747
+      },
+      "r2": 0.0456
+    }
+  },
+  "56": {
+    "archetype": "Chameleon",
+    "estimation_mode": "policy_simulation",
+    "eq1_mean_occup": {
+      "target": "mean_occup",
+      "predictors": [
+        "intervention_value",
+        "total_vehs",
+        "hour"
+      ],
+      "intercept": 0.036397,
+      "coefficients": {
+        "intervention_value": -0.033773,
+        "total_vehs": 0.000239,
+        "hour": -0.00024
+      },
+      "r2": 0.7609
+    },
+    "eq2_mean_queue_s": {
+      "target": "mean_queue_s",
+      "predictors": [
+        "mean_occup",
+        "mean_speed_div",
+        "hour"
+      ],
+      "intercept": 216.830597,
+      "coefficients": {
+        "mean_occup": 144.787595,
+        "mean_speed_div": 3.323831,
+        "hour": 0.053503
+      },
+      "r2": 0.129
+    }
+  },
+  "57": {
+    "archetype": "Ghost",
+    "estimation_mode": "policy_simulation",
+    "eq1_mean_occup": {
+      "target": "mean_occup",
+      "predictors": [
+        "intervention_value",
+        "total_vehs",
+        "hour"
+      ],
+      "intercept": 0.014592,
+      "coefficients": {
+        "intervention_value": -0.013313,
+        "total_vehs": 0.000212,
+        "hour": -0.000152
+      },
+      "r2": 0.6782
+    },
+    "eq2_mean_queue_s": {
+      "target": "mean_queue_s",
+      "predictors": [
+        "mean_occup",
+        "mean_speed_div",
+        "hour"
+      ],
+      "intercept": 176.737393,
+      "coefficients": {
+        "mean_occup": 20.459298,
+        "mean_speed_div": -1.253338,
+        "hour": -0.119937
+      },
+      "r2": 0.0038
+    }
+  },
+  "58": {
+    "archetype": "Commuter",
+    "estimation_mode": "ols",
+    "eq1_mean_occup": {
+      "target": "mean_occup",
+      "predictors": [
+        "intervention_value",
+        "total_vehs",
+        "hour"
+      ],
+      "intercept": 0.002924,
+      "coefficients": {
+        "intervention_value": -0.007177,
+        "total_vehs": 0.000284,
+        "hour": 9e-06
+      },
+      "r2": 0.898
+    },
+    "eq2_mean_queue_s": {
+      "target": "mean_queue_s",
+      "predictors": [
+        "mean_occup",
+        "mean_speed_div",
+        "hour"
+      ],
+      "intercept": 153.813249,
+      "coefficients": {
+        "mean_occup": 539.537987,
+        "mean_speed_div": 6.721114,
+        "hour": 0.14096
+      },
+      "r2": 0.0527
+    }
+  },
+  "59": {
+    "archetype": "Chameleon",
+    "estimation_mode": "policy_simulation",
+    "eq1_mean_occup": {
+      "target": "mean_occup",
+      "predictors": [
+        "intervention_value",
+        "total_vehs",
+        "hour"
+      ],
+      "intercept": 0.050024,
+      "coefficients": {
+        "intervention_value": -0.037434,
+        "total_vehs": 0.000231,
+        "hour": -0.000338
+      },
+      "r2": 0.7171
+    },
+    "eq2_mean_queue_s": {
+      "target": "mean_queue_s",
+      "predictors": [
+        "mean_occup",
+        "mean_speed_div",
+        "hour"
+      ],
+      "intercept": 222.876913,
+      "coefficients": {
+        "mean_occup": 95.528923,
+        "mean_speed_div": -1.653127,
+        "hour": 0.0215
+      },
+      "r2": 0.0612
+    }
+  },
+  "60": {
+    "archetype": "Saturator",
+    "estimation_mode": "policy_simulation",
+    "eq1_mean_occup": {
+      "target": "mean_occup",
+      "predictors": [
+        "intervention_value",
+        "total_vehs",
+        "hour"
+      ],
+      "intercept": 0.266107,
+      "coefficients": {
+        "intervention_value": -0.056265,
+        "total_vehs": 0.000203,
+        "hour": -0.000125
+      },
+      "r2": 0.6346
+    },
+    "eq2_mean_queue_s": {
+      "target": "mean_queue_s",
+      "predictors": [
+        "mean_occup",
+        "mean_speed_div",
+        "hour"
+      ],
+      "intercept": 222.184569,
+      "coefficients": {
+        "mean_occup": 104.550361,
+        "mean_speed_div": -15.545368,
+        "hour": 0.010299
+      },
+      "r2": 0.1345
+    }
+  },
+  "61": {
+    "archetype": "Commuter",
+    "estimation_mode": "ols",
+    "eq1_mean_occup": {
+      "target": "mean_occup",
+      "predictors": [
+        "intervention_value",
+        "total_vehs",
+        "hour"
+      ],
+      "intercept": 0.081603,
+      "coefficients": {
+        "intervention_value": 0.008862,
+        "total_vehs": 0.000193,
+        "hour": -0.000195
+      },
+      "r2": 0.6325
+    },
+    "eq2_mean_queue_s": {
+      "target": "mean_queue_s",
+      "predictors": [
+        "mean_occup",
+        "mean_speed_div",
+        "hour"
+      ],
+      "intercept": 193.640699,
+      "coefficients": {
+        "mean_occup": 149.078839,
+        "mean_speed_div": -17.079393,
+        "hour": 0.08584
+      },
+      "r2": 0.1245
+    }
+  },
+  "62": {
+    "archetype": "Commuter",
+    "estimation_mode": "ols",
+    "eq1_mean_occup": {
+      "target": "mean_occup",
+      "predictors": [
+        "intervention_value",
+        "total_vehs",
+        "hour"
+      ],
+      "intercept": 0.199025,
+      "coefficients": {
+        "intervention_value": -0.025674,
+        "total_vehs": 0.000247,
+        "hour": -0.000231
+      },
+      "r2": 0.5149
+    },
+    "eq2_mean_queue_s": {
+      "target": "mean_queue_s",
+      "predictors": [
+        "mean_occup",
+        "mean_speed_div",
+        "hour"
+      ],
+      "intercept": 54.17672,
+      "coefficients": {
+        "mean_occup": 47.216386,
+        "mean_speed_div": 3.076908,
+        "hour": -0.041662
+      },
+      "r2": 0.0592
+    }
+  },
+  "63": {
+    "archetype": "Commuter",
+    "estimation_mode": "ols",
+    "eq1_mean_occup": {
+      "target": "mean_occup",
+      "predictors": [
+        "intervention_value",
+        "total_vehs",
+        "hour"
+      ],
+      "intercept": -0.002766,
+      "coefficients": {
+        "intervention_value": 0.005422,
+        "total_vehs": 0.000275,
+        "hour": -0.000138
+      },
+      "r2": 0.8683
+    },
+    "eq2_mean_queue_s": {
+      "target": "mean_queue_s",
+      "predictors": [
+        "mean_occup",
+        "mean_speed_div",
+        "hour"
+      ],
+      "intercept": 83.413288,
+      "coefficients": {
+        "mean_occup": 157.126212,
+        "mean_speed_div": 3.193004,
+        "hour": -0.105408
+      },
+      "r2": 0.0757
+    }
+  },
+  "64": {
+    "archetype": "Commuter",
+    "estimation_mode": "ols",
+    "eq1_mean_occup": {
+      "target": "mean_occup",
+      "predictors": [
+        "intervention_value",
+        "total_vehs",
+        "hour"
+      ],
+      "intercept": 0.005851,
+      "coefficients": {
+        "intervention_value": -0.000819,
+        "total_vehs": 0.00024,
+        "hour": -0.000186
+      },
+      "r2": 0.7589
+    },
+    "eq2_mean_queue_s": {
+      "target": "mean_queue_s",
+      "predictors": [
+        "mean_occup",
+        "mean_speed_div",
+        "hour"
+      ],
+      "intercept": 140.026843,
+      "coefficients": {
+        "mean_occup": 94.304716,
+        "mean_speed_div": -8.673311,
+        "hour": 0.090122
+      },
+      "r2": 0.0566
+    }
+  },
+  "65": {
+    "archetype": "Commuter",
+    "estimation_mode": "ols",
+    "eq1_mean_occup": {
+      "target": "mean_occup",
+      "predictors": [
+        "intervention_value",
+        "total_vehs",
+        "hour"
+      ],
+      "intercept": 0.004306,
+      "coefficients": {
+        "intervention_value": 0.002362,
+        "total_vehs": 0.000239,
+        "hour": -0.000153
+      },
+      "r2": 0.5844
+    },
+    "eq2_mean_queue_s": {
+      "target": "mean_queue_s",
+      "predictors": [
+        "mean_occup",
+        "mean_speed_div",
+        "hour"
+      ],
+      "intercept": 137.329266,
+      "coefficients": {
+        "mean_occup": 149.103277,
+        "mean_speed_div": -1.591292,
+        "hour": -0.007421
+      },
+      "r2": 0.0266
+    }
+  },
+  "66": {
+    "archetype": "Commuter",
+    "estimation_mode": "ols",
+    "eq1_mean_occup": {
+      "target": "mean_occup",
+      "predictors": [
+        "intervention_value",
+        "total_vehs",
+        "hour"
+      ],
+      "intercept": -0.002937,
+      "coefficients": {
+        "intervention_value": -0.002888,
+        "total_vehs": 0.000272,
+        "hour": -0.000159
+      },
+      "r2": 0.9015
+    },
+    "eq2_mean_queue_s": {
+      "target": "mean_queue_s",
+      "predictors": [
+        "mean_occup",
+        "mean_speed_div",
+        "hour"
+      ],
+      "intercept": 101.873434,
+      "coefficients": {
+        "mean_occup": 63.864089,
+        "mean_speed_div": -8.244809,
+        "hour": 0.034318
+      },
+      "r2": 0.0484
+    }
+  }
+}

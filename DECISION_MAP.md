@@ -136,7 +136,7 @@ its artifact, with the Bible's §12.3 "before moving on" gate.
 | B6 | Traffic Intelligence Engine | health score, alerts, recs | every rec has reasoning text |
 | B7 | ECHO A — Personality Atlas | `road_archetypes.json` | 5–7 archetypes, silhouette > 0.5 |
 | B8 | ECHO B — Ecosystem State Machine | `causal_graph.json`, `cascade_events.csv` | Link 36→16 edge, July-1 cascade |
-| B9 | ECHO C — Counterfactual | `counterfactual_results.json` | July-1 run, narrative output |
+| B9 | ECHO C — Counterfactual | `counterfactual_results.json` | July-1 run, narrative output | ✅ **DONE** — `echo/counterfactual.py`, `scripts/09_counterfactual.py` |
 | B10 | LLM layer | `llm/` | grounded responses, no hallucination |
 | B11 | FastAPI serving layer | running API | endpoints for all artifacts |
 
@@ -190,3 +190,38 @@ below).
 - **Silhouette ~0.27 is intrinsic** (max ~0.29 at k=4): the 66 links form a
   behavioral continuum, not crisp clusters. Stability (57/66 ≥ 0.7) is the
   primary validation; the Bible's 0.5 silhouette target is aspirational.
+
+---
+
+## B9 — ECHO Stage C: Counterfactual Intervention Engine (done)
+
+`echo/counterfactual.py` (Bible §7 Stage C). Custom lightweight SCM
+(numpy/pandas OLS) — no DoWhy (DECISION_MAP #7 resolved).
+
+**Architecture:**
+- `StructuralEquation`: OLS with pseudoinverse lstsq; one equation per stage.
+- `SCM`: Two-stage structural causal model per link.
+  - Stage 1: `mean_occup = f(intervention, total_vehs, hour)` 
+  - Stage 2: `mean_queue_s = f(mean_occup, mean_speed_div, hour)`
+- `do()` operator: sets intervention value, propagates through both stages.
+- `ate()`: Average Treatment Effect = E[Y|do(T=1)] − E[Y|do(T=0)].
+
+**Frontdoor criterion (not backdoor):** Both intermediate variables
+(`mean_occup`, `mean_speed_div`) are fully observed → valid causal
+identification even with unobserved confounders (driver routing, incidents,
+weather). Matches the Bible §7 Stage C justification exactly.
+
+**Intervention library (archetype-specific):**
+| Archetype | Intervention Column | Description |
+|---|---|---|
+| Landmine / Chronic / Ghost / Chameleon | `lane6_active` | Activate ghost lane |
+| Saturator | `lane6_active` | Lane 6 + perimeter inflow modelling |
+| Commuter | `is_am_peak` | Extend AM peak green phase |
+| Unknown | `lane6_active` | Default broadest lever |
+
+**July 1 centrepiece:** Link 36, 09:30 AM intervention, 09:45 AM peak.
+Output: `data/counterfactual_results.json`, `reports/echo/scm_graph.png`,
+`reports/echo/july1_counterfactual.txt`, `reports/echo/scm_coefficients.json`.
+
+**Gate:** July-1 CF runs, narrative produced, ≥4 archetypes covered.
+

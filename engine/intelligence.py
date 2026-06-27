@@ -385,6 +385,7 @@ def analyze_snapshot(
         records.append(
             {
                 "link_id": link,
+                "archetype": archetypes.get(link),   # None if B7 not run yet
                 "health_score": round(health, 2),
                 "state": state,
                 "risk_score": risk,

@@ -145,3 +145,53 @@ BACKPRESSURE_OCCUP_THRESHOLD: float = 0.7
 CASCADE_MIN_DOWNSTREAM_STRESSED: int = 2
 CASCADE_MAX_HORIZON_MINUTES: int = 60
 CASCADE_STRESSED_OR_WORSE: tuple[str, ...] = ("Stressed", "Saturated", "Collapsed")
+
+# --------------------------------------------------------------------------- #
+# ECHO Stage C — Counterfactual Intervention Engine (Bible §7 Stage C)
+# --------------------------------------------------------------------------- #
+COUNTERFACTUAL_RESULTS_JSON: Path = DATA_DIR / "counterfactual_results.json"
+
+# Minimum std of the intervention column in link data to trust OLS estimation.
+# When std < threshold (i.e., the intervention was never actually used on this
+# link in the 14-day dataset), fall back to a synthetic policy simulation using
+# the domain-informed effect priors below.
+SCM_MIN_INTERVENTION_STD: float = 0.05
+SCM_MIN_TREATED_ROWS: int = 20
+
+# Domain-informed prior effect sizes for lane6_active (Bible §7 Stage C).
+# Source: B6 intelligence engine rule R3 (Saturator) and R4 (Chronic) document
+# that Lane 6 activation is expected to relieve ~10-15% of occupancy at
+# saturated links. We use the conservative end: 10% of the link's mean occupancy
+# as the expected delta.  This is labelled "policy_simulation" in output.
+SCM_LANE6_OCCUP_EFFECT_FRAC: float = 0.10   # expected fractional occup reduction
+SCM_IS_AM_PEAK_OCCUP_EFFECT_FRAC: float = 0.08  # expected occupancy reduction from extended green
+
+# --------------------------------------------------------------------------- #
+# B10 — LLM Intelligence Layer (Bible §8)
+# --------------------------------------------------------------------------- #
+LLM_REPORTS_DIR: Path = REPORTS_DIR / "llm"
+
+# Backend: "template" | "flan_t5" | "gemini"
+# "template" = deterministic structured templates (zero deps, used by tests/gate)
+# "flan_t5"  = google/flan-t5-small via HuggingFace transformers (no API key, CPU)
+# "gemini"   = cloud API (requires GEMINI_API_KEY env var)
+LLM_DEFAULT_BACKEND: str = "flan_t5"
+
+# Flan-T5 model name (HuggingFace hub id).
+# "google/flan-t5-small" (~300 MB): 2-5s per response on CPU
+# "google/flan-t5-base"  (~900 MB): 8-15s per response on CPU -- better quality
+LLM_FLAN_T5_MODEL: str = "google/flan-t5-small"
+
+# Maximum new tokens to generate per LLM call.
+LLM_MAX_NEW_TOKENS: int = 180
+
+# Gemini model name (only used if backend="gemini")
+LLM_GEMINI_MODEL: str = "gemini-1.5-flash"
+
+# Citizen-facing: terms that must NEVER appear in output.
+LLM_CITIZEN_FORBIDDEN: tuple[str, ...] = (
+    "SHAP", "occupancy rate", "occupancy", "harmonic mean",
+    "sensor saturation", "archetype", "SCM", "counterfactual",
+    "structural causal", "do-calculus", "percentile", "AUC",
+)
+

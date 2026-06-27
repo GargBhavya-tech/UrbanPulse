@@ -340,10 +340,11 @@
   "links": [
     {
       "link_id": 1,
+      "archetype": "Ghost",
       "health_score": 42.23,
       "state": "Stressed",
       "risk_score": 99.9,
-      "congestion_prob": 0.3698,
+      "congestion_prob": 0.2843,
       "critical": false,
       "mean_queue_s": 228.6,
       "alerts": [
@@ -356,10 +357,11 @@
     },
     {
       "link_id": 2,
+      "archetype": "Chameleon",
       "health_score": 39.9,
       "state": "Saturated",
       "risk_score": 100.0,
-      "congestion_prob": 0.8913,
+      "congestion_prob": 0.8105,
       "critical": true,
       "mean_queue_s": 290.6,
       "alerts": [
@@ -369,17 +371,18 @@
         },
         {
           "severity": "CRITICAL",
-          "message": "Critical flag: P(congested in 15 min)=0.89, queue=291s."
+          "message": "Critical flag: P(congested in 15 min)=0.81, queue=291s."
         }
       ],
       "recommendations": []
     },
     {
       "link_id": 3,
+      "archetype": "Ghost",
       "health_score": 44.17,
       "state": "Stressed",
       "risk_score": 99.03,
-      "congestion_prob": 0.0941,
+      "congestion_prob": 0.0931,
       "critical": false,
       "mean_queue_s": 235.8,
       "alerts": [
@@ -392,10 +395,11 @@
     },
     {
       "link_id": 4,
+      "archetype": "Chameleon",
       "health_score": 40.94,
       "state": "Stressed",
       "risk_score": 99.95,
-      "congestion_prob": 0.9284,
+      "congestion_prob": 0.8859,
       "critical": true,
       "mean_queue_s": 283.4,
       "alerts": [
@@ -405,17 +409,18 @@
         },
         {
           "severity": "CRITICAL",
-          "message": "Critical flag: P(congested in 15 min)=0.93, queue=283s."
+          "message": "Critical flag: P(congested in 15 min)=0.89, queue=283s."
         }
       ],
       "recommendations": []
     },
     {
       "link_id": 5,
+      "archetype": "Saturator",
       "health_score": 38.48,
       "state": "Saturated",
       "risk_score": 99.88,
-      "congestion_prob": 0.9995,
+      "congestion_prob": 0.9996,
       "critical": true,
       "mean_queue_s": 450.3,
       "alerts": [
@@ -432,10 +437,11 @@
     },
     {
       "link_id": 6,
+      "archetype": "Ghost",
       "health_score": 43.39,
       "state": "Stressed",
       "risk_score": 100.0,
-      "congestion_prob": 0.9894,
+      "congestion_prob": 0.9795,
       "critical": true,
       "mean_queue_s": 333.9,
       "alerts": [
@@ -445,17 +451,18 @@
         },
         {
           "severity": "CRITICAL",
-          "message": "Critical flag: P(congested in 15 min)=0.99, queue=334s."
+          "message": "Critical flag: P(congested in 15 min)=0.98, queue=334s."
         }
       ],
       "recommendations": []
     },
     {
       "link_id": 7,
+      "archetype": "Chameleon",
       "health_score": 54.82,
       "state": "Stressed",
       "risk_score": 88.96,
-      "congestion_prob": 0.1249,
+      "congestion_prob": 0.1334,
       "critical": false,
       "mean_queue_s": 262.9,
       "alerts": [
@@ -468,10 +475,11 @@
     },
     {
       "link_id": 8,
+      "archetype": "Chameleon",
       "health_score": 51.19,
       "state": "Stressed",
       "risk_score": 93.9,
-      "congestion_prob": 0.004,
+      "congestion_prob": 0.0027,
       "critical": false,
       "mean_queue_s": 144.2,
       "alerts": [
@@ -484,10 +492,11 @@
     },
     {
       "link_id": 9,
+      "archetype": "Chameleon",
       "health_score": 49.28,
       "state": "Stressed",
       "risk_score": 97.07,
-      "congestion_prob": 0.8814,
+      "congestion_prob": 0.8046,
       "critical": true,
       "mean_queue_s": 378.7,
       "alerts": [
@@ -497,17 +506,18 @@
         },
         {
           "severity": "CRITICAL",
-          "message": "Critical flag: P(congested in 15 min)=0.88, queue=379s."
+          "message": "Critical flag: P(congested in 15 min)=0.80, queue=379s."
         }
       ],
       "recommendations": []
     },
     {
       "link_id": 10,
+      "archetype": "Ghost",
       "health_score": 44.58,
       "state": "Stressed",
       "risk_score": 99.55,
-      "congestion_prob": 0.996,
+      "congestion_prob": 0.9951,
       "critical": true,
       "mean_queue_s": 309.8,
       "alerts": [
@@ -524,10 +534,11 @@
     },
     {
       "link_id": 11,
+      "archetype": "Ghost",
       "health_score": 44.19,
       "state": "Stressed",
       "risk_score": 99.75,
-      "congestion_prob": 0.0355,
+      "congestion_prob": 0.0517,
       "critical": false,
       "mean_queue_s": 187.7,
       "alerts": [
@@ -540,10 +551,11 @@
     },
     {
       "link_id": 12,
+      "archetype": "Chameleon",
       "health_score": 56.72,
       "state": "Stressed",
       "risk_score": 94.54,
-      "congestion_prob": 0.0084,
+      "congestion_prob": 0.0141,
       "critical": false,
       "mean_queue_s": 229.4,
       "alerts": [
@@ -556,10 +568,11 @@
     },
     {
       "link_id": 13,
+      "archetype": "Ghost",
       "health_score": 48.72,
       "state": "Stressed",
       "risk_score": 98.36,
-      "congestion_prob": 0.5856,
+      "congestion_prob": 0.6278,
       "critical": false,
       "mean_queue_s": 260.2,
       "alerts": [
@@ -572,10 +585,11 @@
     },
     {
       "link_id": 14,
+      "archetype": "Chameleon",
       "health_score": 50.05,
       "state": "Stressed",
       "risk_score": 98.93,
-      "congestion_prob": 0.0099,
+      "congestion_prob": 0.0145,
       "critical": false,
       "mean_queue_s": 156.9,
       "alerts": [
@@ -588,10 +602,11 @@
     },
     {
       "link_id": 15,
+      "archetype": "Chameleon",
       "health_score": 41.79,
       "state": "Stressed",
       "risk_score": 100.0,
-      "congestion_prob": 0.9945,
+      "congestion_prob": 0.9885,
       "critical": true,
       "mean_queue_s": 350.4,
       "alerts": [
@@ -608,10 +623,11 @@
     },
     {
       "link_id": 16,
+      "archetype": "Chameleon",
       "health_score": 36.01,
       "state": "Saturated",
       "risk_score": 99.98,
-      "congestion_prob": 0.9961,
+      "congestion_prob": 0.9905,
       "critical": true,
       "mean_queue_s": 643.8,
       "alerts": [
@@ -621,17 +637,18 @@
         },
         {
           "severity": "CRITICAL",
-          "message": "Critical flag: P(congested in 15 min)=1.00, queue=644s."
+          "message": "Critical flag: P(congested in 15 min)=0.99, queue=644s."
         }
       ],
       "recommendations": []
     },
     {
       "link_id": 17,
+      "archetype": "Saturator",
       "health_score": 47.61,
       "state": "Stressed",
       "risk_score": 92.98,
-      "congestion_prob": 0.8727,
+      "congestion_prob": 0.8854,
       "critical": true,
       "mean_queue_s": 363.8,
       "alerts": [
@@ -641,17 +658,18 @@
         },
         {
           "severity": "CRITICAL",
-          "message": "Critical flag: P(congested in 15 min)=0.87, queue=364s."
+          "message": "Critical flag: P(congested in 15 min)=0.89, queue=364s."
         }
       ],
       "recommendations": []
     },
     {
       "link_id": 18,
+      "archetype": "Chameleon",
       "health_score": 58.75,
       "state": "Stressed",
       "risk_score": 97.99,
-      "congestion_prob": 0.2402,
+      "congestion_prob": 0.1837,
       "critical": false,
       "mean_queue_s": 337.7,
       "alerts": [
@@ -664,6 +682,7 @@
     },
     {
       "link_id": 19,
+      "archetype": "Commuter",
       "health_score": 72.58,
       "state": "Healthy",
       "risk_score": 90.43,
@@ -671,14 +690,23 @@
       "critical": false,
       "mean_queue_s": 128.4,
       "alerts": [],
-      "recommendations": []
+      "recommendations": [
+        {
+          "trigger": "risk>70% AND is_am_peak",
+          "archetype": "Commuter",
+          "recommendation": "Review and extend green phase",
+          "reasoning": "AM-peak congestion is demand-driven; more green time reduces queue build-up.",
+          "severity": "WARNING"
+        }
+      ]
     },
     {
       "link_id": 20,
+      "archetype": "Commuter",
       "health_score": 68.79,
       "state": "Stressed",
       "risk_score": 98.19,
-      "congestion_prob": 0.0007,
+      "congestion_prob": 0.0003,
       "critical": false,
       "mean_queue_s": 252.9,
       "alerts": [
@@ -687,14 +715,23 @@
           "message": "Road is Stressed (advisory)."
         }
       ],
-      "recommendations": []
+      "recommendations": [
+        {
+          "trigger": "risk>70% AND is_am_peak",
+          "archetype": "Commuter",
+          "recommendation": "Review and extend green phase",
+          "reasoning": "AM-peak congestion is demand-driven; more green time reduces queue build-up.",
+          "severity": "WARNING"
+        }
+      ]
     },
     {
       "link_id": 21,
+      "archetype": "Commuter",
       "health_score": 68.83,
       "state": "Stressed",
       "risk_score": 97.92,
-      "congestion_prob": 0.0006,
+      "congestion_prob": 0.0004,
       "critical": false,
       "mean_queue_s": 246.5,
       "alerts": [
@@ -703,10 +740,19 @@
           "message": "Road is Stressed (advisory)."
         }
       ],
-      "recommendations": []
+      "recommendations": [
+        {
+          "trigger": "risk>70% AND is_am_peak",
+          "archetype": "Commuter",
+          "recommendation": "Review and extend green phase",
+          "reasoning": "AM-peak congestion is demand-driven; more green time reduces queue build-up.",
+          "severity": "WARNING"
+        }
+      ]
     },
     {
       "link_id": 22,
+      "archetype": "Commuter",
       "health_score": 72.54,
       "state": "Healthy",
       "risk_score": 89.14,
@@ -714,14 +760,23 @@
       "critical": false,
       "mean_queue_s": 134.8,
       "alerts": [],
-      "recommendations": []
+      "recommendations": [
+        {
+          "trigger": "risk>70% AND is_am_peak",
+          "archetype": "Commuter",
+          "recommendation": "Review and extend green phase",
+          "reasoning": "AM-peak congestion is demand-driven; more green time reduces queue build-up.",
+          "severity": "WARNING"
+        }
+      ]
     },
     {
       "link_id": 23,
+      "archetype": "Saturator",
       "health_score": 72.06,
       "state": "Healthy",
       "risk_score": 94.39,
-      "congestion_prob": 0.0003,
+      "congestion_prob": 0.0004,
       "critical": false,
       "mean_queue_s": 319.1,
       "alerts": [],
@@ -729,10 +784,11 @@
     },
     {
       "link_id": 24,
+      "archetype": "Saturator",
       "health_score": 63.46,
       "state": "Stressed",
       "risk_score": 99.75,
-      "congestion_prob": 0.0044,
+      "congestion_prob": 0.0017,
       "critical": false,
       "mean_queue_s": 346.3,
       "alerts": [
@@ -745,6 +801,7 @@
     },
     {
       "link_id": 25,
+      "archetype": "Commuter",
       "health_score": 69.06,
       "state": "Stressed",
       "risk_score": 99.13,
@@ -757,14 +814,23 @@
           "message": "Road is Stressed (advisory)."
         }
       ],
-      "recommendations": []
+      "recommendations": [
+        {
+          "trigger": "risk>70% AND is_am_peak",
+          "archetype": "Commuter",
+          "recommendation": "Review and extend green phase",
+          "reasoning": "AM-peak congestion is demand-driven; more green time reduces queue build-up.",
+          "severity": "WARNING"
+        }
+      ]
     },
     {
       "link_id": 26,
+      "archetype": "Commuter",
       "health_score": 63.5,
       "state": "Stressed",
       "risk_score": 99.85,
-      "congestion_prob": 0.0034,
+      "congestion_prob": 0.0026,
       "critical": false,
       "mean_queue_s": 267.0,
       "alerts": [
@@ -773,14 +839,23 @@
           "message": "Road is Stressed (advisory)."
         }
       ],
-      "recommendations": []
+      "recommendations": [
+        {
+          "trigger": "risk>70% AND is_am_peak",
+          "archetype": "Commuter",
+          "recommendation": "Review and extend green phase",
+          "reasoning": "AM-peak congestion is demand-driven; more green time reduces queue build-up.",
+          "severity": "WARNING"
+        }
+      ]
     },
     {
       "link_id": 27,
+      "archetype": "Saturator",
       "health_score": 62.27,
       "state": "Stressed",
       "risk_score": 99.68,
-      "congestion_prob": 0.0046,
+      "congestion_prob": 0.0015,
       "critical": false,
       "mean_queue_s": 343.8,
       "alerts": [
@@ -793,6 +868,7 @@
     },
     {
       "link_id": 28,
+      "archetype": "Commuter",
       "health_score": 71.09,
       "state": "Healthy",
       "risk_score": 97.47,
@@ -800,14 +876,23 @@
       "critical": false,
       "mean_queue_s": 215.8,
       "alerts": [],
-      "recommendations": []
+      "recommendations": [
+        {
+          "trigger": "risk>70% AND is_am_peak",
+          "archetype": "Commuter",
+          "recommendation": "Review and extend green phase",
+          "reasoning": "AM-peak congestion is demand-driven; more green time reduces queue build-up.",
+          "severity": "WARNING"
+        }
+      ]
     },
     {
       "link_id": 29,
+      "archetype": "Saturator",
       "health_score": 62.61,
       "state": "Stressed",
       "risk_score": 99.9,
-      "congestion_prob": 0.0007,
+      "congestion_prob": 0.0003,
       "critical": false,
       "mean_queue_s": 517.1,
       "alerts": [
@@ -820,10 +905,11 @@
     },
     {
       "link_id": 30,
+      "archetype": "Saturator",
       "health_score": 38.0,
       "state": "Saturated",
       "risk_score": 99.78,
-      "congestion_prob": 0.9389,
+      "congestion_prob": 0.9518,
       "critical": true,
       "mean_queue_s": 712.8,
       "alerts": [
@@ -833,17 +919,18 @@
         },
         {
           "severity": "CRITICAL",
-          "message": "Critical flag: P(congested in 15 min)=0.94, queue=713s."
+          "message": "Critical flag: P(congested in 15 min)=0.95, queue=713s."
         }
       ],
       "recommendations": []
     },
     {
       "link_id": 31,
+      "archetype": "Chameleon",
       "health_score": 32.41,
       "state": "Saturated",
       "risk_score": 99.98,
-      "congestion_prob": 0.9987,
+      "congestion_prob": 0.9946,
       "critical": true,
       "mean_queue_s": 588.2,
       "alerts": [
@@ -853,17 +940,18 @@
         },
         {
           "severity": "CRITICAL",
-          "message": "Critical flag: P(congested in 15 min)=1.00, queue=588s."
+          "message": "Critical flag: P(congested in 15 min)=0.99, queue=588s."
         }
       ],
       "recommendations": []
     },
     {
       "link_id": 32,
+      "archetype": "Chameleon",
       "health_score": 59.62,
       "state": "Stressed",
       "risk_score": 96.65,
-      "congestion_prob": 0.4092,
+      "congestion_prob": 0.4295,
       "critical": false,
       "mean_queue_s": 348.1,
       "alerts": [
@@ -876,10 +964,11 @@
     },
     {
       "link_id": 33,
+      "archetype": "Chameleon",
       "health_score": 53.7,
       "state": "Stressed",
       "risk_score": 98.04,
-      "congestion_prob": 0.0311,
+      "congestion_prob": 0.0306,
       "critical": false,
       "mean_queue_s": 251.8,
       "alerts": [
@@ -892,6 +981,7 @@
     },
     {
       "link_id": 34,
+      "archetype": "Ghost",
       "health_score": 53.97,
       "state": "Stressed",
       "risk_score": 100.0,
@@ -908,10 +998,11 @@
     },
     {
       "link_id": 35,
+      "archetype": "Chameleon",
       "health_score": 54.31,
       "state": "Stressed",
       "risk_score": 99.8,
-      "congestion_prob": 0.2334,
+      "congestion_prob": 0.2041,
       "critical": false,
       "mean_queue_s": 421.2,
       "alerts": [
@@ -924,10 +1015,11 @@
     },
     {
       "link_id": 36,
+      "archetype": "Chronic",
       "health_score": 25.71,
       "state": "Saturated",
       "risk_score": 99.95,
-      "congestion_prob": 0.9979,
+      "congestion_prob": 0.9954,
       "critical": true,
       "mean_queue_s": 892.3,
       "alerts": [
@@ -940,14 +1032,23 @@
           "message": "Critical flag: P(congested in 15 min)=1.00, queue=892s."
         }
       ],
-      "recommendations": []
+      "recommendations": [
+        {
+          "trigger": "health<30 for 3+ consecutive intervals",
+          "archetype": "Chronic",
+          "recommendation": "Flag for infrastructure review / capacity assessment",
+          "reasoning": "Sustained poor health is a structural deficit signal timing cannot resolve (Link 37 pattern).",
+          "severity": "ADVISORY"
+        }
+      ]
     },
     {
       "link_id": 37,
+      "archetype": "Chronic",
       "health_score": 57.66,
       "state": "Stressed",
       "risk_score": 72.97,
-      "congestion_prob": 0.105,
+      "congestion_prob": 0.1063,
       "critical": false,
       "mean_queue_s": 438.2,
       "alerts": [
@@ -960,10 +1061,11 @@
     },
     {
       "link_id": 38,
+      "archetype": "Saturator",
       "health_score": 39.85,
       "state": "Saturated",
       "risk_score": 99.98,
-      "congestion_prob": 0.0219,
+      "congestion_prob": 0.0207,
       "critical": true,
       "mean_queue_s": 806.6,
       "alerts": [
@@ -976,14 +1078,23 @@
           "message": "Critical flag: P(congested in 15 min)=0.02, queue=807s."
         }
       ],
-      "recommendations": []
+      "recommendations": [
+        {
+          "trigger": "max_occup>=0.9 AND mean_queue>500s",
+          "archetype": "Saturator",
+          "recommendation": "Increase transit frequency on parallel routes",
+          "reasoning": "Near-saturated occupancy: diverting demand relieves pressure faster than signal timing.",
+          "severity": "WARNING"
+        }
+      ]
     },
     {
       "link_id": 39,
+      "archetype": "Commuter",
       "health_score": 65.54,
       "state": "Stressed",
       "risk_score": 99.93,
-      "congestion_prob": 0.001,
+      "congestion_prob": 0.0011,
       "critical": false,
       "mean_queue_s": 224.9,
       "alerts": [
@@ -992,14 +1103,23 @@
           "message": "Road is Stressed (advisory)."
         }
       ],
-      "recommendations": []
+      "recommendations": [
+        {
+          "trigger": "risk>70% AND is_am_peak",
+          "archetype": "Commuter",
+          "recommendation": "Review and extend green phase",
+          "reasoning": "AM-peak congestion is demand-driven; more green time reduces queue build-up.",
+          "severity": "WARNING"
+        }
+      ]
     },
     {
       "link_id": 40,
+      "archetype": "Commuter",
       "health_score": 58.82,
       "state": "Stressed",
       "risk_score": 99.9,
-      "congestion_prob": 0.0031,
+      "congestion_prob": 0.0028,
       "critical": false,
       "mean_queue_s": 446.6,
       "alerts": [
@@ -1008,14 +1128,23 @@
           "message": "Road is Stressed (advisory)."
         }
       ],
-      "recommendations": []
+      "recommendations": [
+        {
+          "trigger": "risk>70% AND is_am_peak",
+          "archetype": "Commuter",
+          "recommendation": "Review and extend green phase",
+          "reasoning": "AM-peak congestion is demand-driven; more green time reduces queue build-up.",
+          "severity": "WARNING"
+        }
+      ]
     },
     {
       "link_id": 41,
+      "archetype": "Chameleon",
       "health_score": 52.26,
       "state": "Stressed",
       "risk_score": 100.0,
-      "congestion_prob": 0.0615,
+      "congestion_prob": 0.039,
       "critical": false,
       "mean_queue_s": 533.4,
       "alerts": [
@@ -1028,10 +1157,11 @@
     },
     {
       "link_id": 42,
+      "archetype": "Chameleon",
       "health_score": 52.18,
       "state": "Stressed",
       "risk_score": 98.93,
-      "congestion_prob": 0.0852,
+      "congestion_prob": 0.116,
       "critical": false,
       "mean_queue_s": 425.2,
       "alerts": [
@@ -1044,10 +1174,11 @@
     },
     {
       "link_id": 43,
+      "archetype": "Saturator",
       "health_score": 50.48,
       "state": "Stressed",
       "risk_score": 99.95,
-      "congestion_prob": 0.0078,
+      "congestion_prob": 0.0197,
       "critical": false,
       "mean_queue_s": 511.6,
       "alerts": [
@@ -1060,10 +1191,11 @@
     },
     {
       "link_id": 44,
+      "archetype": "Saturator",
       "health_score": 35.36,
       "state": "Saturated",
       "risk_score": 99.83,
-      "congestion_prob": 0.9975,
+      "congestion_prob": 0.9954,
       "critical": true,
       "mean_queue_s": 521.4,
       "alerts": [
@@ -1076,14 +1208,23 @@
           "message": "Critical flag: P(congested in 15 min)=1.00, queue=521s."
         }
       ],
-      "recommendations": []
+      "recommendations": [
+        {
+          "trigger": "max_occup>=0.9 AND mean_queue>500s",
+          "archetype": "Saturator",
+          "recommendation": "Increase transit frequency on parallel routes",
+          "reasoning": "Near-saturated occupancy: diverting demand relieves pressure faster than signal timing.",
+          "severity": "WARNING"
+        }
+      ]
     },
     {
       "link_id": 45,
+      "archetype": "Saturator",
       "health_score": 47.72,
       "state": "Stressed",
       "risk_score": 99.95,
-      "congestion_prob": 0.651,
+      "congestion_prob": 0.6714,
       "critical": false,
       "mean_queue_s": 374.6,
       "alerts": [
@@ -1096,10 +1237,11 @@
     },
     {
       "link_id": 46,
+      "archetype": "Chameleon",
       "health_score": 45.66,
       "state": "Stressed",
       "risk_score": 99.38,
-      "congestion_prob": 0.9888,
+      "congestion_prob": 0.9905,
       "critical": true,
       "mean_queue_s": 349.9,
       "alerts": [
@@ -1116,10 +1258,11 @@
     },
     {
       "link_id": 47,
+      "archetype": "Saturator",
       "health_score": 56.97,
       "state": "Stressed",
       "risk_score": 99.75,
-      "congestion_prob": 0.2071,
+      "congestion_prob": 0.1129,
       "critical": false,
       "mean_queue_s": 349.0,
       "alerts": [
@@ -1132,10 +1275,11 @@
     },
     {
       "link_id": 48,
+      "archetype": "Chameleon",
       "health_score": 50.22,
       "state": "Stressed",
       "risk_score": 89.16,
-      "congestion_prob": 0.489,
+      "congestion_prob": 0.4733,
       "critical": false,
       "mean_queue_s": 247.9,
       "alerts": [
@@ -1148,10 +1292,11 @@
     },
     {
       "link_id": 49,
+      "archetype": "Saturator",
       "health_score": 52.66,
       "state": "Stressed",
       "risk_score": 99.9,
-      "congestion_prob": 0.0014,
+      "congestion_prob": 0.0018,
       "critical": false,
       "mean_queue_s": 514.2,
       "alerts": [
@@ -1160,14 +1305,23 @@
           "message": "Road is Stressed (advisory)."
         }
       ],
-      "recommendations": []
+      "recommendations": [
+        {
+          "trigger": "max_occup>=0.9 AND mean_queue>500s",
+          "archetype": "Saturator",
+          "recommendation": "Increase transit frequency on parallel routes",
+          "reasoning": "Near-saturated occupancy: diverting demand relieves pressure faster than signal timing.",
+          "severity": "WARNING"
+        }
+      ]
     },
     {
       "link_id": 50,
+      "archetype": "Saturator",
       "health_score": 54.28,
       "state": "Stressed",
       "risk_score": 99.98,
-      "congestion_prob": 0.0043,
+      "congestion_prob": 0.0032,
       "critical": false,
       "mean_queue_s": 528.5,
       "alerts": [
@@ -1180,10 +1334,11 @@
     },
     {
       "link_id": 51,
+      "archetype": "Commuter",
       "health_score": 61.85,
       "state": "Stressed",
       "risk_score": 99.58,
-      "congestion_prob": 0.0019,
+      "congestion_prob": 0.0017,
       "critical": false,
       "mean_queue_s": 222.2,
       "alerts": [
@@ -1192,14 +1347,23 @@
           "message": "Road is Stressed (advisory)."
         }
       ],
-      "recommendations": []
+      "recommendations": [
+        {
+          "trigger": "risk>70% AND is_am_peak",
+          "archetype": "Commuter",
+          "recommendation": "Review and extend green phase",
+          "reasoning": "AM-peak congestion is demand-driven; more green time reduces queue build-up.",
+          "severity": "WARNING"
+        }
+      ]
     },
     {
       "link_id": 52,
+      "archetype": "Commuter",
       "health_score": 60.28,
       "state": "Stressed",
       "risk_score": 99.95,
-      "congestion_prob": 0.0067,
+      "congestion_prob": 0.0049,
       "critical": false,
       "mean_queue_s": 325.7,
       "alerts": [
@@ -1208,14 +1372,23 @@
           "message": "Road is Stressed (advisory)."
         }
       ],
-      "recommendations": []
+      "recommendations": [
+        {
+          "trigger": "risk>70% AND is_am_peak",
+          "archetype": "Commuter",
+          "recommendation": "Review and extend green phase",
+          "reasoning": "AM-peak congestion is demand-driven; more green time reduces queue build-up.",
+          "severity": "WARNING"
+        }
+      ]
     },
     {
       "link_id": 53,
+      "archetype": "Saturator",
       "health_score": 55.61,
       "state": "Stressed",
       "risk_score": 99.93,
-      "congestion_prob": 0.0027,
+      "congestion_prob": 0.0029,
       "critical": false,
       "mean_queue_s": 490.2,
       "alerts": [
@@ -1228,10 +1401,11 @@
     },
     {
       "link_id": 54,
+      "archetype": "Chameleon",
       "health_score": 61.31,
       "state": "Stressed",
       "risk_score": 99.75,
-      "congestion_prob": 0.0088,
+      "congestion_prob": 0.0124,
       "critical": false,
       "mean_queue_s": 233.8,
       "alerts": [
@@ -1244,10 +1418,11 @@
     },
     {
       "link_id": 55,
+      "archetype": "Chameleon",
       "health_score": 52.94,
       "state": "Stressed",
       "risk_score": 99.53,
-      "congestion_prob": 0.9412,
+      "congestion_prob": 0.9191,
       "critical": true,
       "mean_queue_s": 321.3,
       "alerts": [
@@ -1257,17 +1432,18 @@
         },
         {
           "severity": "CRITICAL",
-          "message": "Critical flag: P(congested in 15 min)=0.94, queue=321s."
+          "message": "Critical flag: P(congested in 15 min)=0.92, queue=321s."
         }
       ],
       "recommendations": []
     },
     {
       "link_id": 56,
+      "archetype": "Chameleon",
       "health_score": 60.47,
       "state": "Stressed",
       "risk_score": 99.7,
-      "congestion_prob": 0.2389,
+      "congestion_prob": 0.298,
       "critical": false,
       "mean_queue_s": 322.4,
       "alerts": [
@@ -1280,10 +1456,11 @@
     },
     {
       "link_id": 57,
+      "archetype": "Ghost",
       "health_score": 66.78,
       "state": "Stressed",
       "risk_score": 99.6,
-      "congestion_prob": 0.0004,
+      "congestion_prob": 0.0009,
       "critical": false,
       "mean_queue_s": 201.0,
       "alerts": [
@@ -1296,21 +1473,31 @@
     },
     {
       "link_id": 58,
+      "archetype": "Commuter",
       "health_score": 70.69,
       "state": "Healthy",
       "risk_score": 96.21,
-      "congestion_prob": 0.0,
+      "congestion_prob": 0.0001,
       "critical": false,
       "mean_queue_s": 177.8,
       "alerts": [],
-      "recommendations": []
+      "recommendations": [
+        {
+          "trigger": "risk>70% AND is_am_peak",
+          "archetype": "Commuter",
+          "recommendation": "Review and extend green phase",
+          "reasoning": "AM-peak congestion is demand-driven; more green time reduces queue build-up.",
+          "severity": "WARNING"
+        }
+      ]
     },
     {
       "link_id": 59,
+      "archetype": "Chameleon",
       "health_score": 62.06,
       "state": "Stressed",
       "risk_score": 99.26,
-      "congestion_prob": 0.4594,
+      "congestion_prob": 0.6051,
       "critical": false,
       "mean_queue_s": 315.8,
       "alerts": [
@@ -1323,10 +1510,11 @@
     },
     {
       "link_id": 60,
+      "archetype": "Saturator",
       "health_score": 46.09,
       "state": "Stressed",
       "risk_score": 99.93,
-      "congestion_prob": 0.9805,
+      "congestion_prob": 0.9678,
       "critical": true,
       "mean_queue_s": 419.5,
       "alerts": [
@@ -1336,17 +1524,18 @@
         },
         {
           "severity": "CRITICAL",
-          "message": "Critical flag: P(congested in 15 min)=0.98, queue=419s."
+          "message": "Critical flag: P(congested in 15 min)=0.97, queue=419s."
         }
       ],
       "recommendations": []
     },
     {
       "link_id": 61,
+      "archetype": "Commuter",
       "health_score": 56.46,
       "state": "Stressed",
       "risk_score": 99.83,
-      "congestion_prob": 0.0173,
+      "congestion_prob": 0.0155,
       "critical": false,
       "mean_queue_s": 312.3,
       "alerts": [
@@ -1355,14 +1544,23 @@
           "message": "Road is Stressed (advisory)."
         }
       ],
-      "recommendations": []
+      "recommendations": [
+        {
+          "trigger": "risk>70% AND is_am_peak",
+          "archetype": "Commuter",
+          "recommendation": "Review and extend green phase",
+          "reasoning": "AM-peak congestion is demand-driven; more green time reduces queue build-up.",
+          "severity": "WARNING"
+        }
+      ]
     },
     {
       "link_id": 62,
+      "archetype": "Commuter",
       "health_score": 61.28,
       "state": "Stressed",
       "risk_score": 96.9,
-      "congestion_prob": 0.0024,
+      "congestion_prob": 0.0018,
       "critical": false,
       "mean_queue_s": 101.9,
       "alerts": [
@@ -1371,14 +1569,23 @@
           "message": "Road is Stressed (advisory)."
         }
       ],
-      "recommendations": []
+      "recommendations": [
+        {
+          "trigger": "risk>70% AND is_am_peak",
+          "archetype": "Commuter",
+          "recommendation": "Review and extend green phase",
+          "reasoning": "AM-peak congestion is demand-driven; more green time reduces queue build-up.",
+          "severity": "WARNING"
+        }
+      ]
     },
     {
       "link_id": 63,
+      "archetype": "Commuter",
       "health_score": 64.42,
       "state": "Stressed",
       "risk_score": 99.88,
-      "congestion_prob": 0.0023,
+      "congestion_prob": 0.0014,
       "critical": false,
       "mean_queue_s": 250.9,
       "alerts": [
@@ -1387,14 +1594,23 @@
           "message": "Road is Stressed (advisory)."
         }
       ],
-      "recommendations": []
+      "recommendations": [
+        {
+          "trigger": "risk>70% AND is_am_peak",
+          "archetype": "Commuter",
+          "recommendation": "Review and extend green phase",
+          "reasoning": "AM-peak congestion is demand-driven; more green time reduces queue build-up.",
+          "severity": "WARNING"
+        }
+      ]
     },
     {
       "link_id": 64,
+      "archetype": "Commuter",
       "health_score": 66.46,
       "state": "Stressed",
       "risk_score": 99.75,
-      "congestion_prob": 0.0003,
+      "congestion_prob": 0.0004,
       "critical": false,
       "mean_queue_s": 159.9,
       "alerts": [
@@ -1403,14 +1619,23 @@
           "message": "Road is Stressed (advisory)."
         }
       ],
-      "recommendations": []
+      "recommendations": [
+        {
+          "trigger": "risk>70% AND is_am_peak",
+          "archetype": "Commuter",
+          "recommendation": "Review and extend green phase",
+          "reasoning": "AM-peak congestion is demand-driven; more green time reduces queue build-up.",
+          "severity": "WARNING"
+        }
+      ]
     },
     {
       "link_id": 65,
+      "archetype": "Commuter",
       "health_score": 64.05,
       "state": "Stressed",
       "risk_score": 99.95,
-      "congestion_prob": 0.0018,
+      "congestion_prob": 0.0011,
       "critical": false,
       "mean_queue_s": 296.5,
       "alerts": [
@@ -1419,14 +1644,23 @@
           "message": "Road is Stressed (advisory)."
         }
       ],
-      "recommendations": []
+      "recommendations": [
+        {
+          "trigger": "risk>70% AND is_am_peak",
+          "archetype": "Commuter",
+          "recommendation": "Review and extend green phase",
+          "reasoning": "AM-peak congestion is demand-driven; more green time reduces queue build-up.",
+          "severity": "WARNING"
+        }
+      ]
     },
     {
       "link_id": 66,
+      "archetype": "Commuter",
       "health_score": 66.84,
       "state": "Stressed",
       "risk_score": 99.6,
-      "congestion_prob": 0.0003,
+      "congestion_prob": 0.0004,
       "critical": false,
       "mean_queue_s": 114.3,
       "alerts": [
@@ -1435,7 +1669,15 @@
           "message": "Road is Stressed (advisory)."
         }
       ],
-      "recommendations": []
+      "recommendations": [
+        {
+          "trigger": "risk>70% AND is_am_peak",
+          "archetype": "Commuter",
+          "recommendation": "Review and extend green phase",
+          "reasoning": "AM-peak congestion is demand-driven; more green time reduces queue build-up.",
+          "severity": "WARNING"
+        }
+      ]
     }
   ]
 }

@@ -124,6 +124,25 @@ def run_b8() -> None:
     _gate("B8 — 36->16 edge + July-1 cascade", passed)
 
 
+def run_b9() -> None:
+    _banner("B9 — ECHO Stage C: Counterfactual Intervention Engine")
+    from echo import counterfactual
+    out = counterfactual.run()
+    print(f"  SCMs fitted          : {out['n_scms_fitted']}/{config.EXPECTED_LINKS}")
+    print(f"  Links processed      : {out['n_links_processed']}")
+    print(f"  July 1 CF success    : {out['july1_ok']}")
+    print(f"  Narrative produced   : {out['narrative_ok']}")
+    if out["july1_ok"] and "narrative" in out["july1_result"]:
+        jr = out["july1_result"]
+        print(f"  Observed queue       : {jr.get('observed_queue_s', '?')}s")
+        print(f"  Counterfactual queue : {jr.get('counterfactual_queue_s', '?')}s")
+        print(f"  Queue reduction      : {jr.get('queue_reduction_pct', '?')}%")
+        print(f"  Cascade prevented    : {jr.get('cascade_prevented', '?')}")
+        print(f"  Vehicle-hours saved  : {jr.get('vehicle_hours_saved', '?')}")
+    passed = out["july1_ok"] and out["narrative_ok"] and out["all_archetypes_covered"]
+    _gate("B9 — July-1 CF + narrative + archetypes", passed)
+
+
 def run_b6() -> None:
     _banner("B6 — Traffic Intelligence Engine")
     import joblib
@@ -134,33 +153,59 @@ def run_b6() -> None:
     model = joblib.load(config.BEST_MODEL_PKL)
     features = io_utils.load_parquet(config.FEATURES_PARQUET)
     archetypes = intelligence.load_archetypes()
+    config.ENGINE_REPORTS_DIR.mkdir(parents=True, exist_ok=True)
 
-    day_number, minute_of_day = 4, 490
-    ecosystem_state: dict[int, bool] = {}
+    # -- July 1 centrepiece snapshot (09:45 AM = day 1, minute 585) --
+    # This is the primary demo snapshot: the exact event the B9 counterfactual
+    # analyses.  Always generated regardless of cascade data.
+    july1_eco: dict[int, bool] = {}
+    if config.CASCADE_EVENTS_CSV.exists():
+        events = pd.read_csv(config.CASCADE_EVENTS_CSV)
+        july1_eco = ecosystem.cascade_propagating_map(events, day_number=1, minute_of_day=585)
+
+    july1_snap = intelligence.analyze_snapshot(
+        features, model, day_number=1, minute_of_day=585,
+        archetypes=archetypes, ecosystem_state=july1_eco,
+    )
+    july1_path = config.ENGINE_REPORTS_DIR / "snapshot_d1_m585.json"
+    july1_path.write_text(_json.dumps(july1_snap, indent=2))
+    print(f"  July 1 snapshot (d1,m585): critical={july1_snap['n_critical']}  "
+          f"recs={sum(len(l['recommendations']) for l in july1_snap['links'])}  -> {july1_path}")
+
+    # -- Best cascade-event snapshot (highest downstream impact) --
+    cascade_day, cascade_min = 4, 490   # fallback
+    cascade_eco: dict[int, bool] = {}
     if config.CASCADE_EVENTS_CSV.exists():
         events = pd.read_csv(config.CASCADE_EVENTS_CSV)
         if len(events):
             demo = events.sort_values("n_downstream", ascending=False).iloc[0]
-            day_number, minute_of_day = int(demo["day_number"]), int(demo["minute_of_day"])
-            ecosystem_state = ecosystem.cascade_propagating_map(events, day_number, minute_of_day)
+            cascade_day = int(demo["day_number"])
+            cascade_min = int(demo["minute_of_day"])
+            cascade_eco = ecosystem.cascade_propagating_map(events, cascade_day, cascade_min)
 
-    result = intelligence.analyze_snapshot(
-        features, model, day_number=day_number, minute_of_day=minute_of_day,
-        archetypes=archetypes, ecosystem_state=ecosystem_state,
+    cascade_snap = intelligence.analyze_snapshot(
+        features, model, day_number=cascade_day, minute_of_day=cascade_min,
+        archetypes=archetypes, ecosystem_state=cascade_eco,
     )
-    config.ENGINE_REPORTS_DIR.mkdir(parents=True, exist_ok=True)
-    out_path = config.ENGINE_REPORTS_DIR / f"snapshot_d{day_number}_m{minute_of_day}.json"
-    out_path.write_text(_json.dumps(result, indent=2))
+    cascade_path = config.ENGINE_REPORTS_DIR / f"snapshot_d{cascade_day}_m{cascade_min}.json"
+    cascade_path.write_text(_json.dumps(cascade_snap, indent=2))
+    n_recs = sum(len(l["recommendations"]) for l in cascade_snap["links"])
+    print(f"  Cascade snapshot (d{cascade_day},m{cascade_min}): critical={cascade_snap['n_critical']}  "
+          f"recs={n_recs}  -> {cascade_path}")
+    if cascade_eco:
+        print(f"  cascade-propagating links: {list(cascade_eco)}")
 
-    n_recs = sum(len(l["recommendations"]) for l in result["links"])
-    print(f"  links={result['n_links']}  critical={result['n_critical']}  recs={n_recs}")
-    if ecosystem_state:
-        print(f"  cascade flags: {list(ecosystem_state)}")
-    print(f"  Saved -> {out_path}")
-    all_reason = all(
-        r["reasoning"].strip() for l in result["links"] for r in l["recommendations"]
-    )
+    # Gate: every recommendation that was generated must carry reasoning.
+    # We check across both snapshots. If no recs fired, the gate still passes --
+    # the empty-rec case means no rule conditions were met, which is valid.
+    all_recs = [
+        r for snap in (july1_snap, cascade_snap)
+        for l in snap["links"]
+        for r in l["recommendations"]
+    ]
+    all_reason = all(r["reasoning"].strip() for r in all_recs) if all_recs else True
     _gate("B6 — every rec has reasoning", all_reason)
+
 
 
 def main() -> int:
@@ -184,6 +229,7 @@ def main() -> int:
     run_b5()
     run_b7()
     run_b8()
+    run_b9()
     run_b6()
     return 0
 

@@ -4,7 +4,7 @@
     "minute_of_day": 545
   },
   "n_links": 66,
-  "n_critical": 18,
+  "n_critical": 17,
   "hotspot_ranking": [
     {
       "link_id": 36,
@@ -340,10 +340,11 @@
   "links": [
     {
       "link_id": 1,
+      "archetype": "Ghost",
       "health_score": 42.04,
       "state": "Stressed",
       "risk_score": 99.93,
-      "congestion_prob": 0.0273,
+      "congestion_prob": 0.0409,
       "critical": false,
       "mean_queue_s": 207.1,
       "alerts": [
@@ -356,10 +357,11 @@
     },
     {
       "link_id": 2,
+      "archetype": "Chameleon",
       "health_score": 42.89,
       "state": "Stressed",
       "risk_score": 99.6,
-      "congestion_prob": 0.5225,
+      "congestion_prob": 0.4835,
       "critical": false,
       "mean_queue_s": 233.4,
       "alerts": [
@@ -372,10 +374,11 @@
     },
     {
       "link_id": 3,
+      "archetype": "Ghost",
       "health_score": 43.29,
       "state": "Stressed",
       "risk_score": 99.78,
-      "congestion_prob": 0.0049,
+      "congestion_prob": 0.0043,
       "critical": false,
       "mean_queue_s": 190.6,
       "alerts": [
@@ -388,26 +391,24 @@
     },
     {
       "link_id": 4,
+      "archetype": "Chameleon",
       "health_score": 45.72,
       "state": "Stressed",
       "risk_score": 98.36,
-      "congestion_prob": 0.7263,
-      "critical": true,
+      "congestion_prob": 0.6266,
+      "critical": false,
       "mean_queue_s": 249.9,
       "alerts": [
         {
           "severity": "ADVISORY",
           "message": "Road is Stressed (advisory)."
-        },
-        {
-          "severity": "CRITICAL",
-          "message": "Critical flag: P(congested in 15 min)=0.73, queue=250s."
         }
       ],
       "recommendations": []
     },
     {
       "link_id": 5,
+      "archetype": "Saturator",
       "health_score": 40.41,
       "state": "Stressed",
       "risk_score": 99.53,
@@ -428,10 +429,11 @@
     },
     {
       "link_id": 6,
+      "archetype": "Ghost",
       "health_score": 44.67,
       "state": "Stressed",
       "risk_score": 99.75,
-      "congestion_prob": 0.9515,
+      "congestion_prob": 0.9538,
       "critical": true,
       "mean_queue_s": 267.8,
       "alerts": [
@@ -448,10 +450,11 @@
     },
     {
       "link_id": 7,
+      "archetype": "Chameleon",
       "health_score": 59.02,
       "state": "Stressed",
       "risk_score": 66.94,
-      "congestion_prob": 0.0764,
+      "congestion_prob": 0.0975,
       "critical": false,
       "mean_queue_s": 242.7,
       "alerts": [
@@ -464,10 +467,11 @@
     },
     {
       "link_id": 8,
+      "archetype": "Chameleon",
       "health_score": 49.22,
       "state": "Stressed",
       "risk_score": 95.39,
-      "congestion_prob": 0.0025,
+      "congestion_prob": 0.0014,
       "critical": false,
       "mean_queue_s": 119.9,
       "alerts": [
@@ -480,10 +484,11 @@
     },
     {
       "link_id": 9,
+      "archetype": "Chameleon",
       "health_score": 55.44,
       "state": "Stressed",
       "risk_score": 83.58,
-      "congestion_prob": 0.6486,
+      "congestion_prob": 0.6891,
       "critical": false,
       "mean_queue_s": 326.6,
       "alerts": [
@@ -496,10 +501,11 @@
     },
     {
       "link_id": 10,
+      "archetype": "Ghost",
       "health_score": 44.51,
       "state": "Stressed",
       "risk_score": 99.58,
-      "congestion_prob": 0.9937,
+      "congestion_prob": 0.9943,
       "critical": true,
       "mean_queue_s": 273.6,
       "alerts": [
@@ -516,10 +522,11 @@
     },
     {
       "link_id": 11,
+      "archetype": "Ghost",
       "health_score": 46.83,
       "state": "Stressed",
       "risk_score": 98.34,
-      "congestion_prob": 0.0066,
+      "congestion_prob": 0.0044,
       "critical": false,
       "mean_queue_s": 151.4,
       "alerts": [
@@ -532,10 +539,11 @@
     },
     {
       "link_id": 12,
+      "archetype": "Chameleon",
       "health_score": 62.45,
       "state": "Stressed",
       "risk_score": 62.75,
-      "congestion_prob": 0.0023,
+      "congestion_prob": 0.0022,
       "critical": false,
       "mean_queue_s": 197.5,
       "alerts": [
@@ -548,10 +556,11 @@
     },
     {
       "link_id": 13,
+      "archetype": "Ghost",
       "health_score": 52.02,
       "state": "Stressed",
       "risk_score": 93.2,
-      "congestion_prob": 0.6181,
+      "congestion_prob": 0.5835,
       "critical": false,
       "mean_queue_s": 233.5,
       "alerts": [
@@ -564,10 +573,11 @@
     },
     {
       "link_id": 14,
+      "archetype": "Chameleon",
       "health_score": 53.57,
       "state": "Stressed",
       "risk_score": 96.78,
-      "congestion_prob": 0.005,
+      "congestion_prob": 0.004,
       "critical": false,
       "mean_queue_s": 115.4,
       "alerts": [
@@ -580,10 +590,11 @@
     },
     {
       "link_id": 15,
+      "archetype": "Chameleon",
       "health_score": 44.98,
       "state": "Stressed",
       "risk_score": 99.85,
-      "congestion_prob": 0.9693,
+      "congestion_prob": 0.9796,
       "critical": true,
       "mean_queue_s": 279.6,
       "alerts": [
@@ -593,17 +604,18 @@
         },
         {
           "severity": "CRITICAL",
-          "message": "Critical flag: P(congested in 15 min)=0.97, queue=280s."
+          "message": "Critical flag: P(congested in 15 min)=0.98, queue=280s."
         }
       ],
       "recommendations": []
     },
     {
       "link_id": 16,
+      "archetype": "Chameleon",
       "health_score": 43.25,
       "state": "Stressed",
       "risk_score": 99.48,
-      "congestion_prob": 0.9988,
+      "congestion_prob": 0.997,
       "critical": true,
       "mean_queue_s": 469.3,
       "alerts": [
@@ -620,10 +632,11 @@
     },
     {
       "link_id": 17,
+      "archetype": "Saturator",
       "health_score": 45.15,
       "state": "Stressed",
       "risk_score": 95.63,
-      "congestion_prob": 0.9553,
+      "congestion_prob": 0.9408,
       "critical": true,
       "mean_queue_s": 329.5,
       "alerts": [
@@ -633,17 +646,18 @@
         },
         {
           "severity": "CRITICAL",
-          "message": "Critical flag: P(congested in 15 min)=0.96, queue=329s."
+          "message": "Critical flag: P(congested in 15 min)=0.94, queue=329s."
         }
       ],
       "recommendations": []
     },
     {
       "link_id": 18,
+      "archetype": "Chameleon",
       "health_score": 64.42,
       "state": "Stressed",
       "risk_score": 83.01,
-      "congestion_prob": 0.0768,
+      "congestion_prob": 0.0657,
       "critical": false,
       "mean_queue_s": 255.4,
       "alerts": [
@@ -656,6 +670,7 @@
     },
     {
       "link_id": 19,
+      "archetype": "Commuter",
       "health_score": 73.38,
       "state": "Healthy",
       "risk_score": 77.36,
@@ -675,10 +690,11 @@
     },
     {
       "link_id": 20,
+      "archetype": "Commuter",
       "health_score": 68.21,
       "state": "Stressed",
       "risk_score": 98.88,
-      "congestion_prob": 0.0008,
+      "congestion_prob": 0.0005,
       "critical": false,
       "mean_queue_s": 197.6,
       "alerts": [
@@ -699,10 +715,11 @@
     },
     {
       "link_id": 21,
+      "archetype": "Commuter",
       "health_score": 67.99,
       "state": "Stressed",
       "risk_score": 99.08,
-      "congestion_prob": 0.0006,
+      "congestion_prob": 0.0005,
       "critical": false,
       "mean_queue_s": 213.9,
       "alerts": [
@@ -723,6 +740,7 @@
     },
     {
       "link_id": 22,
+      "archetype": "Commuter",
       "health_score": 73.6,
       "state": "Healthy",
       "risk_score": 68.53,
@@ -734,10 +752,11 @@
     },
     {
       "link_id": 23,
+      "archetype": "Saturator",
       "health_score": 69.49,
       "state": "Stressed",
       "risk_score": 99.11,
-      "congestion_prob": 0.0004,
+      "congestion_prob": 0.0003,
       "critical": false,
       "mean_queue_s": 332.6,
       "alerts": [
@@ -750,10 +769,11 @@
     },
     {
       "link_id": 24,
+      "archetype": "Saturator",
       "health_score": 65.18,
       "state": "Stressed",
       "risk_score": 99.63,
-      "congestion_prob": 0.0033,
+      "congestion_prob": 0.0016,
       "critical": false,
       "mean_queue_s": 264.4,
       "alerts": [
@@ -766,10 +786,11 @@
     },
     {
       "link_id": 25,
+      "archetype": "Commuter",
       "health_score": 66.35,
       "state": "Stressed",
       "risk_score": 99.85,
-      "congestion_prob": 0.001,
+      "congestion_prob": 0.0005,
       "critical": false,
       "mean_queue_s": 231.4,
       "alerts": [
@@ -790,6 +811,7 @@
     },
     {
       "link_id": 26,
+      "archetype": "Commuter",
       "health_score": 66.19,
       "state": "Stressed",
       "risk_score": 99.5,
@@ -814,10 +836,11 @@
     },
     {
       "link_id": 27,
+      "archetype": "Saturator",
       "health_score": 61.91,
       "state": "Stressed",
       "risk_score": 99.78,
-      "congestion_prob": 0.004,
+      "congestion_prob": 0.0022,
       "critical": false,
       "mean_queue_s": 328.8,
       "alerts": [
@@ -830,6 +853,7 @@
     },
     {
       "link_id": 28,
+      "archetype": "Commuter",
       "health_score": 68.72,
       "state": "Stressed",
       "risk_score": 99.75,
@@ -854,10 +878,11 @@
     },
     {
       "link_id": 29,
+      "archetype": "Saturator",
       "health_score": 64.6,
       "state": "Stressed",
       "risk_score": 99.68,
-      "congestion_prob": 0.0004,
+      "congestion_prob": 0.0005,
       "critical": false,
       "mean_queue_s": 426.3,
       "alerts": [
@@ -870,10 +895,11 @@
     },
     {
       "link_id": 30,
+      "archetype": "Saturator",
       "health_score": 37.06,
       "state": "Saturated",
       "risk_score": 99.8,
-      "congestion_prob": 0.9772,
+      "congestion_prob": 0.9851,
       "critical": true,
       "mean_queue_s": 568.6,
       "alerts": [
@@ -883,7 +909,7 @@
         },
         {
           "severity": "CRITICAL",
-          "message": "Critical flag: P(congested in 15 min)=0.98, queue=569s."
+          "message": "Critical flag: P(congested in 15 min)=0.99, queue=569s."
         }
       ],
       "recommendations": [
@@ -905,10 +931,11 @@
     },
     {
       "link_id": 31,
+      "archetype": "Chameleon",
       "health_score": 37.53,
       "state": "Saturated",
       "risk_score": 99.85,
-      "congestion_prob": 0.9991,
+      "congestion_prob": 0.9975,
       "critical": true,
       "mean_queue_s": 507.4,
       "alerts": [
@@ -925,10 +952,11 @@
     },
     {
       "link_id": 32,
+      "archetype": "Chameleon",
       "health_score": 57.19,
       "state": "Stressed",
       "risk_score": 98.36,
-      "congestion_prob": 0.6305,
+      "congestion_prob": 0.6539,
       "critical": false,
       "mean_queue_s": 344.0,
       "alerts": [
@@ -941,10 +969,11 @@
     },
     {
       "link_id": 33,
+      "archetype": "Chameleon",
       "health_score": 59.11,
       "state": "Stressed",
       "risk_score": 82.17,
-      "congestion_prob": 0.0112,
+      "congestion_prob": 0.0168,
       "critical": false,
       "mean_queue_s": 236.1,
       "alerts": [
@@ -957,10 +986,11 @@
     },
     {
       "link_id": 34,
+      "archetype": "Ghost",
       "health_score": 57.9,
       "state": "Stressed",
       "risk_score": 99.75,
-      "congestion_prob": 0.01,
+      "congestion_prob": 0.0097,
       "critical": false,
       "mean_queue_s": 264.1,
       "alerts": [
@@ -973,10 +1003,11 @@
     },
     {
       "link_id": 35,
+      "archetype": "Chameleon",
       "health_score": 52.06,
       "state": "Stressed",
       "risk_score": 99.98,
-      "congestion_prob": 0.5041,
+      "congestion_prob": 0.5928,
       "critical": false,
       "mean_queue_s": 402.9,
       "alerts": [
@@ -989,10 +1020,11 @@
     },
     {
       "link_id": 36,
+      "archetype": "Chronic",
       "health_score": 33.51,
       "state": "Saturated",
       "risk_score": 99.75,
-      "congestion_prob": 0.9983,
+      "congestion_prob": 0.9981,
       "critical": true,
       "mean_queue_s": 661.2,
       "alerts": [
@@ -1009,10 +1041,11 @@
     },
     {
       "link_id": 37,
+      "archetype": "Chronic",
       "health_score": 44.28,
       "state": "Stressed",
       "risk_score": 100.0,
-      "congestion_prob": 0.9406,
+      "congestion_prob": 0.9452,
       "critical": true,
       "mean_queue_s": 590.8,
       "alerts": [
@@ -1022,17 +1055,18 @@
         },
         {
           "severity": "CRITICAL",
-          "message": "Critical flag: P(congested in 15 min)=0.94, queue=591s."
+          "message": "Critical flag: P(congested in 15 min)=0.95, queue=591s."
         }
       ],
       "recommendations": []
     },
     {
       "link_id": 38,
+      "archetype": "Saturator",
       "health_score": 51.3,
       "state": "Stressed",
       "risk_score": 99.7,
-      "congestion_prob": 0.0079,
+      "congestion_prob": 0.009,
       "critical": false,
       "mean_queue_s": 548.2,
       "alerts": [
@@ -1045,10 +1079,11 @@
     },
     {
       "link_id": 39,
+      "archetype": "Commuter",
       "health_score": 68.28,
       "state": "Stressed",
       "risk_score": 99.85,
-      "congestion_prob": 0.0007,
+      "congestion_prob": 0.0005,
       "critical": false,
       "mean_queue_s": 229.0,
       "alerts": [
@@ -1069,10 +1104,11 @@
     },
     {
       "link_id": 40,
+      "archetype": "Commuter",
       "health_score": 59.5,
       "state": "Stressed",
       "risk_score": 99.85,
-      "congestion_prob": 0.0027,
+      "congestion_prob": 0.0023,
       "critical": false,
       "mean_queue_s": 394.9,
       "alerts": [
@@ -1093,10 +1129,11 @@
     },
     {
       "link_id": 41,
+      "archetype": "Chameleon",
       "health_score": 56.68,
       "state": "Stressed",
       "risk_score": 99.03,
-      "congestion_prob": 0.1516,
+      "congestion_prob": 0.1338,
       "critical": false,
       "mean_queue_s": 370.9,
       "alerts": [
@@ -1109,10 +1146,11 @@
     },
     {
       "link_id": 42,
+      "archetype": "Chameleon",
       "health_score": 56.29,
       "state": "Stressed",
       "risk_score": 94.74,
-      "congestion_prob": 0.1265,
+      "congestion_prob": 0.1479,
       "critical": false,
       "mean_queue_s": 424.9,
       "alerts": [
@@ -1125,10 +1163,11 @@
     },
     {
       "link_id": 43,
+      "archetype": "Saturator",
       "health_score": 50.64,
       "state": "Stressed",
       "risk_score": 99.93,
-      "congestion_prob": 0.0116,
+      "congestion_prob": 0.0151,
       "critical": false,
       "mean_queue_s": 456.1,
       "alerts": [
@@ -1141,10 +1180,11 @@
     },
     {
       "link_id": 44,
+      "archetype": "Saturator",
       "health_score": 36.35,
       "state": "Saturated",
       "risk_score": 99.75,
-      "congestion_prob": 0.9968,
+      "congestion_prob": 0.9952,
       "critical": true,
       "mean_queue_s": 409.7,
       "alerts": [
@@ -1169,10 +1209,11 @@
     },
     {
       "link_id": 45,
+      "archetype": "Saturator",
       "health_score": 48.02,
       "state": "Stressed",
       "risk_score": 99.9,
-      "congestion_prob": 0.8769,
+      "congestion_prob": 0.8774,
       "critical": true,
       "mean_queue_s": 383.9,
       "alerts": [
@@ -1189,10 +1230,11 @@
     },
     {
       "link_id": 46,
+      "archetype": "Chameleon",
       "health_score": 40.79,
       "state": "Stressed",
       "risk_score": 99.95,
-      "congestion_prob": 0.9993,
+      "congestion_prob": 0.998,
       "critical": true,
       "mean_queue_s": 441.2,
       "alerts": [
@@ -1209,10 +1251,11 @@
     },
     {
       "link_id": 47,
+      "archetype": "Saturator",
       "health_score": 54.76,
       "state": "Stressed",
       "risk_score": 99.88,
-      "congestion_prob": 0.422,
+      "congestion_prob": 0.4118,
       "critical": false,
       "mean_queue_s": 359.5,
       "alerts": [
@@ -1225,10 +1268,11 @@
     },
     {
       "link_id": 48,
+      "archetype": "Chameleon",
       "health_score": 44.12,
       "state": "Stressed",
       "risk_score": 99.83,
-      "congestion_prob": 0.793,
+      "congestion_prob": 0.7826,
       "critical": true,
       "mean_queue_s": 263.5,
       "alerts": [
@@ -1238,17 +1282,18 @@
         },
         {
           "severity": "CRITICAL",
-          "message": "Critical flag: P(congested in 15 min)=0.79, queue=264s."
+          "message": "Critical flag: P(congested in 15 min)=0.78, queue=264s."
         }
       ],
       "recommendations": []
     },
     {
       "link_id": 49,
+      "archetype": "Saturator",
       "health_score": 51.69,
       "state": "Stressed",
       "risk_score": 99.95,
-      "congestion_prob": 0.0013,
+      "congestion_prob": 0.003,
       "critical": false,
       "mean_queue_s": 527.8,
       "alerts": [
@@ -1269,10 +1314,11 @@
     },
     {
       "link_id": 50,
+      "archetype": "Saturator",
       "health_score": 58.99,
       "state": "Stressed",
       "risk_score": 99.7,
-      "congestion_prob": 0.0022,
+      "congestion_prob": 0.0016,
       "critical": false,
       "mean_queue_s": 440.0,
       "alerts": [
@@ -1285,10 +1331,11 @@
     },
     {
       "link_id": 51,
+      "archetype": "Commuter",
       "health_score": 56.75,
       "state": "Stressed",
       "risk_score": 100.0,
-      "congestion_prob": 0.0067,
+      "congestion_prob": 0.0045,
       "critical": false,
       "mean_queue_s": 286.4,
       "alerts": [
@@ -1309,10 +1356,11 @@
     },
     {
       "link_id": 52,
+      "archetype": "Commuter",
       "health_score": 62.15,
       "state": "Stressed",
       "risk_score": 99.88,
-      "congestion_prob": 0.0043,
+      "congestion_prob": 0.0023,
       "critical": false,
       "mean_queue_s": 314.4,
       "alerts": [
@@ -1333,10 +1381,11 @@
     },
     {
       "link_id": 53,
+      "archetype": "Saturator",
       "health_score": 53.17,
       "state": "Stressed",
       "risk_score": 99.98,
-      "congestion_prob": 0.0037,
+      "congestion_prob": 0.0029,
       "critical": false,
       "mean_queue_s": 549.8,
       "alerts": [
@@ -1349,10 +1398,11 @@
     },
     {
       "link_id": 54,
+      "archetype": "Chameleon",
       "health_score": 59.0,
       "state": "Stressed",
       "risk_score": 99.98,
-      "congestion_prob": 0.0468,
+      "congestion_prob": 0.0248,
       "critical": false,
       "mean_queue_s": 225.7,
       "alerts": [
@@ -1365,10 +1415,11 @@
     },
     {
       "link_id": 55,
+      "archetype": "Chameleon",
       "health_score": 52.06,
       "state": "Stressed",
       "risk_score": 99.75,
-      "congestion_prob": 0.9753,
+      "congestion_prob": 0.954,
       "critical": true,
       "mean_queue_s": 330.7,
       "alerts": [
@@ -1378,17 +1429,18 @@
         },
         {
           "severity": "CRITICAL",
-          "message": "Critical flag: P(congested in 15 min)=0.98, queue=331s."
+          "message": "Critical flag: P(congested in 15 min)=0.95, queue=331s."
         }
       ],
       "recommendations": []
     },
     {
       "link_id": 56,
+      "archetype": "Chameleon",
       "health_score": 58.82,
       "state": "Stressed",
       "risk_score": 99.88,
-      "congestion_prob": 0.5767,
+      "congestion_prob": 0.5433,
       "critical": false,
       "mean_queue_s": 319.8,
       "alerts": [
@@ -1401,10 +1453,11 @@
     },
     {
       "link_id": 57,
+      "archetype": "Ghost",
       "health_score": 68.01,
       "state": "Stressed",
       "risk_score": 98.21,
-      "congestion_prob": 0.0004,
+      "congestion_prob": 0.0003,
       "critical": false,
       "mean_queue_s": 201.1,
       "alerts": [
@@ -1417,6 +1470,7 @@
     },
     {
       "link_id": 58,
+      "archetype": "Commuter",
       "health_score": 69.89,
       "state": "Stressed",
       "risk_score": 98.88,
@@ -1441,10 +1495,11 @@
     },
     {
       "link_id": 59,
+      "archetype": "Chameleon",
       "health_score": 59.19,
       "state": "Stressed",
       "risk_score": 99.93,
-      "congestion_prob": 0.8663,
+      "congestion_prob": 0.8486,
       "critical": true,
       "mean_queue_s": 286.0,
       "alerts": [
@@ -1454,17 +1509,18 @@
         },
         {
           "severity": "CRITICAL",
-          "message": "Critical flag: P(congested in 15 min)=0.87, queue=286s."
+          "message": "Critical flag: P(congested in 15 min)=0.85, queue=286s."
         }
       ],
       "recommendations": []
     },
     {
       "link_id": 60,
+      "archetype": "Saturator",
       "health_score": 47.36,
       "state": "Stressed",
       "risk_score": 99.85,
-      "congestion_prob": 0.9849,
+      "congestion_prob": 0.9771,
       "critical": true,
       "mean_queue_s": 404.4,
       "alerts": [
@@ -1481,10 +1537,11 @@
     },
     {
       "link_id": 61,
+      "archetype": "Commuter",
       "health_score": 56.44,
       "state": "Stressed",
       "risk_score": 99.85,
-      "congestion_prob": 0.0454,
+      "congestion_prob": 0.0266,
       "critical": false,
       "mean_queue_s": 282.6,
       "alerts": [
@@ -1505,10 +1562,11 @@
     },
     {
       "link_id": 62,
+      "archetype": "Commuter",
       "health_score": 58.77,
       "state": "Stressed",
       "risk_score": 99.45,
-      "congestion_prob": 0.0045,
+      "congestion_prob": 0.0021,
       "critical": false,
       "mean_queue_s": 97.0,
       "alerts": [
@@ -1529,10 +1587,11 @@
     },
     {
       "link_id": 63,
+      "archetype": "Commuter",
       "health_score": 64.3,
       "state": "Stressed",
       "risk_score": 99.93,
-      "congestion_prob": 0.0033,
+      "congestion_prob": 0.0028,
       "critical": false,
       "mean_queue_s": 224.3,
       "alerts": [
@@ -1553,10 +1612,11 @@
     },
     {
       "link_id": 64,
+      "archetype": "Commuter",
       "health_score": 66.34,
       "state": "Stressed",
       "risk_score": 99.83,
-      "congestion_prob": 0.0006,
+      "congestion_prob": 0.0004,
       "critical": false,
       "mean_queue_s": 155.8,
       "alerts": [
@@ -1577,10 +1637,11 @@
     },
     {
       "link_id": 65,
+      "archetype": "Commuter",
       "health_score": 64.06,
       "state": "Stressed",
       "risk_score": 99.93,
-      "congestion_prob": 0.0045,
+      "congestion_prob": 0.0023,
       "critical": false,
       "mean_queue_s": 264.0,
       "alerts": [
@@ -1601,10 +1662,11 @@
     },
     {
       "link_id": 66,
+      "archetype": "Commuter",
       "health_score": 66.58,
       "state": "Stressed",
       "risk_score": 99.73,
-      "congestion_prob": 0.0006,
+      "congestion_prob": 0.0003,
       "critical": false,
       "mean_queue_s": 116.0,
       "alerts": [

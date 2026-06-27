@@ -95,6 +95,33 @@ def main() -> int:
         for link in result["links"]
         for rec in link["recommendations"]
     )
+
+    # Always also generate the July 1 centrepiece snapshot (d1, m585 = 09:45 AM)
+    # so the demo is always current.
+    if not (args.day == 1 and args.minute == 585):
+        july1_eco: dict[int, bool] = {}
+        if config.CASCADE_EVENTS_CSV.exists():
+            events_df = pd.read_csv(config.CASCADE_EVENTS_CSV)
+            july1_eco = ecosystem.cascade_propagating_map(events_df, 1, 585)
+        july1_snap = intelligence.analyze_snapshot(
+            features, model, 1, 585, archetypes=archetypes, ecosystem_state=july1_eco,
+        )
+        july1_path = config.ENGINE_REPORTS_DIR / "snapshot_d1_m585.json"
+        july1_path.write_text(json.dumps(july1_snap, indent=2))
+        july1_recs = sum(len(l["recommendations"]) for l in july1_snap["links"])
+        july1_arch36 = next(
+            (l.get("archetype") for l in july1_snap["links"] if l["link_id"] == 36), None
+        )
+        print(f"\n  July 1 snapshot (09:45 AM): critical={july1_snap['n_critical']}  "
+              f"recs={july1_recs}  Link36.archetype={july1_arch36}  -> {july1_path}")
+
+        all_july1_reason = all(
+            rec["reasoning"].strip()
+            for l in july1_snap["links"]
+            for rec in l["recommendations"]
+        )
+        all_have_reason = all_have_reason and all_july1_reason
+
     print(f"  GATE (every rec has reasoning): {'PASS' if all_have_reason else 'FAIL'}")
     return 0 if all_have_reason else 1
 

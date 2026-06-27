@@ -1,0 +1,13 @@
+Counterfactual Analysis -- Road 36, July 1, 2024
+================================================
+Observed reality:      Queue delay = 892s (14.9 min) at 09:45 AM
+                       Road 16 cascade: 5-min lag confirmed by B8 causal graph
+
+Counterfactual do[lane6_active=1] applied at 09:30 AM:
+  Estimated queue delay = ~391s (6.5 min)    [-56%]
+  Occupancy change:      0.721 -> 0.659  (delta = -0.062) (policy simulation -- intervention not observed in 14-day window)
+  Road 16 cascade:       No cascade event detected at Road 36 in this window
+  Network-wide benefit:  ~1207 vehicle-hours saved
+
+Causal mechanism: Lane 6 activation -> reduced occupancy -> reduced queue
+propagated via the two-stage structural causal model (frontdoor criterion).
