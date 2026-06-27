@@ -25,4 +25,3 @@ python -m pytest tests/ -q
 ```
 
 See `DECISION_MAP.md` for locked decisions and the full roadmap (B1–B11).
-#
