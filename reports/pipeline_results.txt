@@ -1,0 +1,24 @@
+============================================================
+  UrbanPulse Pipeline Results
+  Dataset : Pangyo 14-day highway loop-detector data
+  Task    : Binary congestion prediction +15 min ahead
+  Split   : Temporal (Days 1-10 train / 11-12 val / 13-14 test)
+============================================================
+
+  Best model         : catboost
+  Test ROC-AUC       : 0.9772
+  Test PR-AUC        : 0.8590
+  Test Precision@thr : 0.7200
+  Test Recall@thr    : 0.8524
+  Test F1@thr        : 0.7806
+  Operating threshold: 0.388
+  Infer ms/row       : 0.0002
+
+  All models (sorted by test ROC-AUC):
+    catboost             AUC=0.9772  PR=0.8590  F1=0.7806
+    xgboost              AUC=0.9764  PR=0.8543  F1=0.7776
+    lightgbm             AUC=0.9762  PR=0.8480  F1=0.7769
+    random_forest        AUC=0.9755  PR=0.8465  F1=0.7758
+    gradient_boosting    AUC=0.9752  PR=0.8472  F1=0.7736
+    extra_trees          AUC=0.9743  PR=0.8428  F1=0.7720
+    decision_tree        AUC=0.9496  PR=0.7577  F1=0.7572
