@@ -4,7 +4,9 @@ Provides the leak-safe plumbing shared by the horizon sweep and full training:
 - feature-set selection (all features vs. leak-free)
 - temporal target shifting for forecasting, with cross-split leakage guarded
 - the Bible's temporal train/val/test split (days 1-10 / 11-12 / 13-14)
-- target-encoding of LINK_ID fit on the training split only
+- LINK_ID handling: raw integer ID is EXCLUDED from X; re-added as the
+  smoothed target-encoded ``link_congestion_rate`` (fit on train only), which
+  is an interpretable numeric feature SHAP can reason about.
 """
 from __future__ import annotations
 
@@ -15,7 +17,11 @@ from sklearn.metrics import average_precision_score, roc_auc_score
 import config
 
 # Columns that are identifiers, not model inputs.
-NON_FEATURE_COLS: list[str] = ["date", "day_number", "congested"]
+# LINK_ID is the raw road-segment integer — it must NOT enter the model directly
+# (a tree can memorise 66 integers, inflating train AUC trivially). It is
+# instead represented by its smoothed target-encoded congestion rate, added
+# explicitly as ``link_congestion_rate`` in :func:`prepare_xy`.
+NON_FEATURE_COLS: list[str] = ["date", "day_number", "congested", "LINK_ID"]
 
 # Columns that DEFINE the target (mean_occup>0.5 & mean_queue>238) and their
 # direct derivatives — leakage if used to predict the *current* interval.
@@ -35,14 +41,18 @@ TEST_DAYS: range = range(13, 15)   # 13-14
 
 
 def feature_columns(df: pd.DataFrame, leak_free: bool) -> list[str]:
-    """Return the model-input columns.
+    """Return the model-input columns, excluding all identifier columns.
+
+    ``LINK_ID`` is excluded here; it re-enters the feature matrix as the
+    smoothed target-encoded ``link_congestion_rate`` column added by
+    :func:`prepare_xy`, which is interpretable by SHAP.
 
     Args:
         df: Feature frame.
-        leak_free: If True, exclude the target-defining columns (for nowcasting).
+        leak_free: If True, also exclude target-defining columns (for nowcasting).
 
     Returns:
-        Ordered list of feature column names (LINK_ID kept; it is target-encoded).
+        Ordered list of feature column names. Does NOT include raw ``LINK_ID``.
     """
     cols = [c for c in df.columns if c not in NON_FEATURE_COLS]
     if leak_free:
@@ -156,11 +166,18 @@ def prepare_xy(
     train, val, test = temporal_split(shifted)
 
     enc_train, enc_val, enc_test = target_encode_link(train, [train, val, test])
+    # feature_columns already excludes LINK_ID (it is in NON_FEATURE_COLS).
+    # We use the original `df` here to derive the column list — shift_target
+    # only changes the `congested` column and drops boundary rows, so the
+    # column schema is identical between df and shifted.
     feat_cols = feature_columns(df, leak_free)
 
     def _x(frame: pd.DataFrame, enc: pd.Series) -> pd.DataFrame:
         x = frame[feat_cols].copy()
-        x["LINK_ID"] = enc.to_numpy()  # replace raw id with encoded value
+        # Add the smoothed target-encoded congestion rate as an explicit,
+        # named, interpretable feature column — NOT as raw LINK_ID.
+        # Using .to_numpy() resets the index so assignment is always aligned.
+        x["link_congestion_rate"] = enc.to_numpy()
         return x
 
     x_train = _x(train, enc_train)

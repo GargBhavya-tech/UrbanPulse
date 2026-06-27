@@ -44,8 +44,12 @@ def test_feature_columns_leak_free_drops_defining_cols() -> None:
     cols = modeling.feature_columns(df, leak_free=True)
     assert not (set(modeling.LEAKY_COLS) & set(cols))
     assert "feat_a" in cols
-    # non-leak-free keeps them
-    assert set(modeling.LEAKY_COLS) <= set(modeling.feature_columns(df, leak_free=False))
+    # LINK_ID is an identifier — must never appear as a raw feature
+    assert "LINK_ID" not in cols
+    # non-leak-free keeps leaky cols but still excludes LINK_ID
+    full_cols = modeling.feature_columns(df, leak_free=False)
+    assert set(modeling.LEAKY_COLS) <= set(full_cols)
+    assert "LINK_ID" not in full_cols
 
 
 def test_shift_target_uses_future_label() -> None:
@@ -81,6 +85,24 @@ def test_target_encode_link_fit_on_train_only() -> None:
     enc_train, = modeling.target_encode_link(train, [train])
     # encoded values are bounded in [0, 1] (smoothed rates)
     assert enc_train.between(0, 1).all()
+
+
+def test_prepare_xy_link_congestion_rate_not_raw_id() -> None:
+    """prepare_xy must add link_congestion_rate, not raw LINK_ID, to X."""
+    df = _seq_frame()
+    # Use days 10 (train) + 11 (val) from the fixture; horizon=1 drops last row.
+    x_train, x_val, _, _ = modeling.prepare_xy(df, horizon=1, leak_free=False)
+    # The encoded rate must be present
+    assert "link_congestion_rate" in x_train.columns, (
+        "Expected link_congestion_rate in X_train"
+    )
+    assert "link_congestion_rate" in x_val.columns
+    # Raw integer LINK_ID must NOT appear
+    assert "LINK_ID" not in x_train.columns, (
+        "Raw LINK_ID must be excluded from model inputs"
+    )
+    # Values are smoothed rates in [0, 1]
+    assert x_train["link_congestion_rate"].between(0, 1).all()
 
 
 @pytest.mark.skipif(
