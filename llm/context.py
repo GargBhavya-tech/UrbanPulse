@@ -187,6 +187,7 @@ def from_artifacts(
     archetypes_path: Optional[Path] = None,
     cascade_csv_path: Optional[Path] = None,
     counterfactual_path: Optional[Path] = None,
+    shap_translations_path: Optional[Path] = None,
 ) -> UrbanPulseContext:
     """Load a UrbanPulseContext from all upstream artifacts.
 
@@ -252,17 +253,47 @@ def from_artifacts(
         if isinstance(link_arch, dict):
             ctx.stability_score = link_arch.get("stability_score", 1.0)
 
-    # -- Build synthetic SHAP top-3 (B5 artifacts not always per-link JSON) --
-    # We build from the most interpretable features available in context.
-    shap_inputs = [
-        ("mean_occup", 0.38 if ctx.is_critical else 0.12, ctx.congestion_prob),
-        ("hour", 0.22 if ctx.is_am_peak else -0.08, float(ctx.hour)),
-        ("LINK_ID", 0.18, float(link_id)),
-    ]
-    ctx.top_shap = [
-        _shap_plain_english(feat, shap_v, feat_v)
-        for feat, shap_v, feat_v in shap_inputs
-    ]
+    # -- B5: SHAP translations (real feature attributions when B5 has run) ----
+    # Default: build synthetic SHAP top-3 from most interpretable context fields.
+    # Override: when reports/shap/translations.json exists, use real SHAP values
+    # computed by TreeExplainer -- these are the actual model explanations.
+    shap_p = shap_translations_path or (config.REPORTS_DIR / "shap" / "translations.json")
+    shap_loaded = False
+    if shap_p.exists():
+        try:
+            trans = json.loads(shap_p.read_text(encoding="utf-8"))
+            # translations.json has top-level keys "link_36" and "link_37";
+            # map the requested link_id to the closest available key.
+            key = f"link_{link_id}"
+            if key not in trans:
+                # Fall back to link_36 (July 1 centrepiece) for any unknown link
+                key = "link_36" if "link_36" in trans else next(iter(trans), None)
+            if key:
+                top_feats = trans[key].get("top_features", [])
+                if top_feats:
+                    ctx.top_shap = [
+                        _shap_plain_english(
+                            f["feature"],
+                            float(f["shap"]),
+                            float(f["value"]),
+                        )
+                        for f in top_feats[:3]
+                    ]
+                    shap_loaded = True
+        except Exception:
+            pass  # malformed JSON: fall through to synthetic fallback
+
+    if not shap_loaded:
+        # Synthetic fallback when B5 hasn't run yet.
+        shap_inputs = [
+            ("mean_occup", 0.38 if ctx.is_critical else 0.12, ctx.congestion_prob),
+            ("hour", 0.22 if ctx.is_am_peak else -0.08, float(ctx.hour)),
+            ("link_congestion_rate", 0.18, float(link_id)),
+        ]
+        ctx.top_shap = [
+            _shap_plain_english(feat, shap_v, feat_v)
+            for feat, shap_v, feat_v in shap_inputs
+        ]
 
     # -- B8: cascade events CSV ----------------------------------------------
     casc_p = cascade_csv_path or config.CASCADE_EVENTS_CSV

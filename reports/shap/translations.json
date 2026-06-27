@@ -1,0 +1,74 @@
+{
+  "link_36": {
+    "label": "Link 36 \u2014 Day 1 09:45 (worst event, queue 892s)",
+    "meta": {
+      "link_id": 36,
+      "day_number": 1,
+      "minute_of_day": 585,
+      "mean_queue_s": 892.3233333333334,
+      "mean_occup": 0.7573599999999999,
+      "congested": 1
+    },
+    "base_value": -6.777303898835818,
+    "prediction_log_odds": 5.804686971826037,
+    "top_features": [
+      {
+        "rank": 1,
+        "feature": "link_congestion_rate",
+        "value": 0.8873457689474258,
+        "shap": 6.17106147886684,
+        "plain_english": "This road's historical congestion rate is 88.7%, significantly increasing congestion risk by 617% above the network average."
+      },
+      {
+        "rank": 2,
+        "feature": "congestion_index",
+        "value": 0.7428937283710371,
+        "shap": 1.8328169363889923,
+        "plain_english": "The composite congestion index was 0.74, significantly increasing congestion risk."
+      },
+      {
+        "rank": 3,
+        "feature": "mean_occup",
+        "value": 0.7573599999999999,
+        "shap": 1.231698681674395,
+        "plain_english": "Road occupancy was 76%, significantly increasing congestion risk (high fill = less room for more vehicles)."
+      }
+    ]
+  },
+  "link_37": {
+    "label": "Link 37 \u2014 Day 1 09:05 (chronic case, queue 591s)",
+    "meta": {
+      "link_id": 37,
+      "day_number": 1,
+      "minute_of_day": 545,
+      "mean_queue_s": 590.7533333333333,
+      "mean_occup": 0.53576,
+      "congested": 1
+    },
+    "base_value": -6.777303898835818,
+    "prediction_log_odds": 3.762934925977712,
+    "top_features": [
+      {
+        "rank": 1,
+        "feature": "link_congestion_rate",
+        "value": 0.1562446298380023,
+        "shap": 2.663375972653343,
+        "plain_english": "This road's historical congestion rate is 15.6%, significantly increasing congestion risk by 266% above the network average."
+      },
+      {
+        "rank": 2,
+        "feature": "congestion_index",
+        "value": 0.5571719708600475,
+        "shap": 2.285288866768794,
+        "plain_english": "The composite congestion index was 0.56, significantly increasing congestion risk."
+      },
+      {
+        "rank": 3,
+        "feature": "minute_of_day",
+        "value": 545.0,
+        "shap": 1.3363093333561655,
+        "plain_english": "Minute-of-day position was 545 (\u2248 09:05), significantly increasing congestion risk."
+      }
+    ]
+  }
+}

@@ -33,7 +33,7 @@ from sklearn.cluster import KMeans
 from sklearn.decomposition import PCA
 from sklearn.manifold import SpectralEmbedding
 from sklearn.metrics import silhouette_samples, silhouette_score
-from sklearn.preprocessing import StandardScaler
+from sklearn.preprocessing import RobustScaler, StandardScaler
 
 import config
 
@@ -145,7 +145,12 @@ def cluster(
         Dict with ``labels`` (Series), ``centroids``, ``silhouette``, ``confidence``
         (Series), and the standardized fingerprint matrix ``fz``.
     """
-    fz = StandardScaler().fit_transform(fingerprints.to_numpy())
+    # RobustScaler (median/IQR) guards against outlier links that inflate
+    # the variance of queue-based fingerprint dimensions and pull centroids.
+    fz = RobustScaler().fit_transform(fingerprints.to_numpy())
+    # Additionally standardize so all 8 dimensions have unit variance after
+    # the robust centering — this gives k-means equal weight per dimension.
+    fz = StandardScaler(with_mean=False).fit_transform(fz)
 
     # Graph embedding folds spatial connectivity into the Euclidean space.
     # Disabled when ATLAS_ALPHA<=0 (B7 decision: fingerprint-only clustering).
@@ -278,7 +283,12 @@ def stability_scores(
         fp_day = extract_fingerprints(g)
         fp_day = fp_day.reindex(labels.index)  # align all links
         if fp_day.isna().all(axis=1).any():
-            fp_day = fp_day.fillna(fp_day.mean())
+            # Some links have no rows for this day (sensor outage / complete stall).
+            # col_means can itself be NaN if the entire column is absent for this day.
+            # Fall back to 0.0 for those columns so scaler.transform never receives NaN.
+            col_means = fp_day.mean()
+            col_means = col_means.fillna(0.0)
+            fp_day = fp_day.fillna(col_means)
         fz_day = scaler.transform(fp_day.to_numpy())
         # nearest centroid by fingerprint block
         d = np.linalg.norm(fz_day[:, None, :] - cent_fp[None, :, :], axis=2)

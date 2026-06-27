@@ -1,9 +1,9 @@
 {
-  "citizen_advice": "Road 36 is currently experiencing heavy congestion with significant waiting times, with average waiting times around 14 min 52 sec. Tip: Flag for infrastructure review / capacity assessment.",
-  "planner_briefing": "Road 36 | Health 25.7/100 | State: Saturated | Archetype: Chronic\nCongestion probability: 100% | Predicted queue: 892s\nPrimary drivers: Road fill rate is near maximum (100%)\nTop recommendation: Flag for infrastructure review / capacity assessment",
-  "cascade_alert": "CRITICAL: Road 36 has entered Saturated state. downstream roads predicted to enter Stressed condition in approximately 8 minutes. Immediate intervention required at the source road.",
-  "counterfactual_summary": "Counterfactual analysis for Road 36: applying Activate Lane 6 at 09:30 AM is estimated to reduce queue delay by approximately 56.2%, saving roughly 1207 vehicle-hours across the network. The cascade to downstream roads would have been prevented. (Estimate; actual outcome depends on real-time conditions.)",
-  "traffic_summary": "Network summary: 17 critical links detected. Worst performer is Road 36 (health 25.7/100). All other links are within normal operating parameters.",
-  "answer_question_citizen": "On July 1 at 09:45 AM, Road 36 had its worst traffic jam. Analysis shows that opening an extra lane at 09:30 AM could have cut waiting times by approximately 56.2%, saving around 1207 hours of wasted travel across the network. This is an estimate based on historical traffic patterns.",
-  "answer_question_planner": "On July 1 at 09:45 AM, Road 36 experienced its worst congestion event. Causal analysis estimates that activating Lane 6 at 09:30 AM would have reduced queue delay by approximately 56.2%, saving roughly 1207 vehicle-hours across the network. This is an estimate based on structural causal modelling."
+  "citizen_advice": "Use plain everyday language a 12-year-old would understand.",
+  "planner_briefing": "Road 36 | Health Score: 25.7/100 | State: Saturated Archetype: Chronic -- maintains elevated congestion 24/7, including at 3 AM -- structural capacity deficit Policy class: infrastructure audit, capacity redesign",
+  "cascade_alert": "Road 36 has entered Saturated state.",
+  "counterfactual_summary": "Using [DATA] to estimate the impact of a traffic accident, you need to use a policy_simulation method.",
+  "traffic_summary": "Suitable for both planners and senior officials.",
+  "answer_question_citizen": "What was the cause of the crash?",
+  "answer_question_planner": "What was the cause of the crash?"
 }

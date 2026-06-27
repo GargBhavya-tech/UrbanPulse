@@ -1,0 +1,398 @@
+{
+  "1": {
+    "archetype": "Ghost",
+    "confidence": 0.7108,
+    "stability_score": 1.0,
+    "stable": true
+  },
+  "2": {
+    "archetype": "Chameleon",
+    "confidence": 0.6872,
+    "stability_score": 1.0,
+    "stable": true
+  },
+  "3": {
+    "archetype": "Ghost",
+    "confidence": 0.6931,
+    "stability_score": 1.0,
+    "stable": true
+  },
+  "4": {
+    "archetype": "Chameleon",
+    "confidence": 0.7101,
+    "stability_score": 1.0,
+    "stable": true
+  },
+  "5": {
+    "archetype": "Saturator",
+    "confidence": 0.5754,
+    "stability_score": 1.0,
+    "stable": true
+  },
+  "6": {
+    "archetype": "Ghost",
+    "confidence": 0.6255,
+    "stability_score": 1.0,
+    "stable": true
+  },
+  "7": {
+    "archetype": "Chameleon",
+    "confidence": 0.7279,
+    "stability_score": 1.0,
+    "stable": true
+  },
+  "8": {
+    "archetype": "Chameleon",
+    "confidence": 0.5906,
+    "stability_score": 1.0,
+    "stable": true
+  },
+  "9": {
+    "archetype": "Chameleon",
+    "confidence": 0.6565,
+    "stability_score": 1.0,
+    "stable": true
+  },
+  "10": {
+    "archetype": "Ghost",
+    "confidence": 0.497,
+    "stability_score": 1.0,
+    "stable": true
+  },
+  "11": {
+    "archetype": "Ghost",
+    "confidence": 0.6348,
+    "stability_score": 1.0,
+    "stable": true
+  },
+  "12": {
+    "archetype": "Chameleon",
+    "confidence": 0.6043,
+    "stability_score": 1.0,
+    "stable": true
+  },
+  "13": {
+    "archetype": "Ghost",
+    "confidence": 0.7046,
+    "stability_score": 1.0,
+    "stable": true
+  },
+  "14": {
+    "archetype": "Chameleon",
+    "confidence": 0.5519,
+    "stability_score": 1.0,
+    "stable": true
+  },
+  "15": {
+    "archetype": "Chameleon",
+    "confidence": 0.635,
+    "stability_score": 1.0,
+    "stable": true
+  },
+  "16": {
+    "archetype": "Chameleon",
+    "confidence": 0.6682,
+    "stability_score": 1.0,
+    "stable": true
+  },
+  "17": {
+    "archetype": "Saturator",
+    "confidence": 0.5628,
+    "stability_score": 1.0,
+    "stable": true
+  },
+  "18": {
+    "archetype": "Chameleon",
+    "confidence": 0.6998,
+    "stability_score": 1.0,
+    "stable": true
+  },
+  "19": {
+    "archetype": "Commuter",
+    "confidence": 0.7269,
+    "stability_score": 1.0,
+    "stable": true
+  },
+  "20": {
+    "archetype": "Commuter",
+    "confidence": 0.7111,
+    "stability_score": 1.0,
+    "stable": true
+  },
+  "21": {
+    "archetype": "Commuter",
+    "confidence": 0.696,
+    "stability_score": 1.0,
+    "stable": true
+  },
+  "22": {
+    "archetype": "Commuter",
+    "confidence": 0.7401,
+    "stability_score": 1.0,
+    "stable": true
+  },
+  "23": {
+    "archetype": "Saturator",
+    "confidence": 0.6364,
+    "stability_score": 1.0,
+    "stable": true
+  },
+  "24": {
+    "archetype": "Saturator",
+    "confidence": 0.5062,
+    "stability_score": 0.0,
+    "stable": false
+  },
+  "25": {
+    "archetype": "Commuter",
+    "confidence": 0.7327,
+    "stability_score": 1.0,
+    "stable": true
+  },
+  "26": {
+    "archetype": "Commuter",
+    "confidence": 0.7237,
+    "stability_score": 1.0,
+    "stable": true
+  },
+  "27": {
+    "archetype": "Saturator",
+    "confidence": 0.6137,
+    "stability_score": 1.0,
+    "stable": true
+  },
+  "28": {
+    "archetype": "Commuter",
+    "confidence": 0.7436,
+    "stability_score": 1.0,
+    "stable": true
+  },
+  "29": {
+    "archetype": "Saturator",
+    "confidence": 0.6591,
+    "stability_score": 1.0,
+    "stable": true
+  },
+  "30": {
+    "archetype": "Saturator",
+    "confidence": 0.5962,
+    "stability_score": 1.0,
+    "stable": true
+  },
+  "31": {
+    "archetype": "Chameleon",
+    "confidence": 0.6143,
+    "stability_score": 0.0714,
+    "stable": false
+  },
+  "32": {
+    "archetype": "Chameleon",
+    "confidence": 0.5863,
+    "stability_score": 1.0,
+    "stable": true
+  },
+  "33": {
+    "archetype": "Chameleon",
+    "confidence": 0.708,
+    "stability_score": 1.0,
+    "stable": true
+  },
+  "34": {
+    "archetype": "Ghost",
+    "confidence": 0.6294,
+    "stability_score": 1.0,
+    "stable": true
+  },
+  "35": {
+    "archetype": "Chameleon",
+    "confidence": 0.6654,
+    "stability_score": 1.0,
+    "stable": true
+  },
+  "36": {
+    "archetype": "Chronic",
+    "confidence": 0.5638,
+    "stability_score": 0.8571,
+    "stable": true
+  },
+  "37": {
+    "archetype": "Chronic",
+    "confidence": 0.7207,
+    "stability_score": 1.0,
+    "stable": true
+  },
+  "38": {
+    "archetype": "Saturator",
+    "confidence": 0.5805,
+    "stability_score": 1.0,
+    "stable": true
+  },
+  "39": {
+    "archetype": "Commuter",
+    "confidence": 0.7191,
+    "stability_score": 1.0,
+    "stable": true
+  },
+  "40": {
+    "archetype": "Commuter",
+    "confidence": 0.6543,
+    "stability_score": 1.0,
+    "stable": true
+  },
+  "41": {
+    "archetype": "Chameleon",
+    "confidence": 0.7262,
+    "stability_score": 1.0,
+    "stable": true
+  },
+  "42": {
+    "archetype": "Chameleon",
+    "confidence": 0.7212,
+    "stability_score": 1.0,
+    "stable": true
+  },
+  "43": {
+    "archetype": "Saturator",
+    "confidence": 0.6646,
+    "stability_score": 1.0,
+    "stable": true
+  },
+  "44": {
+    "archetype": "Saturator",
+    "confidence": 0.4601,
+    "stability_score": 0.0714,
+    "stable": false
+  },
+  "45": {
+    "archetype": "Saturator",
+    "confidence": 0.5782,
+    "stability_score": 0.0714,
+    "stable": false
+  },
+  "46": {
+    "archetype": "Chameleon",
+    "confidence": 0.5549,
+    "stability_score": 1.0,
+    "stable": true
+  },
+  "47": {
+    "archetype": "Saturator",
+    "confidence": 0.4666,
+    "stability_score": 0.0714,
+    "stable": false
+  },
+  "48": {
+    "archetype": "Chameleon",
+    "confidence": 0.7094,
+    "stability_score": 1.0,
+    "stable": true
+  },
+  "49": {
+    "archetype": "Saturator",
+    "confidence": 0.6536,
+    "stability_score": 1.0,
+    "stable": true
+  },
+  "50": {
+    "archetype": "Saturator",
+    "confidence": 0.6272,
+    "stability_score": 0.8571,
+    "stable": true
+  },
+  "51": {
+    "archetype": "Commuter",
+    "confidence": 0.6184,
+    "stability_score": 1.0,
+    "stable": true
+  },
+  "52": {
+    "archetype": "Commuter",
+    "confidence": 0.6526,
+    "stability_score": 1.0,
+    "stable": true
+  },
+  "53": {
+    "archetype": "Saturator",
+    "confidence": 0.5741,
+    "stability_score": 0.0714,
+    "stable": false
+  },
+  "54": {
+    "archetype": "Chameleon",
+    "confidence": 0.571,
+    "stability_score": 1.0,
+    "stable": true
+  },
+  "55": {
+    "archetype": "Chameleon",
+    "confidence": 0.5004,
+    "stability_score": 0.0,
+    "stable": false
+  },
+  "56": {
+    "archetype": "Chameleon",
+    "confidence": 0.5926,
+    "stability_score": 1.0,
+    "stable": true
+  },
+  "57": {
+    "archetype": "Ghost",
+    "confidence": 0.4887,
+    "stability_score": 0.0,
+    "stable": false
+  },
+  "58": {
+    "archetype": "Commuter",
+    "confidence": 0.5022,
+    "stability_score": 1.0,
+    "stable": true
+  },
+  "59": {
+    "archetype": "Chameleon",
+    "confidence": 0.5835,
+    "stability_score": 1.0,
+    "stable": true
+  },
+  "60": {
+    "archetype": "Saturator",
+    "confidence": 0.5266,
+    "stability_score": 0.0714,
+    "stable": false
+  },
+  "61": {
+    "archetype": "Commuter",
+    "confidence": 0.5838,
+    "stability_score": 1.0,
+    "stable": true
+  },
+  "62": {
+    "archetype": "Commuter",
+    "confidence": 0.554,
+    "stability_score": 1.0,
+    "stable": true
+  },
+  "63": {
+    "archetype": "Commuter",
+    "confidence": 0.7065,
+    "stability_score": 1.0,
+    "stable": true
+  },
+  "64": {
+    "archetype": "Commuter",
+    "confidence": 0.6892,
+    "stability_score": 1.0,
+    "stable": true
+  },
+  "65": {
+    "archetype": "Commuter",
+    "confidence": 0.7223,
+    "stability_score": 1.0,
+    "stable": true
+  },
+  "66": {
+    "archetype": "Commuter",
+    "confidence": 0.6562,
+    "stability_score": 1.0,
+    "stable": true
+  }
+}

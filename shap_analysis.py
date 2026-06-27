@@ -348,6 +348,14 @@ _TRANSLATIONS: dict[str, str] = {
         "Current average queue delay was {val:.0f} s, {direction} "
         "congestion risk (longer queues signal an already-stressed road)."
     ),
+    "sin_hour": (
+        "The time-of-day sine signal was {val:.3f} — "
+        "{direction} congestion risk (peak-hour proximity)."
+    ),
+    "cos_hour": (
+        "The time-of-day cosine signal was {val:.3f} — "
+        "{direction} congestion risk."
+    ),
     "hour": (
         "This reading falls at hour {val:.0f} — "
         "{direction} congestion risk (peak-hour multiplier)."
@@ -575,11 +583,10 @@ def run() -> dict[str, Any]:
     )
     p4 = plot_waterfall(sv_37, title_37, "04_waterfall_link37.png", SHAP_DIR)
 
-    # ------------------------------------------------------------------ #
-    # 9. Plot 5 — Dependence: hour
-    # ------------------------------------------------------------------ #
-    print("  [5/6] Dependence: hour ...")
-    p5 = plot_dependence(sv_sample, "hour", "05_dependence_hour.png", SHAP_DIR)
+    # Plot 5 — Dependence: sin_hour (replaces raw 'hour', which is now
+    # excluded from the feature set in favour of cyclical encodings).
+    print("  [5/6] Dependence: sin_hour ...")
+    p5 = plot_dependence(sv_sample, "sin_hour", "05_dependence_hour.png", SHAP_DIR)
 
     # ------------------------------------------------------------------ #
     # 10. Plot 6 — Dependence: mean_occup

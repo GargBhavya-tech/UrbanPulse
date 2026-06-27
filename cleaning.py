@@ -28,6 +28,7 @@ def parse_datetime(df: pd.DataFrame) -> pd.DataFrame:
     Returns:
         Frame with ``date`` as datetime and the derived time columns.
     """
+    df = df.copy()
     df["date"] = pd.to_datetime(df["date"])
     df["hour"] = df["date"].dt.hour
     df["minute"] = df["date"].dt.minute
@@ -61,6 +62,7 @@ def cast_vehicle_counts(df: pd.DataFrame) -> pd.DataFrame:
     Returns:
         Frame with integer vehicle-count columns.
     """
+    df = df.copy()
     for col in config.metric_cols("vehs"):
         df[col] = df[col].round().astype("int64")
     return df
@@ -78,6 +80,7 @@ def cap_occupancy(df: pd.DataFrame) -> pd.DataFrame:
     Returns:
         Frame with occupancy clipped to ``[0, OCCUPANCY_CAP]``.
     """
+    df = df.copy()
     occ_cols = config.metric_cols("occup")
     df[occ_cols] = df[occ_cols].clip(upper=config.OCCUPANCY_CAP)
     return df
@@ -95,6 +98,7 @@ def add_lane6_flag(df: pd.DataFrame) -> pd.DataFrame:
     Returns:
         Frame with the ``lane6_active`` column.
     """
+    df = df.copy()
     vehs_6 = f"{config.METRIC_PREFIXES['vehs']}_6"
     df["lane6_active"] = (df[vehs_6] > 0).astype("int64")
     return df
@@ -111,6 +115,7 @@ def add_stall_flags(df: pd.DataFrame) -> pd.DataFrame:
     Returns:
         Frame with ``lane4_stalled`` and ``lane5_stalled`` columns.
     """
+    df = df.copy()
     for lane in (4, 5):
         vehs = f"{config.METRIC_PREFIXES['vehs']}_{lane}"
         speed = f"{config.METRIC_PREFIXES['arith']}_{lane}"
@@ -138,6 +143,7 @@ def scale_speeds(df: pd.DataFrame) -> pd.DataFrame:
     Returns:
         Frame with lane 1-5 speeds in real km/h and Lane 6 speeds unchanged.
     """
+    df = df.copy()
     speed_cols = (
         config.metric_cols("arith", config.DRIVING_LANES)
         + config.metric_cols("harm", config.DRIVING_LANES)
@@ -189,7 +195,7 @@ def integrity_report(df: pd.DataFrame) -> dict[str, object]:
         "missing_cells": int(df.isna().sum().sum()),
         "max_occupancy": float(df[occ_cols].to_numpy().max()),
         "timeint_dropped": "TIMEINT" not in df.columns,
-        "has_lane6_active": "lane6_active" in df.columns,
+        "has_lane6_active": "lane6_active" in df.columns, 
         "has_stall_flags": {"lane4_stalled", "lane5_stalled"}.issubset(df.columns),
         "speed_min_kmh": float(np.nanmin(df[speed_cols].to_numpy())),
         "speed_max_kmh": float(np.nanmax(df[speed_cols].to_numpy())),

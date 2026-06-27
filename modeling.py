@@ -21,7 +21,17 @@ import config
 # (a tree can memorise 66 integers, inflating train AUC trivially). It is
 # instead represented by its smoothed target-encoded congestion rate, added
 # explicitly as ``link_congestion_rate`` in :func:`prepare_xy`.
-NON_FEATURE_COLS: list[str] = ["date", "day_number", "congested", "LINK_ID"]
+# Columns that are identifiers, not model inputs.
+# LINK_ID is the raw road-segment integer — it must NOT enter the model directly
+# (a tree can memorise 66 integers, inflating train AUC trivially). It is
+# instead represented by its smoothed target-encoded congestion rate, added
+# explicitly as ``link_congestion_rate`` in :func:`prepare_xy`.
+# "hour" is excluded because its cyclical encodings (sin_hour, cos_hour) already
+# represent the time-of-day signal in a rotation-invariant form; keeping both
+# the raw integer and the encodings creates a correlated/redundant feature that
+# dilutes SHAP attributions.
+NON_FEATURE_COLS: list[str] = ["date", "day_number", "congested", "LINK_ID", "hour"]
+
 
 # Columns that DEFINE the target (mean_occup>0.5 & mean_queue>238) and their
 # direct derivatives — leakage if used to predict the *current* interval.

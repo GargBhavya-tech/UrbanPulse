@@ -58,7 +58,17 @@ class LLMClient(ABC):
         if backend == "template":
             return TemplateClient()
         if backend == "flan_t5":
-            return FlanT5Client()
+            try:
+                return FlanT5Client()
+            except Exception as exc:  # noqa: BLE001
+                # Edge Case F: model download failure (no internet, disk full,
+                # transformers/torch not installed, etc.).
+                # Degrade gracefully to TemplateClient so the demo still runs.
+                print(
+                    f"  [LLM] FlanT5Client init failed ({type(exc).__name__}: {exc}). "
+                    "Falling back to TemplateClient."
+                )
+                return TemplateClient()
         if backend == "gemini":
             return GeminiClient()
         raise ValueError(
@@ -255,10 +265,21 @@ class FlanT5Client(LLMClient):
 
         model_name = config.LLM_FLAN_T5_MODEL
         print(f"  [LLM] Loading {model_name} (first call -- cached afterwards) ...")
-        FlanT5Client._tokenizer = T5Tokenizer.from_pretrained(model_name)
-        FlanT5Client._model = T5ForConditionalGeneration.from_pretrained(model_name)
-        FlanT5Client._model.eval()
-        print(f"  [LLM] {model_name} loaded.")
+        try:
+            FlanT5Client._tokenizer = T5Tokenizer.from_pretrained(model_name)
+            FlanT5Client._model = T5ForConditionalGeneration.from_pretrained(model_name)
+            FlanT5Client._model.eval()
+            print(f"  [LLM] {model_name} loaded.")
+        except Exception as exc:  # noqa: BLE001
+            # Download failure (no internet, disk full, HuggingFace hub down).
+            # Reset class-level cache so next call retries rather than using
+            # a half-initialised state.
+            FlanT5Client._model = None
+            FlanT5Client._tokenizer = None
+            raise RuntimeError(
+                f"FlanT5Client: failed to load {model_name!r} -- {exc}. "
+                "Ensure you have internet access and 'pip install transformers torch'."
+            ) from exc
 
     def complete(self, prompt: str, max_new_tokens: int = config.LLM_MAX_NEW_TOKENS) -> str:
         self._load()

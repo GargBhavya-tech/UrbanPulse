@@ -15,6 +15,7 @@ plus the binary classification target.
 from __future__ import annotations
 
 import json
+import warnings
 
 import numpy as np
 import pandas as pd
@@ -111,11 +112,65 @@ def group_c_time(df: pd.DataFrame) -> pd.DataFrame:
 # Group D — custom KPI features
 # --------------------------------------------------------------------------- #
 def _minmax(series: pd.Series) -> tuple[pd.Series, float, float]:
-    """Min-max scale a series to [0, 1], returning the constants used."""
+    """Min-max scale a series to [0, 1], returning the constants used.
+
+    When hi == lo (zero-variance feature, e.g. complete sensor outage on a
+    link), span defaults to 1.0 so the output is uniformly 0.0. A warning is
+    emitted so this silent behaviour is visible during debugging.
+    """
     lo = float(series.min())
     hi = float(series.max())
-    span = hi - lo if hi > lo else 1.0
+    if hi > lo:
+        span = hi - lo
+    else:
+        warnings.warn(
+            f"_minmax: zero-variance feature '{series.name}' "
+            f"(min=max={lo:.4f}). Normalised value will be 0.0 for all rows. "
+            "This may indicate a sensor outage or constant-value input.",
+            RuntimeWarning,
+            stacklevel=2,
+        )
+        span = 1.0
     return (series - lo) / span, lo, hi
+
+
+def transform_minmax(series: pd.Series, lo: float, hi: float) -> pd.Series:
+    """Apply pre-fitted min-max scaling using constants from training time.
+
+    This is the scoring-time counterpart to :func:`_minmax`. Use this instead
+    of ``_minmax`` whenever you are transforming a subset of rows (per-link,
+    single-observation, etc.) so the normalisation is consistent with what the
+    model was trained on.
+
+    Args:
+        series: Values to normalise.
+        lo:     Training-time minimum (from ``feature_norms.json``).
+        hi:     Training-time maximum (from ``feature_norms.json``).
+
+    Returns:
+        Normalised Series clipped to [0, 1].
+    """
+    span = hi - lo if hi > lo else 1.0
+    return ((series - lo) / span).clip(0.0, 1.0)
+
+
+def load_feature_norms() -> dict[str, float]:
+    """Load the KPI normalisation constants written by :func:`build_features`.
+
+    Returns:
+        Dict with keys ``queue_min``, ``queue_max``, ``speed_min``,
+        ``speed_max`` — the global training-time min/max values.
+
+    Raises:
+        FileNotFoundError: If B2 has not been run yet.
+    """
+    path = config.FEATURE_NORMS_JSON
+    if not path.exists():
+        raise FileNotFoundError(
+            f"feature_norms.json not found at {path}. Run B2 (build_features) first."
+        )
+    return json.loads(path.read_text())
+
 
 
 def group_d_kpis(group_a: pd.DataFrame) -> tuple[pd.DataFrame, dict[str, float]]:

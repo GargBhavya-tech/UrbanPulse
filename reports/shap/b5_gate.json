@@ -1,0 +1,30 @@
+{
+  "plots_produced": [
+    "01_beeswarm.png",
+    "02_importance_bar.png",
+    "03_waterfall_link36.png",
+    "04_waterfall_link37.png",
+    "05_dependence_hour.png",
+    "06_dependence_mean_occup.png"
+  ],
+  "all_plots_exist": true,
+  "global_sample_rows": 5000,
+  "global_sample_pos_rate": 0.131,
+  "link36_meta": {
+    "link_id": 36,
+    "day_number": 1,
+    "minute_of_day": 585,
+    "mean_queue_s": 892.3233333333334,
+    "mean_occup": 0.7573599999999999,
+    "congested": 1
+  },
+  "link37_meta": {
+    "link_id": 37,
+    "day_number": 1,
+    "minute_of_day": 545,
+    "mean_queue_s": 590.7533333333333,
+    "mean_occup": 0.53576,
+    "congested": 1
+  },
+  "translations_path": "C:\\Users\\JIYA\\Desktop\\UrbanPulse\\reports\\shap\\translations.json"
+}

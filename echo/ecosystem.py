@@ -324,6 +324,8 @@ def run() -> dict[str, Any]:
     )
 
     demo_day, demo_minute = None, None
+    config.ECOSYSTEM_STATE_JSON.parent.mkdir(parents=True, exist_ok=True)
+
     if len(events):
         demo = events.sort_values("n_downstream", ascending=False).iloc[0]
         demo_day, demo_minute = int(demo["day_number"]), int(demo["minute_of_day"])
@@ -344,6 +346,45 @@ def run() -> dict[str, Any]:
                 indent=2,
             )
         )
+    else:
+        # Edge Case E: no cascade events (zero graph edges or low-correlation dataset).
+        # Write a safe sentinel so B10 from_artifacts() never raises FileNotFoundError.
+        # Use the most congested observed interval (lowest mean road_health_score) as the
+        # representative snapshot; this gives the LLM layer real metabolic state data.
+        worst_interval = (
+            timeline.groupby(["day_number", "minute_of_day"])["road_health_score"]
+            .mean()
+            .idxmin()
+        )
+        demo_day, demo_minute = int(worst_interval[0]), int(worst_interval[1])
+        snap = timeline[
+            (timeline["day_number"] == demo_day) & (timeline["minute_of_day"] == demo_minute)
+        ]
+        ecosystem_state = {
+            int(r.LINK_ID): {
+                "state": r.state,
+                "regime": r.regime,
+                "road_health_score": round(float(r.road_health_score), 2),
+            }
+            for r in snap.itertuples()
+        }
+        config.ECOSYSTEM_STATE_JSON.write_text(
+            json.dumps(
+                {
+                    "day_number": demo_day,
+                    "minute_of_day": demo_minute,
+                    "links": ecosystem_state,
+                    "_sentinel": True,   # flag: no cascade events found
+                    "_note": "No cascade events detected; showing most congested interval.",
+                },
+                indent=2,
+            )
+        )
+        print(
+            f"  [WARN] No cascade events detected. "
+            f"Wrote sentinel ecosystem_state.json at day={demo_day} min={demo_minute}."
+        )
+
 
     return {
         "n_edges": graph.number_of_edges(),

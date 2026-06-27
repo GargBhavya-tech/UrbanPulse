@@ -1,7 +1,7 @@
-"""Full pipeline runner: B1 -> B2 -> B3 -> B4 -> B5 -> B7 -> B8 -> B6.
+"""Full pipeline runner: B1 -> B2 -> B3 -> B4 -> B5 -> B7 -> B8 -> B9 -> B6 -> B10.
 
 Usage:
-    python scripts/run_pipeline.py [--data PATH_TO_CSV]
+    python scripts/run_pipeline.py [--data PATH_TO_CSV] [--llm-backend template|flan_t5|gemini]
 """
 from __future__ import annotations
 
@@ -106,6 +106,7 @@ def run_b7() -> None:
     print(f"  silhouette={out['silhouette']:.3f}  archetypes={out['archetype_counts']}")
     print(f"  stable={out['n_stable']}/{config.EXPECTED_LINKS}")
     _gate("B7 — 5-7 archetypes", 5 <= out["n_archetypes"] <= 7)
+    _gate("B7 — silhouette > 0.15", out["silhouette"] > 0.15)
 
 
 def run_b8() -> None:
@@ -207,10 +208,50 @@ def run_b6() -> None:
     _gate("B6 — every rec has reasoning", all_reason)
 
 
+def run_b10(backend: str = "template") -> None:
+    _banner("B10 — LLM Intelligence Layer")
+    from llm.context import from_artifacts
+    from llm.layer import LLMLayer, save_outputs
+    from llm.grounding import GroundingValidator
+
+    print(f"  Backend: {backend}")
+    try:
+        ctx = from_artifacts(link_id=36, day_number=1, minute_of_day=585)
+        print(f"  Context: link={ctx.link_id} state={ctx.metabolic_state} "
+              f"archetype={ctx.archetype} shap={'real' if ctx.top_shap else 'none'}")
+    except Exception as exc:
+        print(f"  [WARN] Context assembly error: {exc}")
+        _gate("B10 — context assembly", False)
+        return
+
+    layer = LLMLayer(backend=backend)
+    print(f"  LLM backend class: {layer.backend_name}")
+    outputs = layer.generate_all(
+        ctx,
+        question="What could have prevented the July 1 disaster on Road 36?",
+        n_critical=17, worst_link=36, worst_health=ctx.road_health_score,
+    )
+    config.LLM_REPORTS_DIR.mkdir(parents=True, exist_ok=True)
+    saved = save_outputs(outputs)
+    print(f"  Saved -> {saved}")
+
+    # Citizen grounding gate
+    validator = GroundingValidator()
+    citizen_vr = validator.validate(
+        outputs.get("citizen_advice", ""),
+        audience="citizen", ctx=ctx, output_type="citizen_advice", prompt="",
+    )
+    _gate("B10 — citizen grounding (no forbidden terms)", citizen_vr.passed)
+
 
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--data", default=str(config.RAW_CSV))
+    parser.add_argument(
+        "--llm-backend", default=config.LLM_DEFAULT_BACKEND,
+        choices=["template", "flan_t5", "gemini"],
+        help="LLM backend for B10 (default: from config)",
+    )
     args = parser.parse_args()
     raw_csv = Path(args.data)
 
@@ -231,6 +272,7 @@ def main() -> int:
     run_b8()
     run_b9()
     run_b6()
+    run_b10(args.llm_backend)
     return 0
 
 

@@ -1,0 +1,268 @@
+{
+  "nodes": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66
+  ],
+  "edges": [
+    {
+      "source": 30,
+      "target": 31,
+      "lag_minutes": 5,
+      "correlation_strength": 0.3042,
+      "discovery_method": "cross_correlation_deseasonalized_residual"
+    },
+    {
+      "source": 30,
+      "target": 38,
+      "lag_minutes": 5,
+      "correlation_strength": 0.3103,
+      "discovery_method": "cross_correlation_deseasonalized_residual"
+    },
+    {
+      "source": 30,
+      "target": 40,
+      "lag_minutes": 5,
+      "correlation_strength": 0.2956,
+      "discovery_method": "cross_correlation_deseasonalized_residual"
+    },
+    {
+      "source": 31,
+      "target": 16,
+      "lag_minutes": 5,
+      "correlation_strength": 0.2692,
+      "discovery_method": "cross_correlation_deseasonalized_residual"
+    },
+    {
+      "source": 31,
+      "target": 36,
+      "lag_minutes": 5,
+      "correlation_strength": 0.3257,
+      "discovery_method": "cross_correlation_deseasonalized_residual"
+    },
+    {
+      "source": 31,
+      "target": 49,
+      "lag_minutes": 5,
+      "correlation_strength": 0.2533,
+      "discovery_method": "cross_correlation_deseasonalized_residual"
+    },
+    {
+      "source": 31,
+      "target": 53,
+      "lag_minutes": 5,
+      "correlation_strength": 0.2549,
+      "discovery_method": "cross_correlation_deseasonalized_residual"
+    },
+    {
+      "source": 34,
+      "target": 36,
+      "lag_minutes": 5,
+      "correlation_strength": 0.2572,
+      "discovery_method": "cross_correlation_deseasonalized_residual"
+    },
+    {
+      "source": 34,
+      "target": 40,
+      "lag_minutes": 5,
+      "correlation_strength": 0.2649,
+      "discovery_method": "cross_correlation_deseasonalized_residual"
+    },
+    {
+      "source": 36,
+      "target": 16,
+      "lag_minutes": 5,
+      "correlation_strength": 0.2672,
+      "discovery_method": "cross_correlation_deseasonalized_residual"
+    },
+    {
+      "source": 36,
+      "target": 30,
+      "lag_minutes": 5,
+      "correlation_strength": 0.2662,
+      "discovery_method": "cross_correlation_deseasonalized_residual"
+    },
+    {
+      "source": 36,
+      "target": 44,
+      "lag_minutes": 5,
+      "correlation_strength": 0.2802,
+      "discovery_method": "cross_correlation_deseasonalized_residual"
+    },
+    {
+      "source": 38,
+      "target": 16,
+      "lag_minutes": 5,
+      "correlation_strength": 0.2979,
+      "discovery_method": "cross_correlation_deseasonalized_residual"
+    },
+    {
+      "source": 38,
+      "target": 31,
+      "lag_minutes": 5,
+      "correlation_strength": 0.3807,
+      "discovery_method": "cross_correlation_deseasonalized_residual"
+    },
+    {
+      "source": 38,
+      "target": 34,
+      "lag_minutes": 5,
+      "correlation_strength": 0.2976,
+      "discovery_method": "cross_correlation_deseasonalized_residual"
+    },
+    {
+      "source": 38,
+      "target": 36,
+      "lag_minutes": 5,
+      "correlation_strength": 0.3672,
+      "discovery_method": "cross_correlation_deseasonalized_residual"
+    },
+    {
+      "source": 38,
+      "target": 40,
+      "lag_minutes": 5,
+      "correlation_strength": 0.3911,
+      "discovery_method": "cross_correlation_deseasonalized_residual"
+    },
+    {
+      "source": 38,
+      "target": 44,
+      "lag_minutes": 5,
+      "correlation_strength": 0.3266,
+      "discovery_method": "cross_correlation_deseasonalized_residual"
+    },
+    {
+      "source": 38,
+      "target": 49,
+      "lag_minutes": 5,
+      "correlation_strength": 0.2595,
+      "discovery_method": "cross_correlation_deseasonalized_residual"
+    },
+    {
+      "source": 38,
+      "target": 50,
+      "lag_minutes": 5,
+      "correlation_strength": 0.2678,
+      "discovery_method": "cross_correlation_deseasonalized_residual"
+    },
+    {
+      "source": 38,
+      "target": 53,
+      "lag_minutes": 5,
+      "correlation_strength": 0.2546,
+      "discovery_method": "cross_correlation_deseasonalized_residual"
+    },
+    {
+      "source": 40,
+      "target": 16,
+      "lag_minutes": 5,
+      "correlation_strength": 0.2554,
+      "discovery_method": "cross_correlation_deseasonalized_residual"
+    },
+    {
+      "source": 40,
+      "target": 31,
+      "lag_minutes": 5,
+      "correlation_strength": 0.3768,
+      "discovery_method": "cross_correlation_deseasonalized_residual"
+    },
+    {
+      "source": 40,
+      "target": 36,
+      "lag_minutes": 5,
+      "correlation_strength": 0.3434,
+      "discovery_method": "cross_correlation_deseasonalized_residual"
+    },
+    {
+      "source": 44,
+      "target": 30,
+      "lag_minutes": 5,
+      "correlation_strength": 0.271,
+      "discovery_method": "cross_correlation_deseasonalized_residual"
+    },
+    {
+      "source": 44,
+      "target": 31,
+      "lag_minutes": 5,
+      "correlation_strength": 0.2927,
+      "discovery_method": "cross_correlation_deseasonalized_residual"
+    },
+    {
+      "source": 44,
+      "target": 40,
+      "lag_minutes": 5,
+      "correlation_strength": 0.2957,
+      "discovery_method": "cross_correlation_deseasonalized_residual"
+    },
+    {
+      "source": 50,
+      "target": 40,
+      "lag_minutes": 5,
+      "correlation_strength": 0.2508,
+      "discovery_method": "cross_correlation_deseasonalized_residual"
+    }
+  ]
+}

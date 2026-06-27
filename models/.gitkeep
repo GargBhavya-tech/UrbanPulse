@@ -1,3 +1,0 @@
-# This file keeps the models/ directory in git.
-# Trained model .pkl files are excluded via .gitignore (large binaries,
-# fully reproducible by running: python train.py && python compare.py)
