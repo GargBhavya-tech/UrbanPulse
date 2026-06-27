@@ -1,0 +1,6 @@
+rule,condition,fires
+R2 (Any),speed_div>5 & queue>300,182
+R3 (Saturator),max_occup>=0.9 & queue>500,121
+R4 (Chronic),health<30 x3 consecutive,5
+R5 (Landmine),lane5_stalled & max_queue>400,0
+R6 (Any),queue surge>200s,26

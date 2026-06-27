@@ -1,0 +1,1612 @@
+{
+  "timestamp": {
+    "day_number": 4,
+    "minute_of_day": 490
+  },
+  "n_links": 66,
+  "n_critical": 16,
+  "hotspot_ranking": [
+    {
+      "link_id": 17,
+      "health_score": 38.63,
+      "state": "Saturated"
+    },
+    {
+      "link_id": 44,
+      "health_score": 43.19,
+      "state": "Stressed"
+    },
+    {
+      "link_id": 5,
+      "health_score": 43.45,
+      "state": "Stressed"
+    },
+    {
+      "link_id": 10,
+      "health_score": 43.92,
+      "state": "Stressed"
+    },
+    {
+      "link_id": 11,
+      "health_score": 44.36,
+      "state": "Stressed"
+    },
+    {
+      "link_id": 13,
+      "health_score": 46.32,
+      "state": "Stressed"
+    },
+    {
+      "link_id": 30,
+      "health_score": 46.91,
+      "state": "Stressed"
+    },
+    {
+      "link_id": 31,
+      "health_score": 47.31,
+      "state": "Stressed"
+    },
+    {
+      "link_id": 46,
+      "health_score": 47.32,
+      "state": "Stressed"
+    },
+    {
+      "link_id": 6,
+      "health_score": 48.11,
+      "state": "Stressed"
+    },
+    {
+      "link_id": 8,
+      "health_score": 49.28,
+      "state": "Stressed"
+    },
+    {
+      "link_id": 36,
+      "health_score": 50.11,
+      "state": "Stressed"
+    },
+    {
+      "link_id": 3,
+      "health_score": 50.74,
+      "state": "Stressed"
+    },
+    {
+      "link_id": 48,
+      "health_score": 51.22,
+      "state": "Stressed"
+    },
+    {
+      "link_id": 15,
+      "health_score": 53.0,
+      "state": "Stressed"
+    },
+    {
+      "link_id": 1,
+      "health_score": 53.26,
+      "state": "Stressed"
+    },
+    {
+      "link_id": 7,
+      "health_score": 53.41,
+      "state": "Stressed"
+    },
+    {
+      "link_id": 14,
+      "health_score": 53.67,
+      "state": "Stressed"
+    },
+    {
+      "link_id": 2,
+      "health_score": 54.05,
+      "state": "Stressed"
+    },
+    {
+      "link_id": 9,
+      "health_score": 54.33,
+      "state": "Stressed"
+    },
+    {
+      "link_id": 60,
+      "health_score": 54.68,
+      "state": "Stressed"
+    },
+    {
+      "link_id": 16,
+      "health_score": 54.89,
+      "state": "Stressed"
+    },
+    {
+      "link_id": 37,
+      "health_score": 55.31,
+      "state": "Stressed"
+    },
+    {
+      "link_id": 45,
+      "health_score": 55.33,
+      "state": "Stressed"
+    },
+    {
+      "link_id": 4,
+      "health_score": 56.91,
+      "state": "Stressed"
+    },
+    {
+      "link_id": 32,
+      "health_score": 56.94,
+      "state": "Stressed"
+    },
+    {
+      "link_id": 12,
+      "health_score": 58.24,
+      "state": "Stressed"
+    },
+    {
+      "link_id": 55,
+      "health_score": 59.41,
+      "state": "Stressed"
+    },
+    {
+      "link_id": 18,
+      "health_score": 59.9,
+      "state": "Stressed"
+    },
+    {
+      "link_id": 62,
+      "health_score": 60.9,
+      "state": "Stressed"
+    },
+    {
+      "link_id": 27,
+      "health_score": 61.1,
+      "state": "Stressed"
+    },
+    {
+      "link_id": 43,
+      "health_score": 61.51,
+      "state": "Stressed"
+    },
+    {
+      "link_id": 38,
+      "health_score": 62.27,
+      "state": "Stressed"
+    },
+    {
+      "link_id": 26,
+      "health_score": 62.57,
+      "state": "Stressed"
+    },
+    {
+      "link_id": 35,
+      "health_score": 63.95,
+      "state": "Stressed"
+    },
+    {
+      "link_id": 24,
+      "health_score": 64.22,
+      "state": "Stressed"
+    },
+    {
+      "link_id": 50,
+      "health_score": 64.28,
+      "state": "Stressed"
+    },
+    {
+      "link_id": 61,
+      "health_score": 64.99,
+      "state": "Stressed"
+    },
+    {
+      "link_id": 54,
+      "health_score": 65.05,
+      "state": "Stressed"
+    },
+    {
+      "link_id": 47,
+      "health_score": 65.15,
+      "state": "Stressed"
+    },
+    {
+      "link_id": 51,
+      "health_score": 65.29,
+      "state": "Stressed"
+    },
+    {
+      "link_id": 29,
+      "health_score": 66.16,
+      "state": "Stressed"
+    },
+    {
+      "link_id": 52,
+      "health_score": 66.48,
+      "state": "Stressed"
+    },
+    {
+      "link_id": 53,
+      "health_score": 66.56,
+      "state": "Stressed"
+    },
+    {
+      "link_id": 21,
+      "health_score": 66.59,
+      "state": "Stressed"
+    },
+    {
+      "link_id": 49,
+      "health_score": 66.68,
+      "state": "Stressed"
+    },
+    {
+      "link_id": 56,
+      "health_score": 66.69,
+      "state": "Stressed"
+    },
+    {
+      "link_id": 20,
+      "health_score": 67.2,
+      "state": "Stressed"
+    },
+    {
+      "link_id": 42,
+      "health_score": 67.3,
+      "state": "Stressed"
+    },
+    {
+      "link_id": 23,
+      "health_score": 67.4,
+      "state": "Stressed"
+    },
+    {
+      "link_id": 34,
+      "health_score": 67.65,
+      "state": "Stressed"
+    },
+    {
+      "link_id": 59,
+      "health_score": 68.16,
+      "state": "Stressed"
+    },
+    {
+      "link_id": 66,
+      "health_score": 68.31,
+      "state": "Stressed"
+    },
+    {
+      "link_id": 33,
+      "health_score": 68.34,
+      "state": "Stressed"
+    },
+    {
+      "link_id": 41,
+      "health_score": 68.39,
+      "state": "Stressed"
+    },
+    {
+      "link_id": 19,
+      "health_score": 68.4,
+      "state": "Stressed"
+    },
+    {
+      "link_id": 25,
+      "health_score": 68.62,
+      "state": "Stressed"
+    },
+    {
+      "link_id": 22,
+      "health_score": 69.01,
+      "state": "Stressed"
+    },
+    {
+      "link_id": 64,
+      "health_score": 69.09,
+      "state": "Stressed"
+    },
+    {
+      "link_id": 28,
+      "health_score": 69.25,
+      "state": "Stressed"
+    },
+    {
+      "link_id": 40,
+      "health_score": 69.4,
+      "state": "Stressed"
+    },
+    {
+      "link_id": 57,
+      "health_score": 70.16,
+      "state": "Healthy"
+    },
+    {
+      "link_id": 63,
+      "health_score": 71.22,
+      "state": "Healthy"
+    },
+    {
+      "link_id": 65,
+      "health_score": 72.01,
+      "state": "Healthy"
+    },
+    {
+      "link_id": 39,
+      "health_score": 72.2,
+      "state": "Healthy"
+    },
+    {
+      "link_id": 58,
+      "health_score": 73.62,
+      "state": "Healthy"
+    }
+  ],
+  "links": [
+    {
+      "link_id": 1,
+      "health_score": 53.26,
+      "state": "Stressed",
+      "risk_score": 87.18,
+      "congestion_prob": 0.0059,
+      "critical": false,
+      "mean_queue_s": 190.8,
+      "alerts": [
+        {
+          "severity": "ADVISORY",
+          "message": "Road is Stressed (advisory)."
+        }
+      ],
+      "recommendations": []
+    },
+    {
+      "link_id": 2,
+      "health_score": 54.05,
+      "state": "Stressed",
+      "risk_score": 44.62,
+      "congestion_prob": 0.0835,
+      "critical": false,
+      "mean_queue_s": 208.0,
+      "alerts": [
+        {
+          "severity": "ADVISORY",
+          "message": "Road is Stressed (advisory)."
+        }
+      ],
+      "recommendations": []
+    },
+    {
+      "link_id": 3,
+      "health_score": 50.74,
+      "state": "Stressed",
+      "risk_score": 72.17,
+      "congestion_prob": 0.003,
+      "critical": false,
+      "mean_queue_s": 177.5,
+      "alerts": [
+        {
+          "severity": "ADVISORY",
+          "message": "Road is Stressed (advisory)."
+        }
+      ],
+      "recommendations": []
+    },
+    {
+      "link_id": 4,
+      "health_score": 56.91,
+      "state": "Stressed",
+      "risk_score": 73.07,
+      "congestion_prob": 0.1356,
+      "critical": false,
+      "mean_queue_s": 221.3,
+      "alerts": [
+        {
+          "severity": "ADVISORY",
+          "message": "Road is Stressed (advisory)."
+        }
+      ],
+      "recommendations": []
+    },
+    {
+      "link_id": 5,
+      "health_score": 43.45,
+      "state": "Stressed",
+      "risk_score": 96.21,
+      "congestion_prob": 0.9999,
+      "critical": true,
+      "mean_queue_s": 419.0,
+      "alerts": [
+        {
+          "severity": "ADVISORY",
+          "message": "Road is Stressed (advisory)."
+        },
+        {
+          "severity": "CRITICAL",
+          "message": "Critical flag: P(congested in 15 min)=1.00, queue=419s."
+        }
+      ],
+      "recommendations": []
+    },
+    {
+      "link_id": 6,
+      "health_score": 48.11,
+      "state": "Stressed",
+      "risk_score": 95.19,
+      "congestion_prob": 0.8905,
+      "critical": true,
+      "mean_queue_s": 250.3,
+      "alerts": [
+        {
+          "severity": "ADVISORY",
+          "message": "Road is Stressed (advisory)."
+        },
+        {
+          "severity": "CRITICAL",
+          "message": "Critical flag: P(congested in 15 min)=0.89, queue=250s."
+        }
+      ],
+      "recommendations": []
+    },
+    {
+      "link_id": 7,
+      "health_score": 53.41,
+      "state": "Stressed",
+      "risk_score": 92.63,
+      "congestion_prob": 0.2436,
+      "critical": false,
+      "mean_queue_s": 268.5,
+      "alerts": [
+        {
+          "severity": "ADVISORY",
+          "message": "Road is Stressed (advisory)."
+        }
+      ],
+      "recommendations": []
+    },
+    {
+      "link_id": 8,
+      "health_score": 49.28,
+      "state": "Stressed",
+      "risk_score": 95.36,
+      "congestion_prob": 0.002,
+      "critical": false,
+      "mean_queue_s": 130.3,
+      "alerts": [
+        {
+          "severity": "ADVISORY",
+          "message": "Road is Stressed (advisory)."
+        }
+      ],
+      "recommendations": []
+    },
+    {
+      "link_id": 9,
+      "health_score": 54.33,
+      "state": "Stressed",
+      "risk_score": 87.52,
+      "congestion_prob": 0.6546,
+      "critical": false,
+      "mean_queue_s": 330.4,
+      "alerts": [
+        {
+          "severity": "ADVISORY",
+          "message": "Road is Stressed (advisory)."
+        }
+      ],
+      "recommendations": []
+    },
+    {
+      "link_id": 10,
+      "health_score": 43.92,
+      "state": "Stressed",
+      "risk_score": 99.78,
+      "congestion_prob": 0.9978,
+      "critical": true,
+      "mean_queue_s": 318.2,
+      "alerts": [
+        {
+          "severity": "ADVISORY",
+          "message": "Road is Stressed (advisory)."
+        },
+        {
+          "severity": "CRITICAL",
+          "message": "Critical flag: P(congested in 15 min)=1.00, queue=318s."
+        }
+      ],
+      "recommendations": []
+    },
+    {
+      "link_id": 11,
+      "health_score": 44.36,
+      "state": "Stressed",
+      "risk_score": 99.7,
+      "congestion_prob": 0.0049,
+      "critical": false,
+      "mean_queue_s": 160.2,
+      "alerts": [
+        {
+          "severity": "ADVISORY",
+          "message": "Road is Stressed (advisory)."
+        }
+      ],
+      "recommendations": []
+    },
+    {
+      "link_id": 12,
+      "health_score": 58.24,
+      "state": "Stressed",
+      "risk_score": 89.41,
+      "congestion_prob": 0.0067,
+      "critical": false,
+      "mean_queue_s": 202.4,
+      "alerts": [
+        {
+          "severity": "ADVISORY",
+          "message": "Road is Stressed (advisory)."
+        }
+      ],
+      "recommendations": []
+    },
+    {
+      "link_id": 13,
+      "health_score": 46.32,
+      "state": "Stressed",
+      "risk_score": 99.63,
+      "congestion_prob": 0.7478,
+      "critical": true,
+      "mean_queue_s": 250.8,
+      "alerts": [
+        {
+          "severity": "ADVISORY",
+          "message": "Road is Stressed (advisory)."
+        },
+        {
+          "severity": "CRITICAL",
+          "message": "Critical flag: P(congested in 15 min)=0.75, queue=251s."
+        }
+      ],
+      "recommendations": []
+    },
+    {
+      "link_id": 14,
+      "health_score": 53.67,
+      "state": "Stressed",
+      "risk_score": 96.63,
+      "congestion_prob": 0.004,
+      "critical": false,
+      "mean_queue_s": 111.8,
+      "alerts": [
+        {
+          "severity": "ADVISORY",
+          "message": "Road is Stressed (advisory)."
+        }
+      ],
+      "recommendations": []
+    },
+    {
+      "link_id": 15,
+      "health_score": 53.0,
+      "state": "Stressed",
+      "risk_score": 66.02,
+      "congestion_prob": 0.6052,
+      "critical": false,
+      "mean_queue_s": 223.9,
+      "alerts": [
+        {
+          "severity": "ADVISORY",
+          "message": "Road is Stressed (advisory)."
+        }
+      ],
+      "recommendations": []
+    },
+    {
+      "link_id": 16,
+      "health_score": 54.89,
+      "state": "Stressed",
+      "risk_score": 87.05,
+      "congestion_prob": 0.9784,
+      "critical": true,
+      "mean_queue_s": 416.5,
+      "alerts": [
+        {
+          "severity": "ADVISORY",
+          "message": "Road is Stressed (advisory)."
+        },
+        {
+          "severity": "CRITICAL",
+          "message": "Critical flag: P(congested in 15 min)=0.98, queue=417s."
+        }
+      ],
+      "recommendations": []
+    },
+    {
+      "link_id": 17,
+      "health_score": 38.63,
+      "state": "Saturated",
+      "risk_score": 99.45,
+      "congestion_prob": 0.9876,
+      "critical": true,
+      "mean_queue_s": 501.5,
+      "alerts": [
+        {
+          "severity": "WARNING",
+          "message": "Road is Saturated (warning)."
+        },
+        {
+          "severity": "CRITICAL",
+          "message": "Critical flag: P(congested in 15 min)=0.99, queue=502s."
+        }
+      ],
+      "recommendations": [
+        {
+          "trigger": "max_occup>=0.9 AND mean_queue>500s",
+          "archetype": "Saturator",
+          "recommendation": "Increase transit frequency on parallel routes",
+          "reasoning": "Near-saturated occupancy: diverting demand relieves pressure faster than signal timing.",
+          "severity": "WARNING"
+        },
+        {
+          "trigger": "queue surge >200s vs last interval",
+          "archetype": "Any",
+          "recommendation": "Issue ADVISORY to downstream links",
+          "reasoning": "Queue jumped 211s in one interval \u2014 likely an incident; downstream links should prepare for spillback.",
+          "severity": "ADVISORY"
+        }
+      ]
+    },
+    {
+      "link_id": 18,
+      "health_score": 59.9,
+      "state": "Stressed",
+      "risk_score": 96.65,
+      "congestion_prob": 0.3719,
+      "critical": false,
+      "mean_queue_s": 266.1,
+      "alerts": [
+        {
+          "severity": "ADVISORY",
+          "message": "Road is Stressed (advisory)."
+        }
+      ],
+      "recommendations": []
+    },
+    {
+      "link_id": 19,
+      "health_score": 68.4,
+      "state": "Stressed",
+      "risk_score": 99.98,
+      "congestion_prob": 0.0003,
+      "critical": false,
+      "mean_queue_s": 228.7,
+      "alerts": [
+        {
+          "severity": "ADVISORY",
+          "message": "Road is Stressed (advisory)."
+        }
+      ],
+      "recommendations": [
+        {
+          "trigger": "risk>70% AND is_am_peak",
+          "archetype": "Commuter",
+          "recommendation": "Review and extend green phase",
+          "reasoning": "AM-peak congestion is demand-driven; more green time reduces queue build-up.",
+          "severity": "WARNING"
+        }
+      ]
+    },
+    {
+      "link_id": 20,
+      "health_score": 67.2,
+      "state": "Stressed",
+      "risk_score": 99.63,
+      "congestion_prob": 0.0015,
+      "critical": false,
+      "mean_queue_s": 259.2,
+      "alerts": [
+        {
+          "severity": "ADVISORY",
+          "message": "Road is Stressed (advisory)."
+        }
+      ],
+      "recommendations": [
+        {
+          "trigger": "risk>70% AND is_am_peak",
+          "archetype": "Commuter",
+          "recommendation": "Review and extend green phase",
+          "reasoning": "AM-peak congestion is demand-driven; more green time reduces queue build-up.",
+          "severity": "WARNING"
+        }
+      ]
+    },
+    {
+      "link_id": 21,
+      "health_score": 66.59,
+      "state": "Stressed",
+      "risk_score": 99.75,
+      "congestion_prob": 0.0024,
+      "critical": false,
+      "mean_queue_s": 272.5,
+      "alerts": [
+        {
+          "severity": "ADVISORY",
+          "message": "Road is Stressed (advisory)."
+        }
+      ],
+      "recommendations": [
+        {
+          "trigger": "risk>70% AND is_am_peak",
+          "archetype": "Commuter",
+          "recommendation": "Review and extend green phase",
+          "reasoning": "AM-peak congestion is demand-driven; more green time reduces queue build-up.",
+          "severity": "WARNING"
+        }
+      ]
+    },
+    {
+      "link_id": 22,
+      "health_score": 69.01,
+      "state": "Stressed",
+      "risk_score": 99.93,
+      "congestion_prob": 0.0002,
+      "critical": false,
+      "mean_queue_s": 215.4,
+      "alerts": [
+        {
+          "severity": "ADVISORY",
+          "message": "Road is Stressed (advisory)."
+        }
+      ],
+      "recommendations": [
+        {
+          "trigger": "risk>70% AND is_am_peak",
+          "archetype": "Commuter",
+          "recommendation": "Review and extend green phase",
+          "reasoning": "AM-peak congestion is demand-driven; more green time reduces queue build-up.",
+          "severity": "WARNING"
+        }
+      ]
+    },
+    {
+      "link_id": 23,
+      "health_score": 67.4,
+      "state": "Stressed",
+      "risk_score": 99.8,
+      "congestion_prob": 0.0002,
+      "critical": false,
+      "mean_queue_s": 442.8,
+      "alerts": [
+        {
+          "severity": "ADVISORY",
+          "message": "Road is Stressed (advisory)."
+        }
+      ],
+      "recommendations": [
+        {
+          "trigger": "queue surge >200s vs last interval",
+          "archetype": "Any",
+          "recommendation": "Issue ADVISORY to downstream links",
+          "reasoning": "Queue jumped 278s in one interval \u2014 likely an incident; downstream links should prepare for spillback.",
+          "severity": "ADVISORY"
+        }
+      ]
+    },
+    {
+      "link_id": 24,
+      "health_score": 64.22,
+      "state": "Stressed",
+      "risk_score": 99.7,
+      "congestion_prob": 0.0036,
+      "critical": false,
+      "mean_queue_s": 307.8,
+      "alerts": [
+        {
+          "severity": "ADVISORY",
+          "message": "Road is Stressed (advisory)."
+        }
+      ],
+      "recommendations": []
+    },
+    {
+      "link_id": 25,
+      "health_score": 68.62,
+      "state": "Stressed",
+      "risk_score": 99.45,
+      "congestion_prob": 0.0006,
+      "critical": false,
+      "mean_queue_s": 227.0,
+      "alerts": [
+        {
+          "severity": "ADVISORY",
+          "message": "Road is Stressed (advisory)."
+        }
+      ],
+      "recommendations": [
+        {
+          "trigger": "risk>70% AND is_am_peak",
+          "archetype": "Commuter",
+          "recommendation": "Review and extend green phase",
+          "reasoning": "AM-peak congestion is demand-driven; more green time reduces queue build-up.",
+          "severity": "WARNING"
+        }
+      ]
+    },
+    {
+      "link_id": 26,
+      "health_score": 62.57,
+      "state": "Stressed",
+      "risk_score": 99.95,
+      "congestion_prob": 0.0032,
+      "critical": false,
+      "mean_queue_s": 286.0,
+      "alerts": [
+        {
+          "severity": "ADVISORY",
+          "message": "Road is Stressed (advisory)."
+        }
+      ],
+      "recommendations": [
+        {
+          "trigger": "risk>70% AND is_am_peak",
+          "archetype": "Commuter",
+          "recommendation": "Review and extend green phase",
+          "reasoning": "AM-peak congestion is demand-driven; more green time reduces queue build-up.",
+          "severity": "WARNING"
+        }
+      ]
+    },
+    {
+      "link_id": 27,
+      "health_score": 61.1,
+      "state": "Stressed",
+      "risk_score": 99.9,
+      "congestion_prob": 0.003,
+      "critical": false,
+      "mean_queue_s": 396.6,
+      "alerts": [
+        {
+          "severity": "ADVISORY",
+          "message": "Road is Stressed (advisory)."
+        }
+      ],
+      "recommendations": [
+        {
+          "trigger": "queue surge >200s vs last interval",
+          "archetype": "Any",
+          "recommendation": "Issue ADVISORY to downstream links",
+          "reasoning": "Queue jumped 249s in one interval \u2014 likely an incident; downstream links should prepare for spillback.",
+          "severity": "ADVISORY"
+        }
+      ]
+    },
+    {
+      "link_id": 28,
+      "health_score": 69.25,
+      "state": "Stressed",
+      "risk_score": 99.53,
+      "congestion_prob": 0.0003,
+      "critical": false,
+      "mean_queue_s": 207.8,
+      "alerts": [
+        {
+          "severity": "ADVISORY",
+          "message": "Road is Stressed (advisory)."
+        }
+      ],
+      "recommendations": [
+        {
+          "trigger": "risk>70% AND is_am_peak",
+          "archetype": "Commuter",
+          "recommendation": "Review and extend green phase",
+          "reasoning": "AM-peak congestion is demand-driven; more green time reduces queue build-up.",
+          "severity": "WARNING"
+        }
+      ]
+    },
+    {
+      "link_id": 29,
+      "health_score": 66.16,
+      "state": "Stressed",
+      "risk_score": 99.55,
+      "congestion_prob": 0.0004,
+      "critical": false,
+      "mean_queue_s": 463.7,
+      "alerts": [
+        {
+          "severity": "ADVISORY",
+          "message": "Road is Stressed (advisory)."
+        }
+      ],
+      "recommendations": [
+        {
+          "trigger": "queue surge >200s vs last interval",
+          "archetype": "Any",
+          "recommendation": "Issue ADVISORY to downstream links",
+          "reasoning": "Queue jumped 245s in one interval \u2014 likely an incident; downstream links should prepare for spillback.",
+          "severity": "ADVISORY"
+        }
+      ]
+    },
+    {
+      "link_id": 30,
+      "health_score": 46.91,
+      "state": "Stressed",
+      "risk_score": 98.76,
+      "congestion_prob": 0.9617,
+      "critical": true,
+      "mean_queue_s": 416.6,
+      "alerts": [
+        {
+          "severity": "ADVISORY",
+          "message": "Road is Stressed (advisory)."
+        },
+        {
+          "severity": "CRITICAL",
+          "message": "Critical flag: P(congested in 15 min)=0.96, queue=417s."
+        }
+      ],
+      "recommendations": []
+    },
+    {
+      "link_id": 31,
+      "health_score": 47.31,
+      "state": "Stressed",
+      "risk_score": 98.93,
+      "congestion_prob": 0.9875,
+      "critical": true,
+      "mean_queue_s": 308.0,
+      "alerts": [
+        {
+          "severity": "ADVISORY",
+          "message": "Road is Stressed (advisory)."
+        },
+        {
+          "severity": "CRITICAL",
+          "message": "Critical flag: P(congested in 15 min)=0.99, queue=308s."
+        }
+      ],
+      "recommendations": []
+    },
+    {
+      "link_id": 32,
+      "health_score": 56.94,
+      "state": "Stressed",
+      "risk_score": 98.46,
+      "congestion_prob": 0.7743,
+      "critical": true,
+      "mean_queue_s": 332.4,
+      "alerts": [
+        {
+          "severity": "ADVISORY",
+          "message": "Road is Stressed (advisory)."
+        },
+        {
+          "severity": "CRITICAL",
+          "message": "Critical flag: P(congested in 15 min)=0.77, queue=332s."
+        }
+      ],
+      "recommendations": []
+    },
+    {
+      "link_id": 33,
+      "health_score": 68.34,
+      "state": "Stressed",
+      "risk_score": 10.91,
+      "congestion_prob": 0.0026,
+      "critical": false,
+      "mean_queue_s": 187.8,
+      "alerts": [
+        {
+          "severity": "ADVISORY",
+          "message": "Road is Stressed (advisory)."
+        }
+      ],
+      "recommendations": []
+    },
+    {
+      "link_id": 34,
+      "health_score": 67.65,
+      "state": "Stressed",
+      "risk_score": 66.34,
+      "congestion_prob": 0.0003,
+      "critical": false,
+      "mean_queue_s": 205.9,
+      "alerts": [
+        {
+          "severity": "ADVISORY",
+          "message": "Road is Stressed (advisory)."
+        }
+      ],
+      "recommendations": []
+    },
+    {
+      "link_id": 35,
+      "health_score": 63.95,
+      "state": "Stressed",
+      "risk_score": 85.42,
+      "congestion_prob": 0.3435,
+      "critical": false,
+      "mean_queue_s": 337.4,
+      "alerts": [
+        {
+          "severity": "ADVISORY",
+          "message": "Road is Stressed (advisory)."
+        }
+      ],
+      "recommendations": []
+    },
+    {
+      "link_id": 36,
+      "health_score": 50.11,
+      "state": "Stressed",
+      "risk_score": 80.95,
+      "congestion_prob": 0.9982,
+      "critical": true,
+      "mean_queue_s": 456.4,
+      "alerts": [
+        {
+          "severity": "ADVISORY",
+          "message": "Road is Stressed (advisory)."
+        },
+        {
+          "severity": "CRITICAL",
+          "message": "Critical flag: P(congested in 15 min)=1.00, queue=456s."
+        }
+      ],
+      "recommendations": []
+    },
+    {
+      "link_id": 37,
+      "health_score": 55.31,
+      "state": "Stressed",
+      "risk_score": 89.16,
+      "congestion_prob": 0.6548,
+      "critical": false,
+      "mean_queue_s": 429.0,
+      "alerts": [
+        {
+          "severity": "ADVISORY",
+          "message": "Road is Stressed (advisory)."
+        }
+      ],
+      "recommendations": []
+    },
+    {
+      "link_id": 38,
+      "health_score": 62.27,
+      "state": "Stressed",
+      "risk_score": 99.11,
+      "congestion_prob": 0.0117,
+      "critical": false,
+      "mean_queue_s": 400.5,
+      "alerts": [
+        {
+          "severity": "ADVISORY",
+          "message": "Road is Stressed (advisory)."
+        }
+      ],
+      "recommendations": []
+    },
+    {
+      "link_id": 39,
+      "health_score": 72.2,
+      "state": "Healthy",
+      "risk_score": 93.87,
+      "congestion_prob": 0.0002,
+      "critical": false,
+      "mean_queue_s": 199.1,
+      "alerts": [],
+      "recommendations": [
+        {
+          "trigger": "risk>70% AND is_am_peak",
+          "archetype": "Commuter",
+          "recommendation": "Review and extend green phase",
+          "reasoning": "AM-peak congestion is demand-driven; more green time reduces queue build-up.",
+          "severity": "WARNING"
+        }
+      ]
+    },
+    {
+      "link_id": 40,
+      "health_score": 69.4,
+      "state": "Stressed",
+      "risk_score": 96.95,
+      "congestion_prob": 0.0003,
+      "critical": false,
+      "mean_queue_s": 213.9,
+      "alerts": [
+        {
+          "severity": "ADVISORY",
+          "message": "Road is Stressed (advisory)."
+        }
+      ],
+      "recommendations": [
+        {
+          "trigger": "risk>70% AND is_am_peak",
+          "archetype": "Commuter",
+          "recommendation": "Review and extend green phase",
+          "reasoning": "AM-peak congestion is demand-driven; more green time reduces queue build-up.",
+          "severity": "WARNING"
+        }
+      ]
+    },
+    {
+      "link_id": 41,
+      "health_score": 68.39,
+      "state": "Stressed",
+      "risk_score": 37.13,
+      "congestion_prob": 0.0884,
+      "critical": false,
+      "mean_queue_s": 297.4,
+      "alerts": [
+        {
+          "severity": "ADVISORY",
+          "message": "Road is Stressed (advisory)."
+        }
+      ],
+      "recommendations": []
+    },
+    {
+      "link_id": 42,
+      "health_score": 67.3,
+      "state": "Stressed",
+      "risk_score": 27.93,
+      "congestion_prob": 0.151,
+      "critical": false,
+      "mean_queue_s": 326.6,
+      "alerts": [
+        {
+          "severity": "ADVISORY",
+          "message": "Road is Stressed (advisory)."
+        }
+      ],
+      "recommendations": []
+    },
+    {
+      "link_id": 43,
+      "health_score": 61.51,
+      "state": "Stressed",
+      "risk_score": 95.14,
+      "congestion_prob": 0.0075,
+      "critical": false,
+      "mean_queue_s": 310.0,
+      "alerts": [
+        {
+          "severity": "ADVISORY",
+          "message": "Road is Stressed (advisory)."
+        }
+      ],
+      "recommendations": []
+    },
+    {
+      "link_id": 44,
+      "health_score": 43.19,
+      "state": "Stressed",
+      "risk_score": 96.35,
+      "congestion_prob": 0.9949,
+      "critical": true,
+      "mean_queue_s": 298.8,
+      "alerts": [
+        {
+          "severity": "ADVISORY",
+          "message": "Road is Stressed (advisory)."
+        },
+        {
+          "severity": "CRITICAL",
+          "message": "Critical flag: P(congested in 15 min)=0.99, queue=299s."
+        }
+      ],
+      "recommendations": []
+    },
+    {
+      "link_id": 45,
+      "health_score": 55.33,
+      "state": "Stressed",
+      "risk_score": 96.03,
+      "congestion_prob": 0.7852,
+      "critical": true,
+      "mean_queue_s": 269.0,
+      "alerts": [
+        {
+          "severity": "ADVISORY",
+          "message": "Road is Stressed (advisory)."
+        },
+        {
+          "severity": "CRITICAL",
+          "message": "Critical flag: P(congested in 15 min)=0.79, queue=269s."
+        }
+      ],
+      "recommendations": []
+    },
+    {
+      "link_id": 46,
+      "health_score": 47.32,
+      "state": "Stressed",
+      "risk_score": 97.62,
+      "congestion_prob": 0.9941,
+      "critical": true,
+      "mean_queue_s": 312.3,
+      "alerts": [
+        {
+          "severity": "ADVISORY",
+          "message": "Road is Stressed (advisory)."
+        },
+        {
+          "severity": "CRITICAL",
+          "message": "Critical flag: P(congested in 15 min)=0.99, queue=312s."
+        }
+      ],
+      "recommendations": []
+    },
+    {
+      "link_id": 47,
+      "health_score": 65.15,
+      "state": "Stressed",
+      "risk_score": 95.11,
+      "congestion_prob": 0.056,
+      "critical": false,
+      "mean_queue_s": 268.0,
+      "alerts": [
+        {
+          "severity": "ADVISORY",
+          "message": "Road is Stressed (advisory)."
+        }
+      ],
+      "recommendations": []
+    },
+    {
+      "link_id": 48,
+      "health_score": 51.22,
+      "state": "Stressed",
+      "risk_score": 83.66,
+      "congestion_prob": 0.3919,
+      "critical": false,
+      "mean_queue_s": 217.4,
+      "alerts": [
+        {
+          "severity": "ADVISORY",
+          "message": "Road is Stressed (advisory)."
+        }
+      ],
+      "recommendations": []
+    },
+    {
+      "link_id": 49,
+      "health_score": 66.68,
+      "state": "Stressed",
+      "risk_score": 93.23,
+      "congestion_prob": 0.0018,
+      "critical": false,
+      "mean_queue_s": 315.1,
+      "alerts": [
+        {
+          "severity": "ADVISORY",
+          "message": "Road is Stressed (advisory)."
+        }
+      ],
+      "recommendations": []
+    },
+    {
+      "link_id": 50,
+      "health_score": 64.28,
+      "state": "Stressed",
+      "risk_score": 98.88,
+      "congestion_prob": 0.0026,
+      "critical": false,
+      "mean_queue_s": 363.5,
+      "alerts": [
+        {
+          "severity": "ADVISORY",
+          "message": "Road is Stressed (advisory)."
+        }
+      ],
+      "recommendations": []
+    },
+    {
+      "link_id": 51,
+      "health_score": 65.29,
+      "state": "Stressed",
+      "risk_score": 96.21,
+      "congestion_prob": 0.0011,
+      "critical": false,
+      "mean_queue_s": 193.5,
+      "alerts": [
+        {
+          "severity": "ADVISORY",
+          "message": "Road is Stressed (advisory)."
+        }
+      ],
+      "recommendations": [
+        {
+          "trigger": "risk>70% AND is_am_peak",
+          "archetype": "Commuter",
+          "recommendation": "Review and extend green phase",
+          "reasoning": "AM-peak congestion is demand-driven; more green time reduces queue build-up.",
+          "severity": "WARNING"
+        }
+      ]
+    },
+    {
+      "link_id": 52,
+      "health_score": 66.48,
+      "state": "Stressed",
+      "risk_score": 96.13,
+      "congestion_prob": 0.0013,
+      "critical": false,
+      "mean_queue_s": 224.7,
+      "alerts": [
+        {
+          "severity": "ADVISORY",
+          "message": "Road is Stressed (advisory)."
+        }
+      ],
+      "recommendations": [
+        {
+          "trigger": "risk>70% AND is_am_peak",
+          "archetype": "Commuter",
+          "recommendation": "Review and extend green phase",
+          "reasoning": "AM-peak congestion is demand-driven; more green time reduces queue build-up.",
+          "severity": "WARNING"
+        }
+      ]
+    },
+    {
+      "link_id": 53,
+      "health_score": 66.56,
+      "state": "Stressed",
+      "risk_score": 90.18,
+      "congestion_prob": 0.0038,
+      "critical": false,
+      "mean_queue_s": 347.7,
+      "alerts": [
+        {
+          "severity": "ADVISORY",
+          "message": "Road is Stressed (advisory)."
+        }
+      ],
+      "recommendations": []
+    },
+    {
+      "link_id": 54,
+      "health_score": 65.05,
+      "state": "Stressed",
+      "risk_score": 98.04,
+      "congestion_prob": 0.008,
+      "critical": false,
+      "mean_queue_s": 243.0,
+      "alerts": [
+        {
+          "severity": "ADVISORY",
+          "message": "Road is Stressed (advisory)."
+        }
+      ],
+      "recommendations": []
+    },
+    {
+      "link_id": 55,
+      "health_score": 59.41,
+      "state": "Stressed",
+      "risk_score": 94.07,
+      "congestion_prob": 0.906,
+      "critical": true,
+      "mean_queue_s": 255.8,
+      "alerts": [
+        {
+          "severity": "ADVISORY",
+          "message": "Road is Stressed (advisory)."
+        },
+        {
+          "severity": "CRITICAL",
+          "message": "Critical flag: P(congested in 15 min)=0.91, queue=256s."
+        }
+      ],
+      "recommendations": []
+    },
+    {
+      "link_id": 56,
+      "health_score": 66.69,
+      "state": "Stressed",
+      "risk_score": 91.79,
+      "congestion_prob": 0.1834,
+      "critical": false,
+      "mean_queue_s": 264.3,
+      "alerts": [
+        {
+          "severity": "ADVISORY",
+          "message": "Road is Stressed (advisory)."
+        }
+      ],
+      "recommendations": []
+    },
+    {
+      "link_id": 57,
+      "health_score": 70.16,
+      "state": "Healthy",
+      "risk_score": 76.24,
+      "congestion_prob": 0.0001,
+      "critical": false,
+      "mean_queue_s": 153.8,
+      "alerts": [],
+      "recommendations": []
+    },
+    {
+      "link_id": 58,
+      "health_score": 73.62,
+      "state": "Healthy",
+      "risk_score": 31.35,
+      "congestion_prob": 0.0,
+      "critical": false,
+      "mean_queue_s": 168.8,
+      "alerts": [],
+      "recommendations": []
+    },
+    {
+      "link_id": 59,
+      "health_score": 68.16,
+      "state": "Stressed",
+      "risk_score": 91.02,
+      "congestion_prob": 0.7127,
+      "critical": true,
+      "mean_queue_s": 300.2,
+      "alerts": [
+        {
+          "severity": "ADVISORY",
+          "message": "Road is Stressed (advisory)."
+        },
+        {
+          "severity": "CRITICAL",
+          "message": "Critical flag: P(congested in 15 min)=0.71, queue=300s."
+        }
+      ],
+      "recommendations": []
+    },
+    {
+      "link_id": 60,
+      "health_score": 54.68,
+      "state": "Stressed",
+      "risk_score": 98.78,
+      "congestion_prob": 0.9468,
+      "critical": true,
+      "mean_queue_s": 254.2,
+      "alerts": [
+        {
+          "severity": "ADVISORY",
+          "message": "Road is Stressed (advisory)."
+        },
+        {
+          "severity": "CRITICAL",
+          "message": "Critical flag: P(congested in 15 min)=0.95, queue=254s."
+        }
+      ],
+      "recommendations": []
+    },
+    {
+      "link_id": 61,
+      "health_score": 64.99,
+      "state": "Stressed",
+      "risk_score": 92.53,
+      "congestion_prob": 0.003,
+      "critical": false,
+      "mean_queue_s": 223.5,
+      "alerts": [
+        {
+          "severity": "ADVISORY",
+          "message": "Road is Stressed (advisory)."
+        }
+      ],
+      "recommendations": [
+        {
+          "trigger": "risk>70% AND is_am_peak",
+          "archetype": "Commuter",
+          "recommendation": "Review and extend green phase",
+          "reasoning": "AM-peak congestion is demand-driven; more green time reduces queue build-up.",
+          "severity": "WARNING"
+        }
+      ]
+    },
+    {
+      "link_id": 62,
+      "health_score": 60.9,
+      "state": "Stressed",
+      "risk_score": 97.52,
+      "congestion_prob": 0.0018,
+      "critical": false,
+      "mean_queue_s": 91.7,
+      "alerts": [
+        {
+          "severity": "ADVISORY",
+          "message": "Road is Stressed (advisory)."
+        }
+      ],
+      "recommendations": [
+        {
+          "trigger": "risk>70% AND is_am_peak",
+          "archetype": "Commuter",
+          "recommendation": "Review and extend green phase",
+          "reasoning": "AM-peak congestion is demand-driven; more green time reduces queue build-up.",
+          "severity": "WARNING"
+        }
+      ]
+    },
+    {
+      "link_id": 63,
+      "health_score": 71.22,
+      "state": "Healthy",
+      "risk_score": 92.46,
+      "congestion_prob": 0.0001,
+      "critical": false,
+      "mean_queue_s": 148.9,
+      "alerts": [],
+      "recommendations": [
+        {
+          "trigger": "risk>70% AND is_am_peak",
+          "archetype": "Commuter",
+          "recommendation": "Review and extend green phase",
+          "reasoning": "AM-peak congestion is demand-driven; more green time reduces queue build-up.",
+          "severity": "WARNING"
+        }
+      ]
+    },
+    {
+      "link_id": 64,
+      "health_score": 69.09,
+      "state": "Stressed",
+      "risk_score": 96.43,
+      "congestion_prob": 0.0002,
+      "critical": false,
+      "mean_queue_s": 172.9,
+      "alerts": [
+        {
+          "severity": "ADVISORY",
+          "message": "Road is Stressed (advisory)."
+        }
+      ],
+      "recommendations": [
+        {
+          "trigger": "risk>70% AND is_am_peak",
+          "archetype": "Commuter",
+          "recommendation": "Review and extend green phase",
+          "reasoning": "AM-peak congestion is demand-driven; more green time reduces queue build-up.",
+          "severity": "WARNING"
+        }
+      ]
+    },
+    {
+      "link_id": 65,
+      "health_score": 72.01,
+      "state": "Healthy",
+      "risk_score": 86.51,
+      "congestion_prob": 0.0001,
+      "critical": false,
+      "mean_queue_s": 189.6,
+      "alerts": [],
+      "recommendations": [
+        {
+          "trigger": "risk>70% AND is_am_peak",
+          "archetype": "Commuter",
+          "recommendation": "Review and extend green phase",
+          "reasoning": "AM-peak congestion is demand-driven; more green time reduces queue build-up.",
+          "severity": "WARNING"
+        }
+      ]
+    },
+    {
+      "link_id": 66,
+      "health_score": 68.31,
+      "state": "Stressed",
+      "risk_score": 98.31,
+      "congestion_prob": 0.0003,
+      "critical": false,
+      "mean_queue_s": 132.3,
+      "alerts": [
+        {
+          "severity": "ADVISORY",
+          "message": "Road is Stressed (advisory)."
+        }
+      ],
+      "recommendations": [
+        {
+          "trigger": "risk>70% AND is_am_peak",
+          "archetype": "Commuter",
+          "recommendation": "Review and extend green phase",
+          "reasoning": "AM-peak congestion is demand-driven; more green time reduces queue build-up.",
+          "severity": "WARNING"
+        }
+      ]
+    }
+  ]
+}

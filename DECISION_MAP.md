@@ -132,7 +132,7 @@ its artifact, with the Bible's §12.3 "before moving on" gate.
 | B2 | Feature engineering | `features.parquet` | no NaN, ~13% positive class |
 | B3 | Model training (7 models) | `models/` | temporal split, no leakage |
 | B4 | Model comparison | charts, best model | ROC-AUC > 0.85, inference < 500 ms |
-| B5 | SHAP explainability | 6 SHAP outputs | Link 36 + Link 37 waterfalls |
+| B5 | SHAP explainability | 6 SHAP outputs | Link 36 + Link 37 waterfalls | ✅ **DONE** — `shap_analysis.py`, `scripts/b5_shap.py`, `notebooks/05_SHAP.ipynb` |
 | B6 | Traffic Intelligence Engine | health score, alerts, recs | every rec has reasoning text |
 | B7 | ECHO A — Personality Atlas | `road_archetypes.json` | 5–7 archetypes, silhouette > 0.5 |
 | B8 | ECHO B — Ecosystem State Machine | `causal_graph.json`, `cascade_events.csv` | Link 36→16 edge, July-1 cascade |
@@ -141,3 +141,52 @@ its artifact, with the Bible's §12.3 "before moving on" gate.
 | B11 | FastAPI serving layer | running API | endpoints for all artifacts |
 
 Phase 2 (frontend: React + three.js + p5.js) begins after B11.
+
+---
+
+## B6 — Traffic Intelligence Engine (done)
+
+`engine/intelligence.py` (Bible §6). Road Health Score → metabolic state
+(Healthy/Stressed/Saturated/Collapsed), Congestion Risk Score (per-link
+percentile), hotspot ranking, Critical Roads Flag (P>0.70 or queue>600s),
+severity alerts, and the §6.3 archetype-aware recommendation rules — every
+recommendation carries explicit reasoning (gate).
+
+**Design:** archetype (B7) and cascade (B8) inputs are optional. Archetype-
+specific rules fire ONLY on a known matching archetype, so they stay silent
+(rather than flooding all 66 links) until ECHO assigns archetypes.
+
+**Findings (for B7):**
+- **R5 (Landmine) rule is dead on this data** — `lane5_stalled` and a >400s queue
+  never co-occur in 266k rows. Flagged via `rule_activation_census`.
+- **Link 36 behaves like a Saturator**, not the Bible's placeholder "Landmine":
+  it satisfies the R3 saturation condition 56× and never the R5 Landmine
+  condition. B7 archetype discovery should re-classify it from data.
+
+---
+
+## B7 — ECHO Stage A: Personality Atlas (done)
+
+`echo/personality_atlas.py` (Bible §7 Stage A). 8-dim temporal fingerprint per
+link → k-means → archetype assignment (anchored on documented exemplars) →
+14-day stability. Output: `data/road_archetypes.json`, atlas plot. Archetypes
+now feed the B6 engine (archetype rules active).
+
+**#8 resolved → MVB k-means** (DEC autoencoder is the documented upgrade seam).
+**#9 resolved → two-pass adjacency**: a lag-correlation adjacency is computed
+(`build_adjacency`) and reserved for Stage B; it is NOT used in clustering (see
+below).
+
+**Findings (deviations from the Bible, with evidence):**
+- **Spatial penalty dropped (α=0).** The Bible's penalty pulls *adjacent* links
+  together, but Link 36↔37 are adjacent (lag-corr edge), so it *merged* the two
+  roads the Bible used it to "separate", and lowered silhouette (0.211 → 0.265).
+  Spatial/causal structure is used in Stage B, its natural home.
+- **No Landmine archetype in the data.** Link 36 (Bible's "Landmine") has a high
+  off-peak floor (356s — congested at 3 AM) and co-clusters robustly with Chronic
+  Link 37. It is empirically Chronic/Saturator-like, not a Landmine. Triple-
+  confirmed (B6 rule census, fingerprint, clustering). Result: 5 honest
+  archetypes (Chronic, Saturator, Ghost, Commuter, Chameleon).
+- **Silhouette ~0.27 is intrinsic** (max ~0.29 at k=4): the 66 links form a
+  behavioral continuum, not crisp clusters. Stability (57/66 ≥ 0.7) is the
+  primary validation; the Bible's 0.5 silhouette target is aspirational.
