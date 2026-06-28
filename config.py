@@ -195,3 +195,34 @@ LLM_CITIZEN_FORBIDDEN: tuple[str, ...] = (
     "structural causal", "do-calculus", "percentile", "AUC",
 )
 
+# --------------------------------------------------------------------------- #
+# B11 — FastAPI Serving Layer (DECISION_MAP #4/#5)
+# --------------------------------------------------------------------------- #
+# The frontend (React + three.js + p5.js, Phase 2) is a separate app. The
+# backend exposes the precomputed pipeline artifacts (parquet + JSON + the
+# B4 best model, when present) over a read-only HTTP API. This is the single
+# data-access path that replaces the Bible's Streamlit role.
+
+# Precomputed artifact locations served by the API (all produced by B1-B10).
+MODEL_COMPARISON_CSV: Path = REPORTS_DIR / "model_comparison" / "model_comparison.csv"
+BEST_MODEL_META_JSON: Path = MODELS_DIR / "best_model_meta.json"
+
+# CORS: which frontend origins may call the API. "*" is fine for the local
+# demo; lock this down to the deployed frontend origin in production.
+API_CORS_ORIGINS: tuple[str, ...] = ("*",)
+
+# The July 1 09:45 AM Link 36 demo event — the platform's narrative centrepiece.
+# Endpoints default to this snapshot so the API is useful with zero query params.
+API_DEMO_LINK_ID: int = 36
+API_DEMO_DAY: int = 1
+API_DEMO_MINUTE: int = 585     # 09:45 AM
+
+API_TITLE: str = "UrbanPulse API"
+API_VERSION: str = "1.1.0"
+
+# Timeline endpoint (Stage 2 scrubber + cascade replay). The features parquet
+# holds road_health_score per link per 5-min interval across all 14 days; the
+# timeline endpoint serves one frame (all 66 links' state) per (day, minute),
+# and the cascade endpoint serves the source->downstream propagation with lags.
+INTERVALS_PER_DAY: int = 24 * 60 // INTERVAL_MINUTES   # 288
+

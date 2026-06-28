@@ -138,7 +138,7 @@ its artifact, with the Bible's §12.3 "before moving on" gate.
 | B8 | ECHO B — Ecosystem State Machine | `causal_graph.json`, `cascade_events.csv` | Link 36→16 edge, July-1 cascade |
 | B9 | ECHO C — Counterfactual | `counterfactual_results.json` | July-1 run, narrative output | ✅ **DONE** — `echo/counterfactual.py`, `scripts/09_counterfactual.py` |
 | B10 | LLM layer | `llm/` | grounded responses, no hallucination |
-| B11 | FastAPI serving layer | running API | endpoints for all artifacts |
+| B11 | FastAPI serving layer | running API | endpoints for all artifacts | ✅ **DONE** — `api/`, `scripts/11_serve.py`, `tests/test_api.py` |
 
 Phase 2 (frontend: React + three.js + p5.js) begins after B11.
 
@@ -225,3 +225,132 @@ Output: `data/counterfactual_results.json`, `reports/echo/scm_graph.png`,
 
 **Gate:** July-1 CF runs, narrative produced, ≥4 archetypes covered.
 
+---
+
+## B11 — FastAPI Serving Layer (done)
+
+`api/` package (DECISION_MAP #4/#5). Read-only HTTP API over the precomputed
+B1–B10 artifacts — the single backend↔frontend data-access path that replaces
+the Bible's Streamlit role.
+
+**Design:**
+- `api/store.py`: cached artifact loaders with graceful degradation. Missing
+  artifacts never crash the app — read-only endpoints stay up after a partial
+  pipeline run; the live `/snapshot` returns a 503 with a "run train.py" hint.
+  **No recomputation** — that's the job of B1–B10. The store only reads.
+- `api/schemas.py`: Pydantic v2 response models = the wire contract the React +
+  three.js + p5.js frontend is built against.
+- `api/routers_artifacts.py`: archetypes (B7), causal graph + cascades +
+  ecosystem state (B8), counterfactuals (B9), model metrics (B3/B4).
+- `api/routers_live.py`: `/snapshot` runs the B6 engine on demand over the B4
+  best model for a chosen (day, minute); model cached after first load.
+- `api/routers_llm.py`: B10 layer over HTTP — 5 structured output types +
+  grounded Q&A. Context assembled via `from_artifacts` (LLM never sees raw
+  sensor data). Backend = config default; layer cached.
+- `api/main.py`: app factory, CORS, `/health` (artifact presence map),
+  `/admin/reload` (drop caches to pick up a fresh pipeline run).
+
+**Endpoints:** `/health`, `/links`, `/archetypes[/{id}]`,
+`/echo/causal-graph`, `/echo/ecosystem-state`, `/echo/cascades`,
+`/echo/counterfactual[/{id}]`, `/models/metrics`, `/snapshot`,
+`/llm/backends`, `/llm/generate`, `/llm/ask`.
+
+**Run:** `python scripts/11_serve.py` → http://127.0.0.1:8000/docs
+
+**Gate:** every artifact reachable via HTTP; `tests/test_api.py` (16 tests)
+green using shipped artifacts + the deterministic template LLM backend.
+
+Phase 2 (frontend: React + three.js + p5.js) begins next.
+
+---
+
+## Phase 2 — Frontend (React + R3F + three.js)
+
+Grilled + sequenced (see session). Hero view = **3D force-directed causal-graph
+constellation** (nodes = 66 links, color = metabolic state, size = health,
+edges = causal relationships). Bible's 10 pages collapse to **3 surfaces**:
+Planner Command Center (constellation + HUD + deep-dive drawer), Counterfactual
+Lab, Citizen Mode. Counterfactual Lab to be **gamified** as "Beat the Cascade"
+(timed upstream-intervention game) — but only in Stage 3 if time allows.
+
+**Three stages, hard cut lines:**
+
+| Stage | Scope | Status |
+|---|---|---|
+| **1 — Spine** | R3F app, constellation (state color / health size / causal edges), node click → deep-dive drawer, view-mode toggle, API wiring | ✅ **DONE** (`frontend/`) |
+| **2 — ECHO payload** | cascade animation ▸ timeline scrubber ▸ counterfactual sandbox ▸ LLM panel + full Citizen mode | 🔶 in progress |
+| **3 — Game + polish** | "Beat the Cascade" timed loop + scoring + `/echo/counterfactual/simulate`, ReactBits flourishes, SHAP page | ⬜ if time |
+
+**Stage 2 progress:**
+- ✅ **Cascade animation** — `frontend/src/scene/CascadePulse.jsx` + store cascade
+  slice. Pulse fires from Link 36 along real causal edges, infecting each
+  downstream link exactly at its real `lag_minutes` (16/30/44 at 5min, 31/38 at
+  10min). Whole event plays in ~10s. Source node flares white-hot; reached nodes
+  flash toward the collapse color. Triggered from the HUD cascade control.
+  Backend: `/echo/cascades/detailed` (parsed source→downstream+lags).
+- ✅ **Timeline endpoint** (scrubber data) — `/echo/timeline` (one frame: all 66
+  links' state at a day/minute) + `/echo/timeline/axis`. Lazy per-frame slice of
+  features.parquet (~1.6s cold build, 6ms/frame). Scrubber UI: next.
+- ⬜ Counterfactual sandbox, LLM panel, full Citizen mode.
+
+---
+
+# PHASE 2 — Frontend (React + R3F + three.js)
+
+> Decided via /grilling. Stack: React + @react-three/fiber + drei, ReactBits
+> for UI flourishes, talking to the B11 FastAPI layer. 3D-first.
+
+## Locked frontend decisions
+
+### F1 — Hero view → **3D force-directed causal-graph constellation**
+NOT a 2D UMAP/node-graph (Bible §9), NOT a faked geographic road map (no geo
+data exists — Bible §1.3). The causal graph is the only spatially-meaningful
+real structure. Nodes = 66 links (color = metabolic state green/amber/red,
+size = road_health). Edges = causal relationships (thickness =
+correlation_strength, label = lag_minutes). Source: `/echo/causal-graph` +
+`/echo/ecosystem-state`. Personality Atlas becomes a *secondary* 3D point cloud
+in fingerprint space, not the hero.
+
+### F2 — Page structure → **3 surfaces, not the Bible's 10 pages**
+1. **Command Center (Planner):** constellation is the whole screen; click node →
+   side drawer deep-dive (archetype, SHAP top-3, causal connections, recs,
+   counterfactual sim). Timeline scrubber drives the scene. Absorbs Bible
+   planner pages 1-5.
+2. **Counterfactual Lab:** the July 1 centrepiece showpiece (see F3).
+3. **Citizen Mode:** animated view-mode toggle (Bible §9.1) → plain-English
+   commute status + simplified network + LLM assistant. Absorbs citizen pages
+   1,2,4.
+   Dropped/stubbed (low judge-signal): Report an Issue, Log Intervention history,
+   Compare Days, Export PDF.
+
+### F3 — Counterfactual Lab → **"Beat the Cascade" game**
+The game mechanic IS the causal mechanism (not points sprinkled on top).
+- Dropped into July 1, clock running to 09:45; Link 36 heading to collapse.
+- **Intervention window** countdown = the real cascade lag (8 min, 36→16).
+- Pick link + intervention → fire do-operator → constellation re-simulates.
+- **Score = vehicle_hours_saved** (real `/echo/counterfactual` field);
+  binary **cascade_prevented** = win/lose. Act earlier → bigger save.
+- **Any-link intervention; upstream interventions score higher** — forces the
+  player to traverse the causal graph backward (Pearl L2/L3). Cannot be won
+  well by Level-1 thinking. Scores MUST come from SCM, no faking.
+- Caveat: B9 SCM is fit per-link. Cross-link upstream scoring needs SCM×graph
+  composition → new endpoint `/echo/counterfactual/simulate(intervention_link,
+  type, target_link)`. **Deferred to Stage 3.**
+
+### F4 — Build staging → **3 stages, hard cut lines, no backward deps**
+- **Stage 1 — The Spine (must ship):** R3F app scaffold wired to FastAPI; 3D
+  constellation (66 nodes+edges, state color, health size, corr thickness,
+  orbit/zoom); click node → deep-dive drawer; view-mode toggle stub. A coherent
+  demo on its own. *No new backend needed.*
+- **Stage 2 — ECHO payload (should ship):** cascade animation (36→16 pulse,
+  real lag); timeline scrubber through 14 days; Counterfactual Lab v1
+  (non-timed sandbox, July 1 preloaded); LLM panel (`/llm/generate`+`/ask`);
+  full Citizen Mode + animated toggle. *Needs ONE new endpoint:* `/echo/timeline`
+  (per-link health/state across a time range — data exists in features.parquet,
+  not yet exposed). Approved.
+- **Stage 3 — Game + polish (nice to have):** "Beat the Cascade" timed loop +
+  scoring + upstream mechanic + `/echo/counterfactual/simulate`; leaderboard;
+  par score; post-mortem; ReactBits flourishes; SHAP Explorer; dropped pages.
+
+Principle: Stage 1 alone is impressive. Stage 2 makes it win. Stage 3 makes it
+unforgettable.

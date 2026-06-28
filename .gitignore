@@ -132,3 +132,6 @@ data/counterfactual_results.json
 # ---------------------------------------------------------------------------
 run_no_linkid.py
 train_no_linkid.py
+
+tests/ 
+frontend/node_modules

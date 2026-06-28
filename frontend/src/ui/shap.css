@@ -1,0 +1,173 @@
+/* ── SHAP Explorer ─────────────────────────────────────────────────────────── */
+
+.shap-card { padding: 0; overflow: hidden; }
+
+.shap-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: var(--sp-4) var(--sp-5);
+  background: none;
+  border: none;
+  color: var(--ink-faint);
+  cursor: pointer;
+  text-align: left;
+  transition: color 0.15s var(--ease);
+}
+.shap-toggle:hover { color: var(--ink-dim); }
+.shap-toggle .eyebrow { color: inherit; }
+.shap-chevron { font-size: var(--fs-micro); color: var(--instrument-dim); }
+
+.shap-body {
+  padding: 0 var(--sp-5) var(--sp-4);
+  border-top: 1px solid var(--hairline);
+}
+
+.shap-loading,
+.shap-error {
+  padding: var(--sp-3) 0;
+  font-size: var(--fs-cap);
+  color: var(--ink-faint);
+}
+.shap-error { color: var(--state-collapsed); }
+
+.shap-context { margin-top: var(--sp-3); }
+
+/* ── Probability row ─────────────────────────────────────────────────────── */
+.shap-prob-row {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  padding: var(--sp-3) 0 var(--sp-4);
+  flex-wrap: wrap;
+}
+.shap-prob-block {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.shap-prob-lbl {
+  font-size: var(--fs-micro);
+  color: var(--ink-faint);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+.shap-prob-val {
+  font-family: var(--font-mono);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--ink);
+}
+.shap-prob-val.shap-danger { color: var(--state-collapsed); }
+.shap-prob-val.shap-warn   { color: var(--state-saturated); }
+.shap-prob-val.shap-ok     { color: var(--state-healthy); }
+.shap-prob-arrow { font-size: 1rem; color: var(--instrument-dim); }
+.shap-prob-label-right {
+  font-size: var(--fs-micro);
+  color: var(--ink-faint);
+  align-self: flex-end;
+  padding-bottom: 4px;
+}
+
+/* ── Feature bars ────────────────────────────────────────────────────────── */
+.shap-feat-list { display: flex; flex-direction: column; gap: var(--sp-4); }
+
+.shap-feat-row { display: flex; flex-direction: column; gap: 5px; }
+
+.shap-feat-meta {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--sp-2);
+}
+.shap-feat-name {
+  font-size: var(--fs-cap);
+  font-weight: 600;
+  color: var(--ink);
+}
+.shap-feat-dir {
+  font-size: var(--fs-micro);
+  font-family: var(--font-mono);
+  white-space: nowrap;
+}
+.shap-up   { color: var(--state-collapsed); }
+.shap-down { color: var(--state-healthy); }
+
+.shap-bar-track {
+  height: 6px;
+  background: var(--hairline);
+  border-radius: 3px;
+  overflow: hidden;
+}
+.shap-bar {
+  height: 100%;
+  border-radius: 3px;
+  transition: width 0.5s var(--ease);
+}
+.shap-bar-pos { background: var(--state-collapsed); box-shadow: 0 0 6px color-mix(in srgb, var(--state-collapsed) 40%, transparent); }
+.shap-bar-neg { background: var(--state-healthy);   box-shadow: 0 0 6px color-mix(in srgb, var(--state-healthy)   40%, transparent); }
+
+.shap-plain {
+  font-size: var(--fs-micro);
+  color: var(--ink-dim);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* ── Waterfall PNG section ───────────────────────────────────────────────── */
+.shap-png-section { margin-top: var(--sp-4); }
+.link-btn {
+  background: none;
+  border: none;
+  color: var(--instrument);
+  font-size: var(--fs-micro);
+  cursor: pointer;
+  padding: 0;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.shap-png {
+  display: block;
+  width: 100%;
+  margin-top: var(--sp-3);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--hairline);
+  background: #fff; /* matplotlib PNGs have white bg */
+}
+
+/* ── Global panel ────────────────────────────────────────────────────────── */
+.shap-global { padding-top: var(--sp-3); }
+.shap-global-note {
+  font-size: var(--fs-cap);
+  color: var(--ink-dim);
+  line-height: 1.55;
+  margin: 0 0 var(--sp-4);
+}
+.shap-img-btns {
+  display: flex;
+  gap: var(--sp-2);
+  margin-bottom: var(--sp-3);
+}
+.shap-img-tab {
+  padding: 5px 12px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--hairline);
+  background: var(--bg-elevated);
+  color: var(--ink-dim);
+  font-size: var(--fs-cap);
+  font-family: var(--font-body);
+  cursor: pointer;
+  transition: all 0.15s var(--ease);
+}
+.shap-img-tab:hover { border-color: var(--instrument-dim); color: var(--ink); }
+.shap-img-tab.active {
+  background: var(--instrument);
+  color: var(--bg-void);
+  border-color: var(--instrument);
+}
+.shap-global-hint {
+  margin-top: var(--sp-4);
+  text-align: center;
+  display: block;
+}

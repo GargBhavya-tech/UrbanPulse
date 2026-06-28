@@ -1,0 +1,87 @@
+/* UrbanPulse — design tokens.
+ *
+ * Identity: a causal-traffic OBSERVATORY. Congestion spreads like a disease
+ * through a constellation of roads, watched from a control room. The palette is
+ * deep-space instrument panel: near-black field, cool instrument cyan for the
+ * UI chrome, and a metabolic state ramp (healthy teal -> collapse magenta) that
+ * is the ONLY place saturated color appears. Color always means something here.
+ */
+
+:root {
+  /* Field */
+  --bg-void: #05070d;
+  --bg-panel: #0b0f1a;
+  --bg-panel-2: #121826;
+  --bg-elevated: #161d2e;
+  --hairline: #1f2940;
+  --hairline-bright: #2c3a5c;
+
+  /* Instrument chrome (NOT a state color — used for UI, labels, axes) */
+  --ink: #e8edf7;
+  --ink-dim: #94a3c4;
+  --ink-faint: #56638a;
+  --instrument: #4cc9f0;       /* cool cyan — selection, focus, links */
+  --instrument-dim: #2a7a96;
+
+  /* Metabolic state ramp — the meaningful color axis (Bible §6) */
+  --state-healthy: #2ee6a6;    /* Healthy  (>70 health)  */
+  --state-stressed: #ffd166;   /* Stressed (40-70)       */
+  --state-saturated: #ff8c42;  /* Saturated (20-40)      */
+  --state-collapsed: #ff3d7f;  /* Collapsed (<20) — the disease color */
+
+  /* Type scale */
+  --font-display: "Space Grotesk", "Inter", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", "SF Mono", ui-monospace, monospace;
+
+  --fs-mega: clamp(2.2rem, 5vw, 3.4rem);
+  --fs-h1: 1.5rem;
+  --fs-h2: 1.125rem;
+  --fs-body: 0.9rem;
+  --fs-cap: 0.75rem;
+  --fs-micro: 0.66rem;
+
+  /* Space */
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 24px;
+  --sp-6: 32px;
+  --sp-7: 48px;
+
+  --radius: 10px;
+  --radius-sm: 6px;
+
+  --shadow-panel: 0 12px 40px rgba(0, 0, 0, 0.55);
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+* { box-sizing: border-box; }
+
+html, body, #root {
+  margin: 0;
+  height: 100%;
+  background: var(--bg-void);
+  color: var(--ink);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+body { overflow: hidden; }
+
+::selection { background: var(--instrument); color: var(--bg-void); }
+
+/* Utility: monospace data readout */
+.mono { font-family: var(--font-mono); font-variant-numeric: tabular-nums; }
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: var(--fs-micro);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
